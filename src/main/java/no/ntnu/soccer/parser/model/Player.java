@@ -1,8 +1,15 @@
 package no.ntnu.soccer.parser.model;
 
 import com.opencsv.bean.CsvBindByPosition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class Player {
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.util.function.Function;
+
+public class Player implements XmiParsable {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Player.class);
     public static final String RESOURCE_CSV_FILE = "players.csv";
     public static final String CSV_DELIMITER = ";";
 
@@ -52,5 +59,27 @@ public class Player {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
+        try {
+            writer.write("<player \n"
+                    + "name=" + "\""  + name + "\"\n"
+                    + "weight=" + "\""  + weight + "\"\n"
+                    + "height=" + "\""  + height + "\"\n"
+            );
+
+            if(childrenFunction != null) {
+                writer.write(">\n");
+                childrenFunction.apply(null);
+                writer.write("</player>\n");
+            } else {
+                writer.write("/>\n");
+
+            }
+        } catch (IOException e) {
+            LOGGER.info("Exception occurred: ",e);
+        }
     }
 }

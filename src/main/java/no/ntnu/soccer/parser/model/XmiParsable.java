@@ -1,5 +1,9 @@
 package no.ntnu.soccer.parser.model;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.util.function.Function;
+
 public interface XmiParsable {
-    String toXmi(String children);
+    void toXmi(BufferedWriter writer, Function<Void, Void> children);
 }

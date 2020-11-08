@@ -1,6 +1,7 @@
 package no.ntnu.soccer.parser.model;
 
 import com.opencsv.bean.CsvBindByPosition;
+import org.apache.commons.lang3.StringUtils;
 
 public class Team {
     public static final String RESOURCE_CSV_FILE = "teams.csv";
@@ -8,6 +9,9 @@ public class Team {
 
     @CsvBindByPosition(position = 0)
     private int id;
+
+    @CsvBindByPosition(position = 1)
+    private int teamApiId;
 
     @CsvBindByPosition(position = 3)
     private String teamName;
@@ -40,5 +44,13 @@ public class Team {
 
     public void setShortName(String shortName) {
         this.shortName = shortName;
+    }
+
+    public int getTeamApiId() {
+        return teamApiId;
+    }
+
+    public void setTeamApiId(int teamApiId) {
+        this.teamApiId = teamApiId;
     }
 }
