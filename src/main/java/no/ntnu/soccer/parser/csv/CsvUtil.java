@@ -13,7 +13,7 @@ import java.util.List;
 public class CsvUtil<T> {
     private static final Logger LOGGER = LoggerFactory.getLogger(CsvUtil.class);
 
-    public List<T> readCsv(String resourceFileName, Class typeOfObjects, String delimiter, Charset charset) {
+    public List<T> readCsv(String resourceFileName, Class<T> typeOfObjects, String delimiter, Charset charset) {
 
         Path absPath = Path.of(System.getProperty("user.dir") + "/src/main/resources/" + resourceFileName);
         LOGGER.info("Reading file from {}", absPath);
@@ -26,6 +26,7 @@ public class CsvUtil<T> {
                     .withType(typeOfObjects)
                     .withSkipLines(1)
                     .build();
+
             LOGGER.debug("Parsing file content to CSV");
             return cb.parse();
         } catch (Exception e) {

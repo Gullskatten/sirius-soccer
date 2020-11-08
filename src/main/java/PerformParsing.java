@@ -24,7 +24,7 @@ public class PerformParsing {
         final List<Match> matches = matchCsvUtil.readCsv(Match.RESOURCE_CSV_FILE, Match.class, Match.CSV_DELIMITER, Charset.defaultCharset());
 
         final CsvUtil<Country> countryCsvUtil = new CsvUtil<>();
-        final List<Country> countries = countryCsvUtil.readCsv(Country.RESOURCE_CSV_FILE, Country.class, League.CSV_DELIMITER, Charset.defaultCharset());
+        final List<Country> countries = countryCsvUtil.readCsv(Country.RESOURCE_CSV_FILE, Country.class, Country.CSV_DELIMITER, Charset.defaultCharset());
 
         // TODO: Find relevant columns
         // TODO: Decide if we should add some derived attributes (e.g. 'team' for a player)
