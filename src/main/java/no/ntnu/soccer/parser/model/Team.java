@@ -1,11 +1,10 @@
 package no.ntnu.soccer.parser.model;
 
 import com.opencsv.bean.CsvBindByPosition;
-import org.apache.commons.lang3.StringUtils;
 
 public class Team {
     public static final String RESOURCE_CSV_FILE = "teams.csv";
-    public static final String CSV_DELIMITER = ";";
+    public static final String CSV_DELIMITER = ",";
 
     @CsvBindByPosition(position = 0)
     private int id;

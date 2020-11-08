@@ -1,6 +1,5 @@
 package no.ntnu.soccer.parser.model;
 
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,22 +22,27 @@ public class TeamOutput extends Team implements XmiParsable {
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write("<team \n"
-                    + "id=" + "\""  + getId() + "\"\n"
-                    + "teamType=" + "\""  + teamType + "\"\n"
-                    + "shortName=" + "\""  + getShortName() + "\"\n"
-                    + "teamName=" + "\""  + getTeamName() + "\"\n");
+            writer.write(indent() + "<team \n"
+                    + indent() + " id=" + "\""  + getId() + "\"\n"
+                    + indent() + " teamType=" + "\""  + teamType + "\"\n"
+                    + indent() + " shortName=" + "\""  + getShortName() + "\"\n"
+                    + indent() + " teamName=" + "\""  + getTeamName() + "\"");
 
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write("</team>");
+                writer.write(indent() + "</team>\n");
             } else {
                 writer.write("/>\n");
-
             }
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ",e);
         }
     }
+
+    @Override
+    public String indent() {
+        return "            ";
+    }
+
 }

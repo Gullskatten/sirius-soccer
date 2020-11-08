@@ -10,9 +10,8 @@ import java.util.function.Function;
 
 public class Country implements XmiParsable {
     private static final Logger LOGGER = LoggerFactory.getLogger(Country.class);
-
     public static final String RESOURCE_CSV_FILE = "countries.csv";
-    public static final String CSV_DELIMITER = ";";
+    public static final String CSV_DELIMITER = ",";
 
     @CsvBindByPosition(position = 0)
     private int id;
@@ -43,20 +42,24 @@ public class Country implements XmiParsable {
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write("<country "
-                    + "id=" + "\""  + id + "\""+ "\n"
-                    + "name=" + "\""  + name + "\""+ "\n"
-                    + ">");
+            writer.write(indent() + "<country \n"
+                    + indent() + " id=" + "\""  + id + "\""+ "\n"
+                    + indent() + " name=" + "\""  + name + "\"");
 
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write("</country>\n");
+                writer.write(indent() + "</country>\n");
             } else {
                 writer.write("/>\n");
             }
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ",e);
         }
+    }
+
+    @Override
+    public String indent() {
+        return "  ";
     }
 }

@@ -11,19 +11,20 @@ import java.util.function.Function;
 public class Player implements XmiParsable {
     private static final Logger LOGGER = LoggerFactory.getLogger(Player.class);
     public static final String RESOURCE_CSV_FILE = "players.csv";
-    public static final String CSV_DELIMITER = ";";
+    public static final String CSV_DELIMITER = ",";
 
-    @CsvBindByPosition(position = 0)
+    // We'll use the API ID (not sequence)
+    @CsvBindByPosition(position = 1)
     private int id;
 
     @CsvBindByPosition(position = 2)
     private String name;
 
     @CsvBindByPosition(position = 5)
-    private int height;
+    private double height;
 
     @CsvBindByPosition(position = 6)
-    private int weight;
+    private double weight;
 
     public Player() {
         // Empty default constructor
@@ -45,41 +46,46 @@ public class Player implements XmiParsable {
         this.name = name;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write("<player \n"
-                    + "name=" + "\""  + name + "\"\n"
-                    + "weight=" + "\""  + weight + "\"\n"
-                    + "height=" + "\""  + height + "\"\n"
+            writer.write(indent() + "<player \n"
+                    + indent() + " id=" + "\""  + id + "\"\n"
+                    + indent() + " name=" + "\""  + name + "\"\n"
+                    + indent() + " weight=" + "\""  + weight + "\"\n"
+                    + indent() + " height=" + "\""  + height + "\""
             );
 
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write("</player>\n");
+                writer.write(indent() + "</player>\n");
             } else {
                 writer.write("/>\n");
-
             }
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ",e);
         }
+    }
+
+    @Override
+    public String indent() {
+        return "              ";
     }
 }

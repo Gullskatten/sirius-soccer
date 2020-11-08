@@ -26,14 +26,14 @@ public class Season implements XmiParsable {
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write("<season \n"
-                    + "seasonName=" + "\""  + seasonName + "\"\n"
+            writer.write(indent() + "<season \n"
+                    + indent() + " seasonName=" + "\""  + seasonName + "\""
             );
 
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write("</season>\n");
+                writer.write(indent() + "</season>\n");
             } else {
                 writer.write("/>\n");
 
@@ -41,5 +41,10 @@ public class Season implements XmiParsable {
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ",e);
         }
+    }
+
+    @Override
+    public String indent() {
+        return "        ";
     }
 }

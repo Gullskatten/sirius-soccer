@@ -1,9 +1,4 @@
 import com.google.common.collect.Lists;
-import com.opencsv.CSVWriter;
-import com.opencsv.bean.StatefulBeanToCsv;
-import com.opencsv.bean.StatefulBeanToCsvBuilder;
-import com.opencsv.exceptions.CsvDataTypeMismatchException;
-import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import no.ntnu.soccer.parser.constants.ListOfSeasons;
 import no.ntnu.soccer.parser.csv.CsvUtil;
 import no.ntnu.soccer.parser.model.*;
@@ -21,7 +16,6 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class PerformParsing {
@@ -30,9 +24,9 @@ public class PerformParsing {
 
 
     /**
-     * Parses an SQLite database of soccer data to XMI-instances used for EMF
+     * Parses a series of soccer data (CSV) to XMI-instances used for EMF
      *
-     * @param args Optional arguments to runnable
+     * @param args (Unused) Optional arguments to runnable
      */
     public static void main(String[] args) {
         Sport sport = new Sport("Football");
@@ -54,7 +48,7 @@ public class PerformParsing {
 
         ExecutorService threadPoolExecutor = Executors.newWorkStealingPool();
         LOGGER.info("Initialized thread pool, prep parallel execution of match -> match output transformation");
-        List<Callable<List<MatchOutput>>> workLoad = Lists.partition(matches, 5000).stream().map(listOfMatches ->
+        List<Callable<List<MatchOutput>>> workLoad = Lists.partition(matches, 1000).stream().map(listOfMatches ->
                 (Callable<List<MatchOutput>>) () -> listOfMatches.stream().map(match -> new MatchOutput(match, players, teams)).collect(Collectors.toList())
         ).collect(Collectors.toList());
 
@@ -66,14 +60,13 @@ public class PerformParsing {
                 try {
                     matchOutputs.addAll(listFuture.get());
 
-                    if (matchOutputs.size() % 10000 == 0 && matchOutputs.size() > 0) {
-                        LOGGER.info("Processed {} matches", workLoad.size());
+                    if (matchOutputs.size() % 5000 == 0 && matchOutputs.size() > 0) {
+                        LOGGER.info("Processed 5000 matches");
                     }
                 } catch (InterruptedException | ExecutionException e) {
                     LOGGER.error("Error during invocation: {}", e.getMessage());
                 }
             });
-
         } catch (InterruptedException e) {
             LOGGER.error("Thread was interrupted: {}", e.getMessage());
         }
@@ -81,15 +74,16 @@ public class PerformParsing {
         LOGGER.info("\n");
         LOGGER.info("GENERATING hierarchy for {} matches", matchOutputs.size());
 
-        // Sport
-        // - Country
-        // - - League
-        // - - - Season
-        // - - - - Matches
-        // - - - - - Teams
+        // Sport -> has participating countries as child
+        // - Country -> has leagues as child
+        // - - League -> has seasons as child
+        // - - - Season -> has matches as child
+        // - - - - Matches -> has team as child
+        // - - - - - Teams -> has players as child
         // - - - - - - Players
 
         File file = new File(System.currentTimeMillis() + "_" + "football.xmi");
+        LOGGER.info("Writing XMI file to {}", file.getAbsolutePath());
         try (FileWriter writer = new FileWriter(file);
              BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
             sport.toXmi(
@@ -99,13 +93,14 @@ public class PerformParsing {
                                 country -> country.toXmi(
                                         bufferedWriter,
                                         unused2 -> {
-                                            leagues.forEach(
+                                            leagues.stream().filter(league -> league.getCountryId() == country.getId()).forEach(
                                                     league -> league.toXmi(
                                                             bufferedWriter,
                                                             unused1 -> {
                                                                 ListOfSeasons.ALL_SEASONS.forEach(season -> season.toXmi(
                                                                         bufferedWriter,
                                                                         unused3 -> {
+
                                                                             matchOutputs.stream().filter(
                                                                                     match ->
                                                                                             country.getId() == match.getCountryId() &&

@@ -50,4 +50,9 @@ public class Sport implements XmiParsable {
             LOGGER.info("Exception occurred: ",e);
         }
     }
+
+    @Override
+    public String indent() {
+        return "";
+    }
 }

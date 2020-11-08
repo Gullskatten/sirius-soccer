@@ -1,6 +1,7 @@
 package no.ntnu.soccer.parser.csv;
 
-import com.opencsv.bean.*;
+import com.opencsv.bean.CsvToBean;
+import com.opencsv.bean.CsvToBeanBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

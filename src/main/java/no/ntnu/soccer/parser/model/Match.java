@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 public class Match {
     public static final String RESOURCE_CSV_FILE = "matches.csv";
-    public static final String CSV_DELIMITER = ";";
+    public static final String CSV_DELIMITER = ",";
 
     @CsvBindByPosition(position = 0)
     private int id;

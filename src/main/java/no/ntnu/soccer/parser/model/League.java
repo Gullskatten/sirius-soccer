@@ -1,7 +1,6 @@
 package no.ntnu.soccer.parser.model;
 
 import com.opencsv.bean.CsvBindByPosition;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +12,7 @@ public class League implements XmiParsable {
     private static final Logger LOGGER = LoggerFactory.getLogger(League.class);
 
     public static final String RESOURCE_CSV_FILE = "leagues.csv";
-    public static final String CSV_DELIMITER = ";";
+    public static final String CSV_DELIMITER = ",";
 
     @CsvBindByPosition(position = 0)
     private int id;
@@ -53,19 +52,24 @@ public class League implements XmiParsable {
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write("<league " + "\n"
-                    + "id=" + "\""  + id + "\""+ "\n"
-                    + "name=" + "\""  + name + "\""+ "\n");
+            writer.write(indent() + "<league \n"
+                    + indent() + " id=" + "\""  + id + "\""+ "\n"
+                    + indent() + " name=" + "\""  + name + "\"");
 
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write("</league>\n");
+                writer.write(indent() + "</league>\n");
             } else {
                 writer.write("/>\n");
             }
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ",e);
         }
+    }
+
+    @Override
+    public String indent() {
+        return "    ";
     }
 }

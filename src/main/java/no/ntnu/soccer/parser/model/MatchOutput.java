@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -25,7 +26,7 @@ public class MatchOutput extends Match implements XmiParsable {
     public MatchOutput(Match match,
                        final List<Player> allPlayers,
                        final List<Team> allTeams) {
-
+        setId(match.getId());
         setDate(match.getDate());
         setSeason(match.getSeason());
 
@@ -67,43 +68,42 @@ public class MatchOutput extends Match implements XmiParsable {
         awayPlayers = findPlayersByPlayerIds(homePlayerIds, allPlayers);
     }
 
-    private Country findCountryById(int countryId, List<Country> allCountries) {
-        return allCountries.stream().filter(x -> x.getId() == countryId).findFirst().orElse(null);
-    }
-
-    private League findLeagueById(int leagueId, List<League> allLeagues) {
-        return allLeagues.stream().filter(x -> x.getId() == leagueId).findFirst().orElse(null);
-    }
-
     private Team findTeamById(int awayTeamApiId, List<Team> allTeams) {
         return allTeams.stream().filter(x -> x.getTeamApiId() == awayTeamApiId).findFirst().orElse(null);
     }
 
     List<Player> findPlayersByPlayerIds(List<Integer> playerIds, List<Player> allPlayers) {
         return playerIds.stream()
-                .filter(playerId -> playerId != 0)
                 .map(playerId -> {
                     Optional<Player> first = allPlayers.stream()
                             .filter(player -> player.getId() == playerId)
                             .findFirst();
                     return first.orElse(null);
-                })
+                }).filter(Objects::nonNull)
                 .collect(Collectors.toList());
     }
 
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> unusedFunction) {
+        if(homeTeam == null || awayTeam == null) {
+            return;
+        }
+
         try {
-            writer.write("<match \n"
-                    + "date=" + "\""  + getDate().format(fmt) + "\"\n"
-                    + "id=" + "\""  + getId() + "\"\n"
-                    + ">\n");
+            writer.write(indent() + "<match \n"
+                    + indent() + " date=" + "\""  + getDate().format(fmt) + "\"\n"
+                    + indent() + " id=" + "\""  + getId() + "\">\n");
             appendTeam(new TeamOutput(awayTeam, "awayTeam"), awayPlayers, writer);
             appendTeam(new TeamOutput(homeTeam, "homeTeam"), homePlayers, writer);
-            writer.write("</match>\n");
+            writer.write(indent() + "</match>\n");
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ", e);
         }
+    }
+
+    @Override
+    public String indent() {
+        return "          ";
     }
 
     private void appendTeam(TeamOutput team, List<Player> players, BufferedWriter writer) {
@@ -114,4 +114,6 @@ public class MatchOutput extends Match implements XmiParsable {
             return null;
         });
     }
+
+
 }
