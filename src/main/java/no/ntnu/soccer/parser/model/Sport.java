@@ -34,9 +34,9 @@ public class Sport implements XmiParsable {
                     "    xmi:version=\"2.0\"\n" +
                     "    xmlns:xmi=\"http://www.omg.org/XMI\"\n" +
                     "    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-                    "    xmlns:no.ntnu=\"platform:/plugin/no.ntnu.sport.model/model/Sport.ecore\"\n" +
-                    "    xsi:schemaLocation=\"platform:/plugin/no.espegu.sport.model/model/Sport.ecore Sport.ecore\"\n" +
-                    "    name=\"" + getName() + " \"");
+                    "    xmlns:no.ntnu=\"platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore\"\n" +
+                    "    xsi:schemaLocation=\"platform:/plugin/no.ntnu.soccer.model/model/Sport.ecore soccer.ecore\"\n" +
+                    "    name=\"" + getName() + "\"");
 
             if(childrenFunction != null) {
                 writer.write(">\n");
