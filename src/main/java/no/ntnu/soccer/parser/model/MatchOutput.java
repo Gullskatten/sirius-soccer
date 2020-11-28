@@ -5,11 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -37,65 +33,73 @@ public class MatchOutput extends Match implements XmiParsable {
         setLeagueId(match.getLeagueId());
         setCountryId(match.getCountryId());
 
-        List<Integer> awayPlayerIds = Arrays.asList(
-                match.getAwayPlayer1(),
-                match.getAwayPlayer2(),
-                match.getAwayPlayer3(),
-                match.getAwayPlayer4(),
-                match.getAwayPlayer5(),
-                match.getAwayPlayer6(),
-                match.getAwayPlayer7(),
-                match.getAwayPlayer8(),
-                match.getAwayPlayer9(),
-                match.getAwayPlayer10(),
-                match.getAwayPlayer11()
-        );
+        Map<Integer, Position> awayPlayersWithPositions = new HashMap<>();
 
-        List<Integer> homePlayerIds = Arrays.asList(
-                match.getHomePlayer1(),
-                match.getHomePlayer2(),
-                match.getHomePlayer3(),
-                match.getHomePlayer4(),
-                match.getHomePlayer5(),
-                match.getHomePlayer6(),
-                match.getHomePlayer7(),
-                match.getHomePlayer8(),
-                match.getHomePlayer9(),
-                match.getHomePlayer10(),
-                match.getHomePlayer11()
-        );
+        awayPlayersWithPositions.put(match.getHomePlayer1(), new Position(match.getHomePlayerX1(), match.getHomePlayerY1()));
+        awayPlayersWithPositions.put(match.getHomePlayer2(), new Position(match.getHomePlayerX2(), match.getHomePlayerY2()));
+        awayPlayersWithPositions.put(match.getHomePlayer3(), new Position(match.getHomePlayerX3(), match.getHomePlayerY3()));
+        awayPlayersWithPositions.put(match.getHomePlayer4(), new Position(match.getHomePlayerX1(), match.getHomePlayerY1()));
+        awayPlayersWithPositions.put(match.getHomePlayer5(), new Position(match.getHomePlayerX5(), match.getHomePlayerY5()));
+        awayPlayersWithPositions.put(match.getHomePlayer6(), new Position(match.getHomePlayerX6(), match.getHomePlayerY6()));
+        awayPlayersWithPositions.put(match.getHomePlayer7(), new Position(match.getHomePlayerX7(), match.getHomePlayerY7()));
+        awayPlayersWithPositions.put(match.getHomePlayer8(), new Position(match.getHomePlayerX8(), match.getHomePlayerY8()));
+        awayPlayersWithPositions.put(match.getHomePlayer9(), new Position(match.getHomePlayerX9(), match.getHomePlayerY9()));
+        awayPlayersWithPositions.put(match.getHomePlayer10(), new Position(match.getHomePlayerX10(), match.getHomePlayerY10()));
+        awayPlayersWithPositions.put(match.getHomePlayer11(), new Position(match.getHomePlayerX11(), match.getHomePlayerY11()));
 
-        homePlayers = findPlayersByPlayerIds(awayPlayerIds, allPlayers);
-        awayPlayers = findPlayersByPlayerIds(homePlayerIds, allPlayers);
+
+        Map<Integer, Position> homePlayersWithPositions = new HashMap<>();
+
+        homePlayersWithPositions.put(match.getHomePlayer1(), new Position(match.getHomePlayerX1(), match.getHomePlayerY1()));
+        homePlayersWithPositions.put(match.getHomePlayer2(), new Position(match.getHomePlayerX2(), match.getHomePlayerY2()));
+        homePlayersWithPositions.put(match.getHomePlayer3(), new Position(match.getHomePlayerX3(), match.getHomePlayerY3()));
+        homePlayersWithPositions.put(match.getHomePlayer4(), new Position(match.getHomePlayerX1(), match.getHomePlayerY1()));
+        homePlayersWithPositions.put(match.getHomePlayer5(), new Position(match.getHomePlayerX5(), match.getHomePlayerY5()));
+        homePlayersWithPositions.put(match.getHomePlayer6(), new Position(match.getHomePlayerX6(), match.getHomePlayerY6()));
+        homePlayersWithPositions.put(match.getHomePlayer7(), new Position(match.getHomePlayerX7(), match.getHomePlayerY7()));
+        homePlayersWithPositions.put(match.getHomePlayer8(), new Position(match.getHomePlayerX8(), match.getHomePlayerY8()));
+        homePlayersWithPositions.put(match.getHomePlayer9(), new Position(match.getHomePlayerX9(), match.getHomePlayerY9()));
+        homePlayersWithPositions.put(match.getHomePlayer10(), new Position(match.getHomePlayerX10(), match.getHomePlayerY10()));
+        homePlayersWithPositions.put(match.getHomePlayer11(), new Position(match.getHomePlayerX11(), match.getHomePlayerY11()));
+
+
+        homePlayers = findPlayersByPlayerIds(awayPlayersWithPositions, allPlayers);
+        awayPlayers = findPlayersByPlayerIds(homePlayersWithPositions, allPlayers);
     }
 
     private Team findTeamById(int awayTeamApiId, List<Team> allTeams) {
         return allTeams.stream().filter(x -> x.getTeamApiId() == awayTeamApiId).findFirst().orElse(null);
     }
 
-    List<Player> findPlayersByPlayerIds(List<Integer> playerIds, List<Player> allPlayers) {
-        return playerIds.stream()
+    private List<Player> findPlayersByPlayerIds(Map<Integer, Position> playerIdsWithPositions, List<Player> allPlayers) {
+        return playerIdsWithPositions.keySet()
+                .stream()
                 .map(playerId -> {
+
                     Optional<Player> first = allPlayers.stream()
                             .filter(player -> player.getId() == playerId)
                             .findFirst();
                     return first.orElse(null);
                 }).filter(Objects::nonNull)
+                .peek(player -> {
+                    player.setX(playerIdsWithPositions.get(player.getId()).getX());
+                    player.setY(playerIdsWithPositions.get(player.getId()).getY());
+                })
                 .collect(Collectors.toList());
     }
 
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> unusedFunction) {
-        if(homeTeam == null || awayTeam == null) {
+        if (homeTeam == null || awayTeam == null) {
             return;
         }
 
         try {
             writer.write(indent() + "<match \n"
-                    + indent() + " id=" + "\""  + getId() + "\">\n"
-                    + indent() + " awayTeamGoal=" + "\""  + getAwayTeamGoal() + "\">\n"
-                    + indent() + " homeTeamGoal=" + "\""  + getHomeTeamGoal() + "\">\n"
-                    + indent() + " winner=" + "\""  + determineMatchWinner() + "\">\n");
+                    + indent() + " id=" + "\"" + getId() + "\">\n"
+                    + indent() + " awayTeamGoal=" + "\"" + getAwayTeamGoal() + "\">\n"
+                    + indent() + " homeTeamGoal=" + "\"" + getHomeTeamGoal() + "\">\n"
+                    + indent() + " winner=" + "\"" + determineMatchWinner() + "\">\n");
             appendTeam(new TeamOutput(awayTeam, "awayTeam"), awayPlayers, writer);
             appendTeam(new TeamOutput(homeTeam, "homeTeam"), homePlayers, writer);
             writer.write(indent() + "</match>\n");

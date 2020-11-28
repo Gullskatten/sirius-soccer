@@ -25,6 +25,8 @@ public class Player implements XmiParsable {
 
     @CsvBindByPosition(position = 6)
     private double weight;
+    private int x;
+    private int y;
 
     public Player() {
         // Empty default constructor
@@ -68,6 +70,8 @@ public class Player implements XmiParsable {
             writer.write(indent() + "<player \n"
                     + indent() + " id=" + "\""  + id + "\"\n"
                     + indent() + " name=" + "\""  + name + "\"\n"
+                    + indent() + " posX=" + "\""  + x + "\"\n"
+                    + indent() + " posY=" + "\""  + y + "\"\n"
                     + indent() + " weight=" + "\""  + weight + "\"\n"
                     + indent() + " height=" + "\""  + height + "\""
             );
@@ -87,5 +91,21 @@ public class Player implements XmiParsable {
     @Override
     public String indent() {
         return "                ";
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int getY() {
+        return y;
     }
 }

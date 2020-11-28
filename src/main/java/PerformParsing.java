@@ -14,6 +14,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -64,7 +65,17 @@ public class PerformParsing {
         ExecutorService threadPoolExecutor = Executors.newWorkStealingPool();
         LOGGER.info("Initialized thread pool, prep parallel execution of match -> match output transformation");
         List<Callable<List<MatchOutput>>> workLoad = Lists.partition(matches, 1000).stream().map(listOfMatches ->
-                (Callable<List<MatchOutput>>) () -> listOfMatches.stream().map(match -> new MatchOutput(match, players, teams)).collect(Collectors.toList())
+                (Callable<List<MatchOutput>>) () -> listOfMatches.stream().map(match -> {
+                    if(match.getAwayPlayerX1() + match.getAwayPlayerY1() +
+                    match.getAwayPlayerX2() + match.getAwayPlayerY2() +
+                    match.getAwayPlayerX3() + match.getAwayPlayerY3() +
+                    match.getAwayPlayerX4() + match.getAwayPlayerY4() == 0
+                    ) {
+                        return null;
+                    }
+
+                    return new MatchOutput(match, players, teams);
+                }).filter(Objects::nonNull).collect(Collectors.toList())
         ).collect(Collectors.toList());
 
         List<MatchOutput> matchOutputs = new ArrayList<>();
