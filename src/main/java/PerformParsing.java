@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -21,6 +23,7 @@ import java.util.stream.Collectors;
 public class PerformParsing {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PerformParsing.class);
+    public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd ");
 
 
     /**
@@ -45,6 +48,18 @@ public class PerformParsing {
 
         final CsvUtil<Country> countryCsvUtil = new CsvUtil<>();
         final List<Country> countries = countryCsvUtil.readCsv(Country.RESOURCE_CSV_FILE, Country.class, Country.CSV_DELIMITER, Charset.defaultCharset());
+
+        final List<MatchDay> matchDays = matches.stream()
+                // Map all dates with seasons
+                .map(match -> match.getDate().format(DATE_TIME_FORMATTER) + match.getSeason() + " " + match.getLeagueId())
+                .distinct().map(distinctDayInSeason -> {
+                    String dayString = distinctDayInSeason.split(" ")[0];
+                    String season = distinctDayInSeason.split(" ")[1];
+                    String league = distinctDayInSeason.split(" ")[2];
+                    LocalDate day =  LocalDate.parse(dayString);
+
+                    return new MatchDay(season, day, league);
+                }).collect(Collectors.toList());
 
         ExecutorService threadPoolExecutor = Executors.newWorkStealingPool();
         LOGGER.info("Initialized thread pool, prep parallel execution of match -> match output transformation");
@@ -100,20 +115,28 @@ public class PerformParsing {
                                                                 ListOfSeasons.ALL_SEASONS.forEach(season -> season.toXmi(
                                                                         bufferedWriter,
                                                                         unused3 -> {
+                                                                            matchDays.stream().filter(
+                                                                                    matchDay -> matchDay.getSeason().equals(season.getSeasonName())
+                                                                                                && matchDay.getLeague().equals(String.valueOf(league.getId())
+                                                                                    )
+                                                                            ).forEach(matchDay -> matchDay.toXmi(bufferedWriter, unused4 -> {
+                                                                                matchOutputs.stream().filter(
+                                                                                        match ->
+                                                                                                country.getId() == match.getCountryId() &&
+                                                                                                        league.getId() == (match.getLeagueId()) &&
+                                                                                                        matchDay.getMatchDate().isEqual(match.getDate())
+                                                                                ).forEach(
+                                                                                        matchOutput -> {
+                                                                                            matchOutput.toXmi(
+                                                                                                    bufferedWriter,
+                                                                                                    null
+                                                                                            );
+                                                                                        }
+                                                                                );
 
-                                                                            matchOutputs.stream().filter(
-                                                                                    match ->
-                                                                                            country.getId() == match.getCountryId() &&
-                                                                                                    season.getSeasonName().equals(match.getSeason()) &&
-                                                                                                    league.getId() == (match.getLeagueId())
-                                                                            ).forEach(
-                                                                                    matchOutput -> {
-                                                                                        matchOutput.toXmi(
-                                                                                                bufferedWriter,
-                                                                                                null
-                                                                                        );
-                                                                                    }
-                                                                            );
+                                                                                return null;
+
+                                                                            }));
 
                                                                             return null;
                                                                         }

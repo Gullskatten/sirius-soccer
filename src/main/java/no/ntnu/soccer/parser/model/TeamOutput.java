@@ -22,9 +22,8 @@ public class TeamOutput extends Team implements XmiParsable {
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write(indent() + "<team \n"
+            writer.write(indent() + "<"+ teamType + "\n"
                     + indent() + " id=" + "\""  + getId() + "\"\n"
-                    + indent() + " teamType=" + "\""  + teamType + "\"\n"
                     + indent() + " shortName=" + "\""  + getShortName() + "\"\n"
                     + indent() + " teamName=" + "\""  + getTeamName() + "\"");
 
@@ -42,7 +41,7 @@ public class TeamOutput extends Team implements XmiParsable {
 
     @Override
     public String indent() {
-        return "            ";
+        return "              ";
     }
 
 }

@@ -86,6 +86,6 @@ public class Player implements XmiParsable {
 
     @Override
     public String indent() {
-        return "              ";
+        return "                ";
     }
 }

@@ -15,7 +15,6 @@ import java.util.stream.Collectors;
 
 public class MatchOutput extends Match implements XmiParsable {
     private static final Logger LOGGER = LoggerFactory.getLogger(MatchOutput.class);
-    private static final DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     private final Team awayTeam;
     private final Team homeTeam;
@@ -29,6 +28,8 @@ public class MatchOutput extends Match implements XmiParsable {
         setId(match.getId());
         setDate(match.getDate());
         setSeason(match.getSeason());
+        setAwayTeamGoal(match.getAwayTeamGoal());
+        setHomeTeamGoal(match.getHomeTeamGoal());
 
         awayTeam = findTeamById(match.getAwayTeamApiId(), allTeams);
         homeTeam = findTeamById(match.getHomeTeamApiId(), allTeams);
@@ -91,8 +92,10 @@ public class MatchOutput extends Match implements XmiParsable {
 
         try {
             writer.write(indent() + "<match \n"
-                    + indent() + " date=" + "\""  + getDate().format(fmt) + "\"\n"
-                    + indent() + " id=" + "\""  + getId() + "\">\n");
+                    + indent() + " id=" + "\""  + getId() + "\">\n"
+                    + indent() + " awayTeamGoal=" + "\""  + getAwayTeamGoal() + "\">\n"
+                    + indent() + " homeTeamGoal=" + "\""  + getHomeTeamGoal() + "\">\n"
+                    + indent() + " winner=" + "\""  + determineMatchWinner() + "\">\n");
             appendTeam(new TeamOutput(awayTeam, "awayTeam"), awayPlayers, writer);
             appendTeam(new TeamOutput(homeTeam, "homeTeam"), homePlayers, writer);
             writer.write(indent() + "</match>\n");
@@ -101,9 +104,17 @@ public class MatchOutput extends Match implements XmiParsable {
         }
     }
 
+    private String determineMatchWinner() {
+        if (getHomeTeamGoal() == getAwayTeamGoal()) {
+            return "DRAW";
+        }
+
+        return getHomeTeamGoal() > getAwayTeamGoal() ? "HOME_TEAM" : "AWAY_TEAM";
+    }
+
     @Override
     public String indent() {
-        return "          ";
+        return "            ";
     }
 
     private void appendTeam(TeamOutput team, List<Player> players, BufferedWriter writer) {
