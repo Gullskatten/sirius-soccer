@@ -30,7 +30,7 @@ public class TeamOutput extends Team implements XmiParsable {
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write(indent() + "</team>\n");
+                writer.write(indent() + "</"+ teamType + ">\n");
             } else {
                 writer.write("/>\n");
             }
