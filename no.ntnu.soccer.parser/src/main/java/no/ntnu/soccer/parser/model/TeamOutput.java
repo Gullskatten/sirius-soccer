@@ -22,7 +22,10 @@ public class TeamOutput extends Team implements XmiParsable {
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write(indent() + "<"+ teamType + "\n"
+            writer.write(indent() + "<opponent\n"
+                    + indent() + "opponentType=" + "\""  + teamType + "\">\n");
+
+            writer.write(indent() + "<team\n"
                     + indent() + " id=" + "\""  + getId() + "\"\n"
                     + indent() + " shortName=" + "\""  + getShortName() + "\"\n"
                     + indent() + " teamName=" + "\""  + getTeamName() + "\"");
@@ -30,9 +33,12 @@ public class TeamOutput extends Team implements XmiParsable {
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write(indent() + "</"+ teamType + ">\n");
+                writer.write(indent() + "</team>\n");
+                writer.write(indent() + "</opponent>\n");
             } else {
                 writer.write("/>\n");
+                writer.write("</opponent>\n");
+
             }
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ",e);
