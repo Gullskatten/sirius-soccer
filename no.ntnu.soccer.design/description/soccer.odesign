@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="soccer" version="12.0.0.2017041100">
+  <ownedViewpoints name="soccer" modelFileExtension="ecore">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Soccer" initialisation="true" domainClass="soccer::Sport" enablePopupBars="true">
+      <metamodel href="../../no.ntnu.soccer.model/model/soccer.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Country" domainClass="soccer::Country">
+          <style xsi:type="style:DotDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="League" domainClass="soccer::League">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="MatchDay" domainClass="soccer::MatchDay">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:date" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Season" domainClass="soccer::Season">
+          <style xsi:type="style:DotDescription" labelSize="12" labelExpression="feature:seasonName" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Opponent" domainClass="soccer::Opponent">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelExpression="feature:opponentType" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Match" domainClass="soccer::Match">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="country" sourceMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='Country']" targetMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='League']" targetFinderExpression="feature:league">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="league" sourceMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='League']" targetMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='Season']" targetFinderExpression="feature:season">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="match" sourceMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='Match']" targetMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='Opponent']" targetFinderExpression="feature:opponent">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="opponent" sourceMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='Opponent']" targetMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@containerMappings[name='team']" targetFinderExpression="feature:team">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="season" sourceMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='Season']" targetMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='MatchDay']" targetFinderExpression="feature:matchDay">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="matchday" sourceMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='MatchDay']" targetMapping="//@ownedViewpoints[name='soccer']/@ownedRepresentations[name='Soccer']/@defaultLayer/@nodeMappings[name='Match']">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="team" domainClass="soccer::Team" childrenPresentation="HorizontalStack">
+          <subNodeMappings name="Player" semanticCandidatesExpression="feature:eAllContents" domainClass="soccer::Player">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" tooltipExpression="feature:name" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/no.ntnu.soccer.design/assets/winston-reid-updated-player-profile-stats-football-reid-png-500_500.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subContainerMappings semanticCandidatesExpression="feature:eAllContents"/>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+      <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="no.ntnu.soccer.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
