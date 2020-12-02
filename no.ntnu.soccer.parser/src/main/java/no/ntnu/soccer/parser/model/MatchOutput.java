@@ -68,6 +68,9 @@ public class MatchOutput extends Match implements XmiParsable {
 
         homePlayers = findPlayersByPlayerIds(awayPlayersWithPositions, allPlayers);
         awayPlayers = findPlayersByPlayerIds(homePlayersWithPositions, allPlayers);
+
+        homeTeam.setPlayers(homePlayers);
+        awayTeam.setPlayers(awayPlayers);
     }
 
     public Team findTeamById(int anyTeamId, List<Team> allTeams) {
@@ -111,8 +114,8 @@ public class MatchOutput extends Match implements XmiParsable {
                     + indent() + " awayTeamGoal=" + "\"" + getAwayTeamGoal() + "\"\n"
                     + indent() + " homeTeamGoal=" + "\"" + getHomeTeamGoal() + "\"\n"
                     + indent() + " winner=" + "\"" + determineMatchWinner() + "\">\n");
-            appendTeam(new TeamOutput(awayTeam, "awayTeam"), awayPlayers, writer);
-            appendTeam(new TeamOutput(homeTeam, "homeTeam"), homePlayers, writer);
+            appendOpponent(new Opponent(awayTeam, "awayTeam"), writer);
+            appendOpponent(new Opponent(homeTeam, "homeTeam"), writer);
             writer.write(indent() + "</match>\n");
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ", e);
@@ -132,13 +135,8 @@ public class MatchOutput extends Match implements XmiParsable {
         return "            ";
     }
 
-    private void appendTeam(TeamOutput team, List<Player> players, BufferedWriter writer) {
-        team.toXmi(writer, unused -> {
-            players.forEach(
-                    player -> player.toXmi(writer, null)
-            );
-            return null;
-        });
+    private void appendOpponent(Opponent team, BufferedWriter writer) {
+        team.toXmi(writer, null);
     }
 
 

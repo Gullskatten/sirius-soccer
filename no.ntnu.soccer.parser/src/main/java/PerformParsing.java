@@ -18,7 +18,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class PerformParsing {
 
@@ -121,6 +120,8 @@ public class PerformParsing {
                                 country -> country.toXmi(
                                         bufferedWriter,
                                         unused2 -> {
+                                            List<Team> teamsInLeague = new ArrayList<>();
+
                                             leagues.stream().filter(league -> league.getCountryId() == country.getId()).forEach(
                                                     league -> league.toXmi(
                                                             bufferedWriter,
@@ -153,7 +154,8 @@ public class PerformParsing {
                                                                                                     .filter(x -> x.getTeamApiId() == matchOutput.getAwayTeam().getTeamApiId()).findFirst();
 
                                                                                             createOrUpdatePlacement(allPlacementsInSeason, matchOutput, awayTeamPlacement, matchOutput.getAwayTeam());
-
+                                                                                            createTeamIfNotExists(matchOutput.getHomeTeam(), teamsInLeague);
+                                                                                            createTeamIfNotExists(matchOutput.getAwayTeam(), teamsInLeague);
                                                                                             matchOutput.toXmi(
                                                                                                     bufferedWriter,
                                                                                                     null
@@ -169,13 +171,18 @@ public class PerformParsing {
                                                                                     List<Placement> placementsSorted = allPlacementsInSeason.stream()
                                                                                             .sorted(Comparator.comparingInt(Placement::getSeasonPoints)).collect(Collectors.toList());
                                                                                     Collections.reverse(placementsSorted);
-
                                                                                     placementsSorted.forEach(placement -> placement.toXmi(bufferedWriter, null));
                                                                                 return null;
                                                                             });
                                                                             return null;
                                                                         }
                                                                 ));
+                                                                teamsInLeague.forEach(team -> team.toXmi(bufferedWriter, unused5 -> {
+                                                                    team.getPlayers().forEach(
+                                                                            player -> player.toXmi(bufferedWriter, null)
+                                                                    );
+                                                                    return null;
+                                                                }));
                                                                 return null;
                                                             })
                                             );
@@ -191,6 +198,12 @@ public class PerformParsing {
              */
         } catch (IOException e) {
             LOGGER.error("Failed to write output file: {}", e.getMessage());
+        }
+    }
+
+    private static void createTeamIfNotExists(Team aTeam, List<Team> teamsInLeague) {
+        if(teamsInLeague.stream().noneMatch(team -> team.getTeamApiId() == aTeam.getTeamApiId())) {
+            teamsInLeague.add(aTeam);
         }
     }
 
