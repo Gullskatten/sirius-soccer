@@ -67,7 +67,7 @@ public class Player implements XmiParsable {
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write(indent() + "<player \n"
+            writer.write(indent() + "<players\n"
                     + indent() + " id=" + "\""  + id + "\"\n"
                     + indent() + " name=" + "\""  + name + "\"\n"
                     + indent() + " posX=" + "\""  + x + "\"\n"
@@ -79,7 +79,7 @@ public class Player implements XmiParsable {
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write(indent() + "</player>\n");
+                writer.write(indent() + "</players>\n");
             } else {
                 writer.write("/>\n");
             }

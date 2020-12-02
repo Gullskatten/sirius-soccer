@@ -30,13 +30,13 @@ public class MatchDay implements XmiParsable {
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
 
         try {
-            writer.write(indent() + "<matchDay \n"
+            writer.write(indent() + "<matchDays\n"
                     + indent() + " date=" + "\""  + getMatchDate().format(fmt) + "\""
                    );
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write(indent() + "</matchDay>\n");
+                writer.write(indent() + "</matchDays>\n");
             } else {
                 writer.write("/>\n");
 

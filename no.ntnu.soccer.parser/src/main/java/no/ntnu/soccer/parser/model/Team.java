@@ -18,10 +18,10 @@ public class Team implements XmiParsable {
     private int id;
 
     @CsvBindByPosition(position = 1)
-    private int teamApiId;
+    private int apiId;
 
     @CsvBindByPosition(position = 3)
-    private String teamName;
+    private String name;
 
     @CsvBindByPosition(position = 4)
     private String shortName;
@@ -40,11 +40,11 @@ public class Team implements XmiParsable {
     }
 
     public String getTeamName() {
-        return teamName;
+        return name;
     }
 
-    public void setTeamName(String teamName) {
-        this.teamName = teamName;
+    public void setTeamName(String name) {
+        this.name = name;
     }
 
     public String getShortName() {
@@ -56,26 +56,26 @@ public class Team implements XmiParsable {
     }
 
     public int getTeamApiId() {
-        return teamApiId;
+        return apiId;
     }
 
-    public void setTeamApiId(int teamApiId) {
-        this.teamApiId = teamApiId;
+    public void setTeamApiId(int apiId) {
+        this.apiId = apiId;
     }
 
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write(indent() + "<team \n"
-                    + indent() + " name=" + "\""  + teamName + "\"\n"
+            writer.write(indent() + "<teams\n"
+                    + indent() + " name=" + "\""  + name + "\"\n"
                     + indent() + " shortName=" + "\""  + shortName + "\"\n"
-                    + indent() + " id=" + "\""  + teamApiId + "\""
+                    + indent() + " id=" + "\""  + apiId + "\""
             );
 
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write(indent() + "</team>\n");
+                writer.write(indent() + "</teams>\n");
             } else {
                 writer.write("/>\n");
 

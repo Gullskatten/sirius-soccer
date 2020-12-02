@@ -125,7 +125,7 @@ public class Placement implements XmiParsable {
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> unusedFunction) {
         try {
-            writer.write(indent() + "<placement \n"
+            writer.write(indent() + "<placements\n"
                     + indent() + " teamApiId=" + "\"" + getTeamApiId() + "\"\n"
                     + indent() + " name=" + "\"" + getName() + "\"\n"
                     + indent() + " awayTeamGoal=" + "\"" + getAwayGoals() + "\"\n"
@@ -135,7 +135,7 @@ public class Placement implements XmiParsable {
                     + indent() + " losses=" + "\"" + getLosses() + "\"\n"
                     + indent() + " draws=" + "\"" + getDraws() + "\"\n"
                     + indent() + " seasonPoints=" + "\"" + getSeasonPoints() + "\">\n");
-            writer.write(indent() + "</placement>\n");
+            writer.write(indent() + "</placements>\n");
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ", e);
         }

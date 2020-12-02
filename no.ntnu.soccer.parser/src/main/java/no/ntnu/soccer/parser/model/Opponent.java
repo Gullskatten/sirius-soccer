@@ -20,9 +20,9 @@ public class Opponent implements XmiParsable {
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write(indent() + "<opponent\n"
+            writer.write(indent() + "<opponents\n"
                     + indent() + "team=" + "\""  + getTeamApiId() + "\"\n"
-                    + indent() + "opponentType=" + "\""  + teamType + "\" />\n");
+                    + indent() + "opponentType=" + "\""  + teamType + "\"/>\n");
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ",e);
         }

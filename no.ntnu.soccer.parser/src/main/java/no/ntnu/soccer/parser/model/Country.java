@@ -42,14 +42,14 @@ public class Country implements XmiParsable {
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
-            writer.write(indent() + "<country \n"
+            writer.write(indent() + "<countries\n"
                     + indent() + " id=" + "\""  + id + "\""+ "\n"
                     + indent() + " name=" + "\""  + name + "\"");
 
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write(indent() + "</country>\n");
+                writer.write(indent() + "</countries>\n");
             } else {
                 writer.write("/>\n");
             }
