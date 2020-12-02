@@ -27,7 +27,7 @@ public class Season implements XmiParsable {
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
             writer.write(indent() + "<seasons\n"
-                    + indent() + " name=" + "\""  + name + "\""
+                    + indent() + "    name=" + "\""  + name + "\""
             );
 
             if(childrenFunction != null) {
@@ -45,6 +45,6 @@ public class Season implements XmiParsable {
 
     @Override
     public String indent() {
-        return "        ";
+        return "      ";
     }
 }

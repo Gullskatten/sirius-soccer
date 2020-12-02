@@ -68,12 +68,12 @@ public class Player implements XmiParsable {
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
             writer.write(indent() + "<players\n"
-                    + indent() + " id=" + "\""  + id + "\"\n"
-                    + indent() + " name=" + "\""  + name + "\"\n"
-                    + indent() + " posX=" + "\""  + x + "\"\n"
-                    + indent() + " posY=" + "\""  + y + "\"\n"
-                    + indent() + " weight=" + "\""  + weight + "\"\n"
-                    + indent() + " height=" + "\""  + height + "\""
+                    + indent() + "    id=" + "\""  + id + "\"\n"
+                    + indent() + "    name=" + "\""  + name + "\"\n"
+                    + indent() + "    posX=" + "\""  + x + "\"\n"
+                    + indent() + "    posY=" + "\""  + y + "\"\n"
+                    + indent() + "    weight=" + "\""  + weight + "\"\n"
+                    + indent() + "    height=" + "\""  + height + "\""
             );
 
             if(childrenFunction != null) {
@@ -90,7 +90,7 @@ public class Player implements XmiParsable {
 
     @Override
     public String indent() {
-        return "                ";
+        return "        ";
     }
 
     public void setX(int x) {

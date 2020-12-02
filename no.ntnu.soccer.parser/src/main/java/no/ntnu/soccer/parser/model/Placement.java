@@ -126,15 +126,15 @@ public class Placement implements XmiParsable {
     public void toXmi(BufferedWriter writer, Function<Void, Void> unusedFunction) {
         try {
             writer.write(indent() + "<placements\n"
-                    + indent() + " teamApiId=" + "\"" + getTeamApiId() + "\"\n"
-                    + indent() + " name=" + "\"" + getName() + "\"\n"
-                    + indent() + " awayTeamGoal=" + "\"" + getAwayGoals() + "\"\n"
-                    + indent() + " homeTeamGoal=" + "\"" + getHomeGoals() + "\"\n"
-                    + indent() + " goalDifference=" + "\"" + getGoalDifference() + "\"\n"
-                    + indent() + " wins=" + "\"" + getWins() + "\"\n"
-                    + indent() + " losses=" + "\"" + getLosses() + "\"\n"
-                    + indent() + " draws=" + "\"" + getDraws() + "\"\n"
-                    + indent() + " seasonPoints=" + "\"" + getSeasonPoints() + "\">\n");
+                    + indent() + "    teamApiId=" + "\"" + getTeamApiId() + "\"\n"
+                    + indent() + "    name=" + "\"" + getName() + "\"\n"
+                    + indent() + "    awayTeamGoal=" + "\"" + getAwayGoals() + "\"\n"
+                    + indent() + "    homeTeamGoal=" + "\"" + getHomeGoals() + "\"\n"
+                    + indent() + "    goalDifference=" + "\"" + getGoalDifference() + "\"\n"
+                    + indent() + "    wins=" + "\"" + getWins() + "\"\n"
+                    + indent() + "    losses=" + "\"" + getLosses() + "\"\n"
+                    + indent() + "    draws=" + "\"" + getDraws() + "\"\n"
+                    + indent() + "    seasonPoints=" + "\"" + getSeasonPoints() + "\">\n");
             writer.write(indent() + "</placements>\n");
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ", e);

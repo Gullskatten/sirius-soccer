@@ -110,10 +110,10 @@ public class MatchOutput extends Match implements XmiParsable {
 
         try {
             writer.write(indent() + "<matches\n"
-                    + indent() + " id=" + "\"" + getId() + "\"\n"
-                    + indent() + " awayTeamGoal=" + "\"" + getAwayTeamGoal() + "\"\n"
-                    + indent() + " homeTeamGoal=" + "\"" + getHomeTeamGoal() + "\"\n"
-                    + indent() + " winner=" + "\"" + determineMatchWinner() + "\">\n");
+                    + indent() + "    id=" + "\"" + getId() + "\"\n"
+                    + indent() + "    awayTeamGoal=" + "\"" + getAwayTeamGoal() + "\"\n"
+                    + indent() + "    homeTeamGoal=" + "\"" + getHomeTeamGoal() + "\"\n"
+                    + indent() + "    winner=" + "\"" + determineMatchWinner() + "\">\n");
             appendOpponent(new Opponent(awayTeam, "awayTeam"), writer);
             appendOpponent(new Opponent(homeTeam, "homeTeam"), writer);
             writer.write(indent() + "</matches>\n");
@@ -132,7 +132,7 @@ public class MatchOutput extends Match implements XmiParsable {
 
     @Override
     public String indent() {
-        return "            ";
+        return "          ";
     }
 
     private void appendOpponent(Opponent team, BufferedWriter writer) {

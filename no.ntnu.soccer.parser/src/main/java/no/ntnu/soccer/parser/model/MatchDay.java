@@ -31,7 +31,7 @@ public class MatchDay implements XmiParsable {
 
         try {
             writer.write(indent() + "<matchDays\n"
-                    + indent() + " date=" + "\""  + getMatchDate().format(fmt) + "\""
+                    + indent() + "    date=" + "\""  + getMatchDate().format(fmt) + "\""
                    );
             if(childrenFunction != null) {
                 writer.write(">\n");
@@ -47,7 +47,7 @@ public class MatchDay implements XmiParsable {
     }
     @Override
     public String indent() {
-        return "          ";
+        return "        ";
     }
 
     public LocalDate getMatchDate() {
