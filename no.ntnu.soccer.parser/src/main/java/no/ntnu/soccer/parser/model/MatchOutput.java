@@ -26,6 +26,9 @@ public class MatchOutput extends Match implements XmiParsable {
         setSeason(match.getSeason());
         setAwayTeamGoal(match.getAwayTeamGoal());
         setHomeTeamGoal(match.getHomeTeamGoal());
+        setHomeTeamApiId(match.getHomeTeamApiId());
+        setAwayTeamApiId(match.getAwayTeamApiId());
+        setHomeTeamGoal(match.getHomeTeamGoal());
 
         awayTeam = findTeamById(match.getAwayTeamApiId(), allTeams);
         homeTeam = findTeamById(match.getHomeTeamApiId(), allTeams);
@@ -67,8 +70,8 @@ public class MatchOutput extends Match implements XmiParsable {
         awayPlayers = findPlayersByPlayerIds(homePlayersWithPositions, allPlayers);
     }
 
-    private Team findTeamById(int awayTeamApiId, List<Team> allTeams) {
-        return allTeams.stream().filter(x -> x.getTeamApiId() == awayTeamApiId).findFirst().orElse(null);
+    public Team findTeamById(int anyTeamId, List<Team> allTeams) {
+        return allTeams.stream().filter(x -> x.getTeamApiId() == anyTeamId).findFirst().orElse(null);
     }
 
     private List<Player> findPlayersByPlayerIds(Map<Integer, Position> playerIdsWithPositions, List<Player> allPlayers) {
@@ -86,6 +89,14 @@ public class MatchOutput extends Match implements XmiParsable {
                     player.setY(playerIdsWithPositions.get(player.getId()).getY());
                 })
                 .collect(Collectors.toList());
+    }
+
+    public Team getAwayTeam() {
+        return awayTeam;
+    }
+
+    public Team getHomeTeam() {
+        return homeTeam;
     }
 
     @Override

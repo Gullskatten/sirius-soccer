@@ -12,14 +12,13 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class PerformParsing {
 
@@ -53,6 +52,7 @@ public class PerformParsing {
         final List<MatchDay> matchDays = matches.stream()
                 // Map all dates with seasons
                 .map(match -> match.getDate().format(DATE_TIME_FORMATTER) + match.getSeason() + " " + match.getLeagueId())
+                // For each distinct day - create a MatchDay object
                 .distinct().map(distinctDayInSeason -> {
                     String dayString = distinctDayInSeason.split(" ")[0];
                     String season = distinctDayInSeason.split(" ")[1];
@@ -66,6 +66,8 @@ public class PerformParsing {
         LOGGER.info("Initialized thread pool, prep parallel execution of match -> match output transformation");
         List<Callable<List<MatchOutput>>> workLoad = Lists.partition(matches, 1000).stream().map(listOfMatches ->
                 (Callable<List<MatchOutput>>) () -> listOfMatches.stream().map(match -> {
+
+                    // Do not include matches that don't have player coordinates!
                     if(match.getAwayPlayerX1() + match.getAwayPlayerY1() +
                     match.getAwayPlayerX2() + match.getAwayPlayerY2() +
                     match.getAwayPlayerX3() + match.getAwayPlayerY3() +
@@ -126,6 +128,9 @@ public class PerformParsing {
                                                                 ListOfSeasons.ALL_SEASONS.forEach(season -> season.toXmi(
                                                                         bufferedWriter,
                                                                         unused3 -> {
+
+                                                                            List<Placement> allPlacementsInSeason = new ArrayList<>();
+
                                                                             matchDays.stream().filter(
                                                                                     matchDay -> matchDay.getSeason().equals(season.getSeasonName())
                                                                                                 && matchDay.getLeague().equals(String.valueOf(league.getId())
@@ -138,6 +143,17 @@ public class PerformParsing {
                                                                                                         matchDay.getMatchDate().isEqual(match.getDate())
                                                                                 ).forEach(
                                                                                         matchOutput -> {
+
+                                                                                           Optional<Placement> homeTeamPlacement = allPlacementsInSeason.stream()
+                                                                                                    .filter(x -> x.getTeamApiId() == matchOutput.getHomeTeam().getTeamApiId()).findFirst();
+
+                                                                                            createOrUpdatePlacement(allPlacementsInSeason, matchOutput, homeTeamPlacement, matchOutput.getHomeTeam());
+
+                                                                                            Optional<Placement> awayTeamPlacement = allPlacementsInSeason.stream()
+                                                                                                    .filter(x -> x.getTeamApiId() == matchOutput.getAwayTeam().getTeamApiId()).findFirst();
+
+                                                                                            createOrUpdatePlacement(allPlacementsInSeason, matchOutput, awayTeamPlacement, matchOutput.getAwayTeam());
+
                                                                                             matchOutput.toXmi(
                                                                                                     bufferedWriter,
                                                                                                     null
@@ -148,7 +164,15 @@ public class PerformParsing {
                                                                                 return null;
 
                                                                             }));
+                                                                            new Standing().toXmi(bufferedWriter,
+                                                                                unused5 -> {
+                                                                                    List<Placement> placementsSorted = allPlacementsInSeason.stream()
+                                                                                            .sorted(Comparator.comparingInt(Placement::getSeasonPoints)).collect(Collectors.toList());
+                                                                                    Collections.reverse(placementsSorted);
 
+                                                                                    placementsSorted.forEach(placement -> placement.toXmi(bufferedWriter, null));
+                                                                                return null;
+                                                                            });
                                                                             return null;
                                                                         }
                                                                 ));
@@ -167,6 +191,16 @@ public class PerformParsing {
              */
         } catch (IOException e) {
             LOGGER.error("Failed to write output file: {}", e.getMessage());
+        }
+    }
+
+    private static void createOrUpdatePlacement(List<Placement> allPlacementsInSeason, MatchOutput matchOutput, Optional<Placement> awayTeamPlacement, Team awayTeam) {
+        if (awayTeamPlacement.isPresent()) {
+            awayTeamPlacement.get().updatePlacementInfo(matchOutput);
+        } else {
+            Placement placement = new Placement(awayTeam);
+            placement.updatePlacementInfo(matchOutput);
+            allPlacementsInSeason.add(placement);
         }
     }
 }
