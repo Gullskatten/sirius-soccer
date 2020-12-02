@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link soccer.Season#getSeasonName <em>Season Name</em>}</li>
+ *   <li>{@link soccer.Season#getName <em>Name</em>}</li>
  *   <li>{@link soccer.Season#getLeague <em>League</em>}</li>
- *   <li>{@link soccer.Season#getMatchDay <em>Match Day</em>}</li>
+ *   <li>{@link soccer.Season#getMatchDays <em>Match Days</em>}</li>
  *   <li>{@link soccer.Season#getStanding <em>Standing</em>}</li>
  * </ul>
  *
@@ -26,38 +26,38 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Season extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Season Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Season Name</em>' attribute.
-	 * @see #setSeasonName(String)
-	 * @see soccer.SoccerPackage#getSeason_SeasonName()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see soccer.SoccerPackage#getSeason_Name()
 	 * @model default="" derived="true"
 	 * @generated
 	 */
-	String getSeasonName();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link soccer.Season#getSeasonName <em>Season Name</em>}' attribute.
+	 * Sets the value of the '{@link soccer.Season#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Season Name</em>' attribute.
-	 * @see #getSeasonName()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setSeasonName(String value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>League</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link soccer.League#getSeason <em>Season</em>}'.
+	 * It is bidirectional and its opposite is '{@link soccer.League#getSeasons <em>Seasons</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>League</em>' container reference.
 	 * @see #setLeague(League)
 	 * @see soccer.SoccerPackage#getSeason_League()
-	 * @see soccer.League#getSeason
-	 * @model opposite="season" required="true" transient="false"
+	 * @see soccer.League#getSeasons
+	 * @model opposite="seasons" required="true" transient="false"
 	 * @generated
 	 */
 	League getLeague();
@@ -73,18 +73,18 @@ public interface Season extends EObject {
 	void setLeague(League value);
 
 	/**
-	 * Returns the value of the '<em><b>Match Day</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Match Days</b></em>' containment reference list.
 	 * The list contents are of type {@link soccer.MatchDay}.
 	 * It is bidirectional and its opposite is '{@link soccer.MatchDay#getSeason <em>Season</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Match Day</em>' containment reference list.
-	 * @see soccer.SoccerPackage#getSeason_MatchDay()
+	 * @return the value of the '<em>Match Days</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getSeason_MatchDays()
 	 * @see soccer.MatchDay#getSeason
 	 * @model opposite="season" containment="true"
 	 * @generated
 	 */
-	EList<MatchDay> getMatchDay();
+	EList<MatchDay> getMatchDays();
 
 	/**
 	 * Returns the value of the '<em><b>Standing</b></em>' containment reference.

@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link soccer.Standing#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link soccer.Standing#getPlacements <em>Placements</em>}</li>
  *   <li>{@link soccer.Standing#getSeason <em>Season</em>}</li>
  * </ul>
  *
@@ -25,16 +25,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Standing extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Placement</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Placements</b></em>' containment reference list.
 	 * The list contents are of type {@link soccer.Placement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Placement</em>' containment reference list.
-	 * @see soccer.SoccerPackage#getStanding_Placement()
+	 * @return the value of the '<em>Placements</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getStanding_Placements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Placement> getPlacement();
+	EList<Placement> getPlacements();
 
 	/**
 	 * Returns the value of the '<em><b>Season</b></em>' container reference.

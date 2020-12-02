@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated soccer -->
       <package
-            uri="platform:/resource/no.ntnu.soccer.model/model/soccer.ecore"
+            uri="platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore"
             class="soccer.SoccerPackage"
             genModel="model/soccer.genmodel"/>
    </extension>

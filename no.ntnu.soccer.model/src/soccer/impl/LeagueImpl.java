@@ -36,8 +36,8 @@ import soccer.Team;
  *   <li>{@link soccer.impl.LeagueImpl#getId <em>Id</em>}</li>
  *   <li>{@link soccer.impl.LeagueImpl#getName <em>Name</em>}</li>
  *   <li>{@link soccer.impl.LeagueImpl#getCountry <em>Country</em>}</li>
- *   <li>{@link soccer.impl.LeagueImpl#getSeason <em>Season</em>}</li>
- *   <li>{@link soccer.impl.LeagueImpl#getTeam <em>Team</em>}</li>
+ *   <li>{@link soccer.impl.LeagueImpl#getSeasons <em>Seasons</em>}</li>
+ *   <li>{@link soccer.impl.LeagueImpl#getTeams <em>Teams</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,24 +84,24 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSeason() <em>Season</em>}' containment reference list.
+	 * The cached value of the '{@link #getSeasons() <em>Seasons</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSeason()
+	 * @see #getSeasons()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Season> season;
+	protected EList<Season> seasons;
 
 	/**
-	 * The cached value of the '{@link #getTeam() <em>Team</em>}' containment reference list.
+	 * The cached value of the '{@link #getTeams() <em>Teams</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTeam()
+	 * @see #getTeams()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Team> team;
+	protected EList<Team> teams;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,11 +210,11 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Season> getSeason() {
-		if (season == null) {
-			season = new EObjectContainmentWithInverseEList<Season>(Season.class, this, SoccerPackage.LEAGUE__SEASON, SoccerPackage.SEASON__LEAGUE);
+	public EList<Season> getSeasons() {
+		if (seasons == null) {
+			seasons = new EObjectContainmentWithInverseEList<Season>(Season.class, this, SoccerPackage.LEAGUE__SEASONS, SoccerPackage.SEASON__LEAGUE);
 		}
-		return season;
+		return seasons;
 	}
 
 	/**
@@ -222,11 +222,11 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Team> getTeam() {
-		if (team == null) {
-			team = new EObjectContainmentWithInverseEList<Team>(Team.class, this, SoccerPackage.LEAGUE__TEAM, SoccerPackage.TEAM__LEAGUE);
+	public EList<Team> getTeams() {
+		if (teams == null) {
+			teams = new EObjectContainmentWithInverseEList<Team>(Team.class, this, SoccerPackage.LEAGUE__TEAMS, SoccerPackage.TEAM__LEAGUE);
 		}
-		return team;
+		return teams;
 	}
 
 	/**
@@ -242,10 +242,10 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetCountry((Country)otherEnd, msgs);
-			case SoccerPackage.LEAGUE__SEASON:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSeason()).basicAdd(otherEnd, msgs);
-			case SoccerPackage.LEAGUE__TEAM:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTeam()).basicAdd(otherEnd, msgs);
+			case SoccerPackage.LEAGUE__SEASONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSeasons()).basicAdd(otherEnd, msgs);
+			case SoccerPackage.LEAGUE__TEAMS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTeams()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -260,10 +260,10 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 		switch (featureID) {
 			case SoccerPackage.LEAGUE__COUNTRY:
 				return basicSetCountry(null, msgs);
-			case SoccerPackage.LEAGUE__SEASON:
-				return ((InternalEList<?>)getSeason()).basicRemove(otherEnd, msgs);
-			case SoccerPackage.LEAGUE__TEAM:
-				return ((InternalEList<?>)getTeam()).basicRemove(otherEnd, msgs);
+			case SoccerPackage.LEAGUE__SEASONS:
+				return ((InternalEList<?>)getSeasons()).basicRemove(otherEnd, msgs);
+			case SoccerPackage.LEAGUE__TEAMS:
+				return ((InternalEList<?>)getTeams()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -296,10 +296,10 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 				return getName();
 			case SoccerPackage.LEAGUE__COUNTRY:
 				return getCountry();
-			case SoccerPackage.LEAGUE__SEASON:
-				return getSeason();
-			case SoccerPackage.LEAGUE__TEAM:
-				return getTeam();
+			case SoccerPackage.LEAGUE__SEASONS:
+				return getSeasons();
+			case SoccerPackage.LEAGUE__TEAMS:
+				return getTeams();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -322,13 +322,13 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 			case SoccerPackage.LEAGUE__COUNTRY:
 				setCountry((Country)newValue);
 				return;
-			case SoccerPackage.LEAGUE__SEASON:
-				getSeason().clear();
-				getSeason().addAll((Collection<? extends Season>)newValue);
+			case SoccerPackage.LEAGUE__SEASONS:
+				getSeasons().clear();
+				getSeasons().addAll((Collection<? extends Season>)newValue);
 				return;
-			case SoccerPackage.LEAGUE__TEAM:
-				getTeam().clear();
-				getTeam().addAll((Collection<? extends Team>)newValue);
+			case SoccerPackage.LEAGUE__TEAMS:
+				getTeams().clear();
+				getTeams().addAll((Collection<? extends Team>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -351,11 +351,11 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 			case SoccerPackage.LEAGUE__COUNTRY:
 				setCountry((Country)null);
 				return;
-			case SoccerPackage.LEAGUE__SEASON:
-				getSeason().clear();
+			case SoccerPackage.LEAGUE__SEASONS:
+				getSeasons().clear();
 				return;
-			case SoccerPackage.LEAGUE__TEAM:
-				getTeam().clear();
+			case SoccerPackage.LEAGUE__TEAMS:
+				getTeams().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -375,10 +375,10 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SoccerPackage.LEAGUE__COUNTRY:
 				return getCountry() != null;
-			case SoccerPackage.LEAGUE__SEASON:
-				return season != null && !season.isEmpty();
-			case SoccerPackage.LEAGUE__TEAM:
-				return team != null && !team.isEmpty();
+			case SoccerPackage.LEAGUE__SEASONS:
+				return seasons != null && !seasons.isEmpty();
+			case SoccerPackage.LEAGUE__TEAMS:
+				return teams != null && !teams.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

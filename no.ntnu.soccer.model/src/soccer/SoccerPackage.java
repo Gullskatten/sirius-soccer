@@ -39,7 +39,7 @@ public interface SoccerPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "platform:/resource/no.ntnu.soccer.model/model/soccer.ecore";
+	String eNS_URI = "platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore";
 
 	/**
 	 * The package namespace name.
@@ -68,13 +68,13 @@ public interface SoccerPackage extends EPackage {
 	int SPORT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Countries</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPORT__COUNTRY = 0;
+	int SPORT__COUNTRIES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -132,7 +132,7 @@ public interface SoccerPackage extends EPackage {
 	int COUNTRY__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>League</b></em>' containment reference list.
+	 * The feature id for the '<em><b>League</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -205,22 +205,22 @@ public interface SoccerPackage extends EPackage {
 	int LEAGUE__COUNTRY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Season</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Seasons</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEAGUE__SEASON = 3;
+	int LEAGUE__SEASONS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Team</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Teams</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEAGUE__TEAM = 4;
+	int LEAGUE__TEAMS = 4;
 
 	/**
 	 * The number of structural features of the '<em>League</em>' class.
@@ -251,13 +251,13 @@ public interface SoccerPackage extends EPackage {
 	int SEASON = 3;
 
 	/**
-	 * The feature id for the '<em><b>Season Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEASON__SEASON_NAME = 0;
+	int SEASON__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>League</b></em>' container reference.
@@ -269,13 +269,13 @@ public interface SoccerPackage extends EPackage {
 	int SEASON__LEAGUE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Match Day</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Match Days</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEASON__MATCH_DAY = 2;
+	int SEASON__MATCH_DAYS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Standing</b></em>' containment reference.
@@ -324,13 +324,13 @@ public interface SoccerPackage extends EPackage {
 	int MATCH_DAY__DATE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Match</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Matches</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MATCH_DAY__MATCH = 1;
+	int MATCH_DAY__MATCHES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Season</b></em>' container reference.
@@ -435,13 +435,13 @@ public interface SoccerPackage extends EPackage {
 	int MATCH__WINNER = 4;
 
 	/**
-	 * The feature id for the '<em><b>Opponent</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Opponents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MATCH__OPPONENT = 5;
+	int MATCH__OPPONENTS = 5;
 
 	/**
 	 * The number of structural features of the '<em>Match</em>' class.
@@ -489,13 +489,13 @@ public interface SoccerPackage extends EPackage {
 	int TEAM__SHORT_NAME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Player</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Players</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__PLAYER = 3;
+	int TEAM__PLAYERS = 3;
 
 	/**
 	 * The feature id for the '<em><b>League</b></em>' container reference.
@@ -673,13 +673,13 @@ public interface SoccerPackage extends EPackage {
 	int STANDING = 9;
 
 	/**
-	 * The feature id for the '<em><b>Placement</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Placements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STANDING__PLACEMENT = 0;
+	int STANDING__PLACEMENTS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Season</b></em>' container reference.
@@ -849,6 +849,17 @@ public interface SoccerPackage extends EPackage {
 	EClass getSport();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link soccer.Sport#getCountries <em>Countries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Countries</em>'.
+	 * @see soccer.Sport#getCountries()
+	 * @see #getSport()
+	 * @generated
+	 */
+	EReference getSport_Countries();
+
+	/**
 	 * Returns the meta object for the attribute '{@link soccer.Sport#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -858,17 +869,6 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSport_Name();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link soccer.Sport#getCountry <em>Country</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Country</em>'.
-	 * @see soccer.Sport#getCountry()
-	 * @see #getSport()
-	 * @generated
-	 */
-	EReference getSport_Country();
 
 	/**
 	 * Returns the meta object for class '{@link soccer.Country <em>Country</em>}'.
@@ -903,10 +903,10 @@ public interface SoccerPackage extends EPackage {
 	EAttribute getCountry_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link soccer.Country#getLeague <em>League</em>}'.
+	 * Returns the meta object for the containment reference '{@link soccer.Country#getLeague <em>League</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>League</em>'.
+	 * @return the meta object for the containment reference '<em>League</em>'.
 	 * @see soccer.Country#getLeague()
 	 * @see #getCountry()
 	 * @generated
@@ -968,26 +968,26 @@ public interface SoccerPackage extends EPackage {
 	EReference getLeague_Country();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link soccer.League#getSeason <em>Season</em>}'.
+	 * Returns the meta object for the containment reference list '{@link soccer.League#getSeasons <em>Seasons</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Season</em>'.
-	 * @see soccer.League#getSeason()
+	 * @return the meta object for the containment reference list '<em>Seasons</em>'.
+	 * @see soccer.League#getSeasons()
 	 * @see #getLeague()
 	 * @generated
 	 */
-	EReference getLeague_Season();
+	EReference getLeague_Seasons();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link soccer.League#getTeam <em>Team</em>}'.
+	 * Returns the meta object for the containment reference list '{@link soccer.League#getTeams <em>Teams</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Team</em>'.
-	 * @see soccer.League#getTeam()
+	 * @return the meta object for the containment reference list '<em>Teams</em>'.
+	 * @see soccer.League#getTeams()
 	 * @see #getLeague()
 	 * @generated
 	 */
-	EReference getLeague_Team();
+	EReference getLeague_Teams();
 
 	/**
 	 * Returns the meta object for class '{@link soccer.Season <em>Season</em>}'.
@@ -1000,15 +1000,15 @@ public interface SoccerPackage extends EPackage {
 	EClass getSeason();
 
 	/**
-	 * Returns the meta object for the attribute '{@link soccer.Season#getSeasonName <em>Season Name</em>}'.
+	 * Returns the meta object for the attribute '{@link soccer.Season#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Season Name</em>'.
-	 * @see soccer.Season#getSeasonName()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see soccer.Season#getName()
 	 * @see #getSeason()
 	 * @generated
 	 */
-	EAttribute getSeason_SeasonName();
+	EAttribute getSeason_Name();
 
 	/**
 	 * Returns the meta object for the container reference '{@link soccer.Season#getLeague <em>League</em>}'.
@@ -1022,15 +1022,15 @@ public interface SoccerPackage extends EPackage {
 	EReference getSeason_League();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link soccer.Season#getMatchDay <em>Match Day</em>}'.
+	 * Returns the meta object for the containment reference list '{@link soccer.Season#getMatchDays <em>Match Days</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Match Day</em>'.
-	 * @see soccer.Season#getMatchDay()
+	 * @return the meta object for the containment reference list '<em>Match Days</em>'.
+	 * @see soccer.Season#getMatchDays()
 	 * @see #getSeason()
 	 * @generated
 	 */
-	EReference getSeason_MatchDay();
+	EReference getSeason_MatchDays();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link soccer.Season#getStanding <em>Standing</em>}'.
@@ -1065,15 +1065,15 @@ public interface SoccerPackage extends EPackage {
 	EAttribute getMatchDay_Date();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link soccer.MatchDay#getMatch <em>Match</em>}'.
+	 * Returns the meta object for the containment reference list '{@link soccer.MatchDay#getMatches <em>Matches</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Match</em>'.
-	 * @see soccer.MatchDay#getMatch()
+	 * @return the meta object for the containment reference list '<em>Matches</em>'.
+	 * @see soccer.MatchDay#getMatches()
 	 * @see #getMatchDay()
 	 * @generated
 	 */
-	EReference getMatchDay_Match();
+	EReference getMatchDay_Matches();
 
 	/**
 	 * Returns the meta object for the container reference '{@link soccer.MatchDay#getSeason <em>Season</em>}'.
@@ -1130,15 +1130,15 @@ public interface SoccerPackage extends EPackage {
 	EAttribute getTeam_ShortName();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link soccer.Team#getPlayer <em>Player</em>}'.
+	 * Returns the meta object for the containment reference list '{@link soccer.Team#getPlayers <em>Players</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Player</em>'.
-	 * @see soccer.Team#getPlayer()
+	 * @return the meta object for the containment reference list '<em>Players</em>'.
+	 * @see soccer.Team#getPlayers()
 	 * @see #getTeam()
 	 * @generated
 	 */
-	EReference getTeam_Player();
+	EReference getTeam_Players();
 
 	/**
 	 * Returns the meta object for the container reference '{@link soccer.Team#getLeague <em>League</em>}'.
@@ -1292,15 +1292,15 @@ public interface SoccerPackage extends EPackage {
 	EClass getStanding();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link soccer.Standing#getPlacement <em>Placement</em>}'.
+	 * Returns the meta object for the containment reference list '{@link soccer.Standing#getPlacements <em>Placements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Placement</em>'.
-	 * @see soccer.Standing#getPlacement()
+	 * @return the meta object for the containment reference list '<em>Placements</em>'.
+	 * @see soccer.Standing#getPlacements()
 	 * @see #getStanding()
 	 * @generated
 	 */
-	EReference getStanding_Placement();
+	EReference getStanding_Placements();
 
 	/**
 	 * Returns the meta object for the container reference '{@link soccer.Standing#getSeason <em>Season</em>}'.
@@ -1509,15 +1509,15 @@ public interface SoccerPackage extends EPackage {
 	EAttribute getMatch_Winner();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link soccer.Match#getOpponent <em>Opponent</em>}'.
+	 * Returns the meta object for the containment reference list '{@link soccer.Match#getOpponents <em>Opponents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Opponent</em>'.
-	 * @see soccer.Match#getOpponent()
+	 * @return the meta object for the containment reference list '<em>Opponents</em>'.
+	 * @see soccer.Match#getOpponents()
 	 * @see #getMatch()
 	 * @generated
 	 */
-	EReference getMatch_Opponent();
+	EReference getMatch_Opponents();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1553,20 +1553,20 @@ public interface SoccerPackage extends EPackage {
 		EClass SPORT = eINSTANCE.getSport();
 
 		/**
+		 * The meta object literal for the '<em><b>Countries</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPORT__COUNTRIES = eINSTANCE.getSport_Countries();
+
+		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute SPORT__NAME = eINSTANCE.getSport_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Country</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPORT__COUNTRY = eINSTANCE.getSport_Country();
 
 		/**
 		 * The meta object literal for the '{@link soccer.impl.CountryImpl <em>Country</em>}' class.
@@ -1595,7 +1595,7 @@ public interface SoccerPackage extends EPackage {
 		EAttribute COUNTRY__NAME = eINSTANCE.getCountry_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>League</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>League</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1645,20 +1645,20 @@ public interface SoccerPackage extends EPackage {
 		EReference LEAGUE__COUNTRY = eINSTANCE.getLeague_Country();
 
 		/**
-		 * The meta object literal for the '<em><b>Season</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Seasons</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LEAGUE__SEASON = eINSTANCE.getLeague_Season();
+		EReference LEAGUE__SEASONS = eINSTANCE.getLeague_Seasons();
 
 		/**
-		 * The meta object literal for the '<em><b>Team</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Teams</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LEAGUE__TEAM = eINSTANCE.getLeague_Team();
+		EReference LEAGUE__TEAMS = eINSTANCE.getLeague_Teams();
 
 		/**
 		 * The meta object literal for the '{@link soccer.impl.SeasonImpl <em>Season</em>}' class.
@@ -1671,12 +1671,12 @@ public interface SoccerPackage extends EPackage {
 		EClass SEASON = eINSTANCE.getSeason();
 
 		/**
-		 * The meta object literal for the '<em><b>Season Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEASON__SEASON_NAME = eINSTANCE.getSeason_SeasonName();
+		EAttribute SEASON__NAME = eINSTANCE.getSeason_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>League</b></em>' container reference feature.
@@ -1687,12 +1687,12 @@ public interface SoccerPackage extends EPackage {
 		EReference SEASON__LEAGUE = eINSTANCE.getSeason_League();
 
 		/**
-		 * The meta object literal for the '<em><b>Match Day</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Match Days</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SEASON__MATCH_DAY = eINSTANCE.getSeason_MatchDay();
+		EReference SEASON__MATCH_DAYS = eINSTANCE.getSeason_MatchDays();
 
 		/**
 		 * The meta object literal for the '<em><b>Standing</b></em>' containment reference feature.
@@ -1721,12 +1721,12 @@ public interface SoccerPackage extends EPackage {
 		EAttribute MATCH_DAY__DATE = eINSTANCE.getMatchDay_Date();
 
 		/**
-		 * The meta object literal for the '<em><b>Match</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Matches</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MATCH_DAY__MATCH = eINSTANCE.getMatchDay_Match();
+		EReference MATCH_DAY__MATCHES = eINSTANCE.getMatchDay_Matches();
 
 		/**
 		 * The meta object literal for the '<em><b>Season</b></em>' container reference feature.
@@ -1771,12 +1771,12 @@ public interface SoccerPackage extends EPackage {
 		EAttribute TEAM__SHORT_NAME = eINSTANCE.getTeam_ShortName();
 
 		/**
-		 * The meta object literal for the '<em><b>Player</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Players</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TEAM__PLAYER = eINSTANCE.getTeam_Player();
+		EReference TEAM__PLAYERS = eINSTANCE.getTeam_Players();
 
 		/**
 		 * The meta object literal for the '<em><b>League</b></em>' container reference feature.
@@ -1897,12 +1897,12 @@ public interface SoccerPackage extends EPackage {
 		EClass STANDING = eINSTANCE.getStanding();
 
 		/**
-		 * The meta object literal for the '<em><b>Placement</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Placements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STANDING__PLACEMENT = eINSTANCE.getStanding_Placement();
+		EReference STANDING__PLACEMENTS = eINSTANCE.getStanding_Placements();
 
 		/**
 		 * The meta object literal for the '<em><b>Season</b></em>' container reference feature.
@@ -2063,12 +2063,12 @@ public interface SoccerPackage extends EPackage {
 		EAttribute MATCH__WINNER = eINSTANCE.getMatch_Winner();
 
 		/**
-		 * The meta object literal for the '<em><b>Opponent</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Opponents</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MATCH__OPPONENT = eINSTANCE.getMatch_Opponent();
+		EReference MATCH__OPPONENTS = eINSTANCE.getMatch_Opponents();
 
 	}
 

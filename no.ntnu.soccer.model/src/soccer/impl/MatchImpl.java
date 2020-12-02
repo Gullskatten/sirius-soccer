@@ -36,7 +36,7 @@ import soccer.SoccerPackage;
  *   <li>{@link soccer.impl.MatchImpl#getHomeTeamGoal <em>Home Team Goal</em>}</li>
  *   <li>{@link soccer.impl.MatchImpl#getAwayTeamGoal <em>Away Team Goal</em>}</li>
  *   <li>{@link soccer.impl.MatchImpl#getWinner <em>Winner</em>}</li>
- *   <li>{@link soccer.impl.MatchImpl#getOpponent <em>Opponent</em>}</li>
+ *   <li>{@link soccer.impl.MatchImpl#getOpponents <em>Opponents</em>}</li>
  * </ul>
  *
  * @generated
@@ -123,14 +123,14 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 	protected MatchWinner winner = WINNER_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getOpponent() <em>Opponent</em>}' containment reference list.
+	 * The cached value of the '{@link #getOpponents() <em>Opponents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOpponent()
+	 * @see #getOpponents()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Opponent> opponent;
+	protected EList<Opponent> opponents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,7 +184,7 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newMatchDay != null)
-				msgs = ((InternalEObject)newMatchDay).eInverseAdd(this, SoccerPackage.MATCH_DAY__MATCH, MatchDay.class, msgs);
+				msgs = ((InternalEObject)newMatchDay).eInverseAdd(this, SoccerPackage.MATCH_DAY__MATCHES, MatchDay.class, msgs);
 			msgs = basicSetMatchDay(newMatchDay, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -281,11 +281,11 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Opponent> getOpponent() {
-		if (opponent == null) {
-			opponent = new EObjectContainmentWithInverseEList<Opponent>(Opponent.class, this, SoccerPackage.MATCH__OPPONENT, SoccerPackage.OPPONENT__MATCH);
+	public EList<Opponent> getOpponents() {
+		if (opponents == null) {
+			opponents = new EObjectContainmentWithInverseEList<Opponent>(Opponent.class, this, SoccerPackage.MATCH__OPPONENTS, SoccerPackage.OPPONENT__MATCH);
 		}
-		return opponent;
+		return opponents;
 	}
 
 	/**
@@ -301,8 +301,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetMatchDay((MatchDay)otherEnd, msgs);
-			case SoccerPackage.MATCH__OPPONENT:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOpponent()).basicAdd(otherEnd, msgs);
+			case SoccerPackage.MATCH__OPPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOpponents()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -317,8 +317,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 		switch (featureID) {
 			case SoccerPackage.MATCH__MATCH_DAY:
 				return basicSetMatchDay(null, msgs);
-			case SoccerPackage.MATCH__OPPONENT:
-				return ((InternalEList<?>)getOpponent()).basicRemove(otherEnd, msgs);
+			case SoccerPackage.MATCH__OPPONENTS:
+				return ((InternalEList<?>)getOpponents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -332,7 +332,7 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case SoccerPackage.MATCH__MATCH_DAY:
-				return eInternalContainer().eInverseRemove(this, SoccerPackage.MATCH_DAY__MATCH, MatchDay.class, msgs);
+				return eInternalContainer().eInverseRemove(this, SoccerPackage.MATCH_DAY__MATCHES, MatchDay.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -355,8 +355,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 				return getAwayTeamGoal();
 			case SoccerPackage.MATCH__WINNER:
 				return getWinner();
-			case SoccerPackage.MATCH__OPPONENT:
-				return getOpponent();
+			case SoccerPackage.MATCH__OPPONENTS:
+				return getOpponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -385,9 +385,9 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 			case SoccerPackage.MATCH__WINNER:
 				setWinner((MatchWinner)newValue);
 				return;
-			case SoccerPackage.MATCH__OPPONENT:
-				getOpponent().clear();
-				getOpponent().addAll((Collection<? extends Opponent>)newValue);
+			case SoccerPackage.MATCH__OPPONENTS:
+				getOpponents().clear();
+				getOpponents().addAll((Collection<? extends Opponent>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -416,8 +416,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 			case SoccerPackage.MATCH__WINNER:
 				setWinner(WINNER_EDEFAULT);
 				return;
-			case SoccerPackage.MATCH__OPPONENT:
-				getOpponent().clear();
+			case SoccerPackage.MATCH__OPPONENTS:
+				getOpponents().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -441,8 +441,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 				return awayTeamGoal != AWAY_TEAM_GOAL_EDEFAULT;
 			case SoccerPackage.MATCH__WINNER:
 				return winner != WINNER_EDEFAULT;
-			case SoccerPackage.MATCH__OPPONENT:
-				return opponent != null && !opponent.isEmpty();
+			case SoccerPackage.MATCH__OPPONENTS:
+				return opponents != null && !opponents.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

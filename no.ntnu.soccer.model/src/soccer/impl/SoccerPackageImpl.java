@@ -191,8 +191,8 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSport_Name() {
-		return (EAttribute)sportEClass.getEStructuralFeatures().get(1);
+	public EReference getSport_Countries() {
+		return (EReference)sportEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -200,8 +200,8 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSport_Country() {
-		return (EReference)sportEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSport_Name() {
+		return (EAttribute)sportEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -290,7 +290,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLeague_Season() {
+	public EReference getLeague_Seasons() {
 		return (EReference)leagueEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -299,7 +299,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLeague_Team() {
+	public EReference getLeague_Teams() {
 		return (EReference)leagueEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -317,7 +317,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSeason_SeasonName() {
+	public EAttribute getSeason_Name() {
 		return (EAttribute)seasonEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -335,7 +335,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSeason_MatchDay() {
+	public EReference getSeason_MatchDays() {
 		return (EReference)seasonEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -371,7 +371,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMatchDay_Match() {
+	public EReference getMatchDay_Matches() {
 		return (EReference)matchDayEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -425,7 +425,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTeam_Player() {
+	public EReference getTeam_Players() {
 		return (EReference)teamEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -560,7 +560,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStanding_Placement() {
+	public EReference getStanding_Placements() {
 		return (EReference)standingEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -740,7 +740,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMatch_Opponent() {
+	public EReference getMatch_Opponents() {
 		return (EReference)matchEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -773,7 +773,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 
 		// Create classes and their features
 		sportEClass = createEClass(SPORT);
-		createEReference(sportEClass, SPORT__COUNTRY);
+		createEReference(sportEClass, SPORT__COUNTRIES);
 		createEAttribute(sportEClass, SPORT__NAME);
 
 		countryEClass = createEClass(COUNTRY);
@@ -786,18 +786,18 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 		createEAttribute(leagueEClass, LEAGUE__ID);
 		createEAttribute(leagueEClass, LEAGUE__NAME);
 		createEReference(leagueEClass, LEAGUE__COUNTRY);
-		createEReference(leagueEClass, LEAGUE__SEASON);
-		createEReference(leagueEClass, LEAGUE__TEAM);
+		createEReference(leagueEClass, LEAGUE__SEASONS);
+		createEReference(leagueEClass, LEAGUE__TEAMS);
 
 		seasonEClass = createEClass(SEASON);
-		createEAttribute(seasonEClass, SEASON__SEASON_NAME);
+		createEAttribute(seasonEClass, SEASON__NAME);
 		createEReference(seasonEClass, SEASON__LEAGUE);
-		createEReference(seasonEClass, SEASON__MATCH_DAY);
+		createEReference(seasonEClass, SEASON__MATCH_DAYS);
 		createEReference(seasonEClass, SEASON__STANDING);
 
 		matchDayEClass = createEClass(MATCH_DAY);
 		createEAttribute(matchDayEClass, MATCH_DAY__DATE);
-		createEReference(matchDayEClass, MATCH_DAY__MATCH);
+		createEReference(matchDayEClass, MATCH_DAY__MATCHES);
 		createEReference(matchDayEClass, MATCH_DAY__SEASON);
 
 		matchEClass = createEClass(MATCH);
@@ -806,13 +806,13 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 		createEAttribute(matchEClass, MATCH__HOME_TEAM_GOAL);
 		createEAttribute(matchEClass, MATCH__AWAY_TEAM_GOAL);
 		createEAttribute(matchEClass, MATCH__WINNER);
-		createEReference(matchEClass, MATCH__OPPONENT);
+		createEReference(matchEClass, MATCH__OPPONENTS);
 
 		teamEClass = createEClass(TEAM);
 		createEAttribute(teamEClass, TEAM__ID);
 		createEAttribute(teamEClass, TEAM__NAME);
 		createEAttribute(teamEClass, TEAM__SHORT_NAME);
-		createEReference(teamEClass, TEAM__PLAYER);
+		createEReference(teamEClass, TEAM__PLAYERS);
 		createEReference(teamEClass, TEAM__LEAGUE);
 
 		playerEClass = createEClass(PLAYER);
@@ -830,7 +830,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 		createEAttribute(opponentEClass, OPPONENT__OPPONENT_TYPE);
 
 		standingEClass = createEClass(STANDING);
-		createEReference(standingEClass, STANDING__PLACEMENT);
+		createEReference(standingEClass, STANDING__PLACEMENTS);
 		createEReference(standingEClass, STANDING__SEASON);
 
 		placementEClass = createEClass(PLACEMENT);
@@ -880,64 +880,64 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(sportEClass, Sport.class, "Sport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSport_Country(), this.getCountry(), this.getCountry_Sport(), "country", null, 0, -1, Sport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSport_Countries(), this.getCountry(), this.getCountry_Sport(), "countries", null, 0, -1, Sport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSport_Name(), ecorePackage.getEString(), "name", null, 0, 1, Sport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(countryEClass, Country.class, "Country", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCountry_Id(), ecorePackage.getEString(), "id", null, 0, 1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCountry_Name(), ecorePackage.getEString(), "name", null, 0, 1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCountry_League(), this.getLeague(), this.getLeague_Country(), "league", null, 0, -1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCountry_Sport(), this.getSport(), this.getSport_Country(), "sport", null, 0, 1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCountry_League(), this.getLeague(), this.getLeague_Country(), "league", null, 0, 1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCountry_Sport(), this.getSport(), this.getSport_Countries(), "sport", null, 0, 1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(leagueEClass, League.class, "League", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLeague_Id(), ecorePackage.getEString(), "id", null, 0, 1, League.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLeague_Name(), ecorePackage.getEString(), "name", null, 0, 1, League.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLeague_Country(), this.getCountry(), this.getCountry_League(), "country", null, 0, 1, League.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLeague_Season(), this.getSeason(), this.getSeason_League(), "season", null, 0, -1, League.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLeague_Team(), this.getTeam(), this.getTeam_League(), "team", null, 0, -1, League.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLeague_Seasons(), this.getSeason(), this.getSeason_League(), "seasons", null, 0, -1, League.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLeague_Teams(), this.getTeam(), this.getTeam_League(), "teams", null, 0, -1, League.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(seasonEClass, Season.class, "Season", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSeason_SeasonName(), ecorePackage.getEString(), "seasonName", "", 0, 1, Season.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getSeason_League(), this.getLeague(), this.getLeague_Season(), "league", null, 1, 1, Season.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSeason_MatchDay(), this.getMatchDay(), this.getMatchDay_Season(), "matchDay", null, 0, -1, Season.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSeason_Name(), ecorePackage.getEString(), "name", "", 0, 1, Season.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getSeason_League(), this.getLeague(), this.getLeague_Seasons(), "league", null, 1, 1, Season.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSeason_MatchDays(), this.getMatchDay(), this.getMatchDay_Season(), "matchDays", null, 0, -1, Season.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSeason_Standing(), this.getStanding(), this.getStanding_Season(), "standing", null, 0, 1, Season.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(matchDayEClass, MatchDay.class, "MatchDay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMatchDay_Date(), ecorePackage.getEString(), "date", null, 0, 1, MatchDay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMatchDay_Match(), this.getMatch(), this.getMatch_MatchDay(), "match", null, 0, -1, MatchDay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMatchDay_Season(), this.getSeason(), this.getSeason_MatchDay(), "season", null, 0, 1, MatchDay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMatchDay_Matches(), this.getMatch(), this.getMatch_MatchDay(), "matches", null, 0, -1, MatchDay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMatchDay_Season(), this.getSeason(), this.getSeason_MatchDays(), "season", null, 0, 1, MatchDay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(matchEClass, Match.class, "Match", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMatch_MatchDay(), this.getMatchDay(), this.getMatchDay_Match(), "matchDay", null, 0, 1, Match.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMatch_MatchDay(), this.getMatchDay(), this.getMatchDay_Matches(), "matchDay", null, 0, 1, Match.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMatch_Id(), ecorePackage.getEString(), "id", null, 0, 1, Match.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMatch_HomeTeamGoal(), ecorePackage.getEInt(), "homeTeamGoal", null, 0, 1, Match.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMatch_AwayTeamGoal(), ecorePackage.getEInt(), "awayTeamGoal", null, 0, 1, Match.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMatch_Winner(), this.getMatchWinner(), "winner", null, 0, 1, Match.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMatch_Opponent(), this.getOpponent(), this.getOpponent_Match(), "opponent", null, 2, 2, Match.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMatch_Opponents(), this.getOpponent(), this.getOpponent_Match(), "opponents", null, 2, 2, Match.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(teamEClass, Team.class, "Team", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTeam_Id(), ecorePackage.getEString(), "id", null, 0, 1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTeam_Name(), ecorePackage.getEString(), "name", null, 1, 1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTeam_ShortName(), ecorePackage.getEString(), "shortName", null, 1, 1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTeam_Player(), this.getPlayer(), this.getPlayer_Team(), "player", null, 0, -1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTeam_League(), this.getLeague(), this.getLeague_Team(), "league", null, 0, 1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTeam_Players(), this.getPlayer(), this.getPlayer_Team(), "players", null, 0, -1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTeam_League(), this.getLeague(), this.getLeague_Teams(), "league", null, 0, 1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(playerEClass, Player.class, "Player", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPlayer_Id(), ecorePackage.getEString(), "id", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_Name(), ecorePackage.getEString(), "name", null, 1, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_Height(), ecorePackage.getEFloat(), "height", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_Weight(), ecorePackage.getEFloat(), "weight", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPlayer_Team(), this.getTeam(), this.getTeam_Player(), "team", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlayer_Team(), this.getTeam(), this.getTeam_Players(), "team", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_PosX(), ecorePackage.getEInt(), "posX", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_PosY(), ecorePackage.getEInt(), "posY", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(opponentEClass, Opponent.class, "Opponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOpponent_Match(), this.getMatch(), this.getMatch_Opponent(), "match", null, 1, 1, Opponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOpponent_Match(), this.getMatch(), this.getMatch_Opponents(), "match", null, 1, 1, Opponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOpponent_Team(), this.getTeam(), null, "team", null, 0, 1, Opponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOpponent_OpponentType(), ecorePackage.getEString(), "opponentType", null, 0, 1, Opponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(standingEClass, Standing.class, "Standing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStanding_Placement(), this.getPlacement(), null, "placement", null, 0, -1, Standing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStanding_Placements(), this.getPlacement(), null, "placements", null, 0, -1, Standing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStanding_Season(), this.getSeason(), this.getSeason_Standing(), "season", null, 0, 1, Standing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(placementEClass, Placement.class, "Placement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

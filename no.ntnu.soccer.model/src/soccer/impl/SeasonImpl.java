@@ -31,9 +31,9 @@ import soccer.Standing;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link soccer.impl.SeasonImpl#getSeasonName <em>Season Name</em>}</li>
+ *   <li>{@link soccer.impl.SeasonImpl#getName <em>Name</em>}</li>
  *   <li>{@link soccer.impl.SeasonImpl#getLeague <em>League</em>}</li>
- *   <li>{@link soccer.impl.SeasonImpl#getMatchDay <em>Match Day</em>}</li>
+ *   <li>{@link soccer.impl.SeasonImpl#getMatchDays <em>Match Days</em>}</li>
  *   <li>{@link soccer.impl.SeasonImpl#getStanding <em>Standing</em>}</li>
  * </ul>
  *
@@ -41,34 +41,34 @@ import soccer.Standing;
  */
 public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	/**
-	 * The default value of the '{@link #getSeasonName() <em>Season Name</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSeasonName()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SEASON_NAME_EDEFAULT = "";
+	protected static final String NAME_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getSeasonName() <em>Season Name</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSeasonName()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String seasonName = SEASON_NAME_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getMatchDay() <em>Match Day</em>}' containment reference list.
+	 * The cached value of the '{@link #getMatchDays() <em>Match Days</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMatchDay()
+	 * @see #getMatchDays()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MatchDay> matchDay;
+	protected EList<MatchDay> matchDays;
 
 	/**
 	 * The cached value of the '{@link #getStanding() <em>Standing</em>}' containment reference.
@@ -104,8 +104,8 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSeasonName() {
-		return seasonName;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -113,11 +113,11 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSeasonName(String newSeasonName) {
-		String oldSeasonName = seasonName;
-		seasonName = newSeasonName;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.SEASON__SEASON_NAME, oldSeasonName, seasonName));
+			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.SEASON__NAME, oldName, name));
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newLeague != null)
-				msgs = ((InternalEObject)newLeague).eInverseAdd(this, SoccerPackage.LEAGUE__SEASON, League.class, msgs);
+				msgs = ((InternalEObject)newLeague).eInverseAdd(this, SoccerPackage.LEAGUE__SEASONS, League.class, msgs);
 			msgs = basicSetLeague(newLeague, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -166,11 +166,11 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MatchDay> getMatchDay() {
-		if (matchDay == null) {
-			matchDay = new EObjectContainmentWithInverseEList<MatchDay>(MatchDay.class, this, SoccerPackage.SEASON__MATCH_DAY, SoccerPackage.MATCH_DAY__SEASON);
+	public EList<MatchDay> getMatchDays() {
+		if (matchDays == null) {
+			matchDays = new EObjectContainmentWithInverseEList<MatchDay>(MatchDay.class, this, SoccerPackage.SEASON__MATCH_DAYS, SoccerPackage.MATCH_DAY__SEASON);
 		}
-		return matchDay;
+		return matchDays;
 	}
 
 	/**
@@ -229,8 +229,8 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetLeague((League)otherEnd, msgs);
-			case SoccerPackage.SEASON__MATCH_DAY:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMatchDay()).basicAdd(otherEnd, msgs);
+			case SoccerPackage.SEASON__MATCH_DAYS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMatchDays()).basicAdd(otherEnd, msgs);
 			case SoccerPackage.SEASON__STANDING:
 				if (standing != null)
 					msgs = ((InternalEObject)standing).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SoccerPackage.SEASON__STANDING, null, msgs);
@@ -249,8 +249,8 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 		switch (featureID) {
 			case SoccerPackage.SEASON__LEAGUE:
 				return basicSetLeague(null, msgs);
-			case SoccerPackage.SEASON__MATCH_DAY:
-				return ((InternalEList<?>)getMatchDay()).basicRemove(otherEnd, msgs);
+			case SoccerPackage.SEASON__MATCH_DAYS:
+				return ((InternalEList<?>)getMatchDays()).basicRemove(otherEnd, msgs);
 			case SoccerPackage.SEASON__STANDING:
 				return basicSetStanding(null, msgs);
 		}
@@ -266,7 +266,7 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case SoccerPackage.SEASON__LEAGUE:
-				return eInternalContainer().eInverseRemove(this, SoccerPackage.LEAGUE__SEASON, League.class, msgs);
+				return eInternalContainer().eInverseRemove(this, SoccerPackage.LEAGUE__SEASONS, League.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -279,12 +279,12 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SoccerPackage.SEASON__SEASON_NAME:
-				return getSeasonName();
+			case SoccerPackage.SEASON__NAME:
+				return getName();
 			case SoccerPackage.SEASON__LEAGUE:
 				return getLeague();
-			case SoccerPackage.SEASON__MATCH_DAY:
-				return getMatchDay();
+			case SoccerPackage.SEASON__MATCH_DAYS:
+				return getMatchDays();
 			case SoccerPackage.SEASON__STANDING:
 				return getStanding();
 		}
@@ -300,15 +300,15 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SoccerPackage.SEASON__SEASON_NAME:
-				setSeasonName((String)newValue);
+			case SoccerPackage.SEASON__NAME:
+				setName((String)newValue);
 				return;
 			case SoccerPackage.SEASON__LEAGUE:
 				setLeague((League)newValue);
 				return;
-			case SoccerPackage.SEASON__MATCH_DAY:
-				getMatchDay().clear();
-				getMatchDay().addAll((Collection<? extends MatchDay>)newValue);
+			case SoccerPackage.SEASON__MATCH_DAYS:
+				getMatchDays().clear();
+				getMatchDays().addAll((Collection<? extends MatchDay>)newValue);
 				return;
 			case SoccerPackage.SEASON__STANDING:
 				setStanding((Standing)newValue);
@@ -325,14 +325,14 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SoccerPackage.SEASON__SEASON_NAME:
-				setSeasonName(SEASON_NAME_EDEFAULT);
+			case SoccerPackage.SEASON__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case SoccerPackage.SEASON__LEAGUE:
 				setLeague((League)null);
 				return;
-			case SoccerPackage.SEASON__MATCH_DAY:
-				getMatchDay().clear();
+			case SoccerPackage.SEASON__MATCH_DAYS:
+				getMatchDays().clear();
 				return;
 			case SoccerPackage.SEASON__STANDING:
 				setStanding((Standing)null);
@@ -349,12 +349,12 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SoccerPackage.SEASON__SEASON_NAME:
-				return SEASON_NAME_EDEFAULT == null ? seasonName != null : !SEASON_NAME_EDEFAULT.equals(seasonName);
+			case SoccerPackage.SEASON__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SoccerPackage.SEASON__LEAGUE:
 				return getLeague() != null;
-			case SoccerPackage.SEASON__MATCH_DAY:
-				return matchDay != null && !matchDay.isEmpty();
+			case SoccerPackage.SEASON__MATCH_DAYS:
+				return matchDays != null && !matchDays.isEmpty();
 			case SoccerPackage.SEASON__STANDING:
 				return standing != null;
 		}
@@ -371,8 +371,8 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (seasonName: ");
-		result.append(seasonName);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

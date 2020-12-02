@@ -31,7 +31,7 @@ import soccer.SoccerPackage;
  * </p>
  * <ul>
  *   <li>{@link soccer.impl.MatchDayImpl#getDate <em>Date</em>}</li>
- *   <li>{@link soccer.impl.MatchDayImpl#getMatch <em>Match</em>}</li>
+ *   <li>{@link soccer.impl.MatchDayImpl#getMatches <em>Matches</em>}</li>
  *   <li>{@link soccer.impl.MatchDayImpl#getSeason <em>Season</em>}</li>
  * </ul>
  *
@@ -59,14 +59,14 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 	protected String date = DATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getMatch() <em>Match</em>}' containment reference list.
+	 * The cached value of the '{@link #getMatches() <em>Matches</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMatch()
+	 * @see #getMatches()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Match> match;
+	protected EList<Match> matches;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,11 +113,11 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Match> getMatch() {
-		if (match == null) {
-			match = new EObjectContainmentWithInverseEList<Match>(Match.class, this, SoccerPackage.MATCH_DAY__MATCH, SoccerPackage.MATCH__MATCH_DAY);
+	public EList<Match> getMatches() {
+		if (matches == null) {
+			matches = new EObjectContainmentWithInverseEList<Match>(Match.class, this, SoccerPackage.MATCH_DAY__MATCHES, SoccerPackage.MATCH__MATCH_DAY);
 		}
-		return match;
+		return matches;
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newSeason != null)
-				msgs = ((InternalEObject)newSeason).eInverseAdd(this, SoccerPackage.SEASON__MATCH_DAY, Season.class, msgs);
+				msgs = ((InternalEObject)newSeason).eInverseAdd(this, SoccerPackage.SEASON__MATCH_DAYS, Season.class, msgs);
 			msgs = basicSetSeason(newSeason, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -170,8 +170,8 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SoccerPackage.MATCH_DAY__MATCH:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMatch()).basicAdd(otherEnd, msgs);
+			case SoccerPackage.MATCH_DAY__MATCHES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMatches()).basicAdd(otherEnd, msgs);
 			case SoccerPackage.MATCH_DAY__SEASON:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -188,8 +188,8 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SoccerPackage.MATCH_DAY__MATCH:
-				return ((InternalEList<?>)getMatch()).basicRemove(otherEnd, msgs);
+			case SoccerPackage.MATCH_DAY__MATCHES:
+				return ((InternalEList<?>)getMatches()).basicRemove(otherEnd, msgs);
 			case SoccerPackage.MATCH_DAY__SEASON:
 				return basicSetSeason(null, msgs);
 		}
@@ -205,7 +205,7 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case SoccerPackage.MATCH_DAY__SEASON:
-				return eInternalContainer().eInverseRemove(this, SoccerPackage.SEASON__MATCH_DAY, Season.class, msgs);
+				return eInternalContainer().eInverseRemove(this, SoccerPackage.SEASON__MATCH_DAYS, Season.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -220,8 +220,8 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 		switch (featureID) {
 			case SoccerPackage.MATCH_DAY__DATE:
 				return getDate();
-			case SoccerPackage.MATCH_DAY__MATCH:
-				return getMatch();
+			case SoccerPackage.MATCH_DAY__MATCHES:
+				return getMatches();
 			case SoccerPackage.MATCH_DAY__SEASON:
 				return getSeason();
 		}
@@ -240,9 +240,9 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 			case SoccerPackage.MATCH_DAY__DATE:
 				setDate((String)newValue);
 				return;
-			case SoccerPackage.MATCH_DAY__MATCH:
-				getMatch().clear();
-				getMatch().addAll((Collection<? extends Match>)newValue);
+			case SoccerPackage.MATCH_DAY__MATCHES:
+				getMatches().clear();
+				getMatches().addAll((Collection<? extends Match>)newValue);
 				return;
 			case SoccerPackage.MATCH_DAY__SEASON:
 				setSeason((Season)newValue);
@@ -262,8 +262,8 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 			case SoccerPackage.MATCH_DAY__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
-			case SoccerPackage.MATCH_DAY__MATCH:
-				getMatch().clear();
+			case SoccerPackage.MATCH_DAY__MATCHES:
+				getMatches().clear();
 				return;
 			case SoccerPackage.MATCH_DAY__SEASON:
 				setSeason((Season)null);
@@ -282,8 +282,8 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 		switch (featureID) {
 			case SoccerPackage.MATCH_DAY__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
-			case SoccerPackage.MATCH_DAY__MATCH:
-				return match != null && !match.isEmpty();
+			case SoccerPackage.MATCH_DAY__MATCHES:
+				return matches != null && !matches.isEmpty();
 			case SoccerPackage.MATCH_DAY__SEASON:
 				return getSeason() != null;
 		}

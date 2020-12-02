@@ -293,7 +293,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newTeam != null)
-				msgs = ((InternalEObject)newTeam).eInverseAdd(this, SoccerPackage.TEAM__PLAYER, Team.class, msgs);
+				msgs = ((InternalEObject)newTeam).eInverseAdd(this, SoccerPackage.TEAM__PLAYERS, Team.class, msgs);
 			msgs = basicSetTeam(newTeam, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -382,7 +382,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case SoccerPackage.PLAYER__TEAM:
-				return eInternalContainer().eInverseRemove(this, SoccerPackage.TEAM__PLAYER, Team.class, msgs);
+				return eInternalContainer().eInverseRemove(this, SoccerPackage.TEAM__PLAYERS, Team.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}

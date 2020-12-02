@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link soccer.Match#getHomeTeamGoal <em>Home Team Goal</em>}</li>
  *   <li>{@link soccer.Match#getAwayTeamGoal <em>Away Team Goal</em>}</li>
  *   <li>{@link soccer.Match#getWinner <em>Winner</em>}</li>
- *   <li>{@link soccer.Match#getOpponent <em>Opponent</em>}</li>
+ *   <li>{@link soccer.Match#getOpponents <em>Opponents</em>}</li>
  * </ul>
  *
  * @see soccer.SoccerPackage#getMatch()
@@ -29,14 +29,14 @@ import org.eclipse.emf.ecore.EObject;
 public interface Match extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Match Day</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link soccer.MatchDay#getMatch <em>Match</em>}'.
+	 * It is bidirectional and its opposite is '{@link soccer.MatchDay#getMatches <em>Matches</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Match Day</em>' container reference.
 	 * @see #setMatchDay(MatchDay)
 	 * @see soccer.SoccerPackage#getMatch_MatchDay()
-	 * @see soccer.MatchDay#getMatch
-	 * @model opposite="match" transient="false"
+	 * @see soccer.MatchDay#getMatches
+	 * @model opposite="matches" transient="false"
 	 * @generated
 	 */
 	MatchDay getMatchDay();
@@ -143,17 +143,17 @@ public interface Match extends EObject {
 	void setWinner(MatchWinner value);
 
 	/**
-	 * Returns the value of the '<em><b>Opponent</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Opponents</b></em>' containment reference list.
 	 * The list contents are of type {@link soccer.Opponent}.
 	 * It is bidirectional and its opposite is '{@link soccer.Opponent#getMatch <em>Match</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Opponent</em>' containment reference list.
-	 * @see soccer.SoccerPackage#getMatch_Opponent()
+	 * @return the value of the '<em>Opponents</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getMatch_Opponents()
 	 * @see soccer.Opponent#getMatch
 	 * @model opposite="match" containment="true" lower="2" upper="2"
 	 * @generated
 	 */
-	EList<Opponent> getOpponent();
+	EList<Opponent> getOpponents();
 
 } // Match

@@ -32,7 +32,7 @@ import soccer.Standing;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link soccer.impl.StandingImpl#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link soccer.impl.StandingImpl#getPlacements <em>Placements</em>}</li>
  *   <li>{@link soccer.impl.StandingImpl#getSeason <em>Season</em>}</li>
  * </ul>
  *
@@ -40,15 +40,14 @@ import soccer.Standing;
  */
 public class StandingImpl extends MinimalEObjectImpl.Container implements Standing {
 	/**
-	 * The cached value of the '{@link #getPlacement() <em>Placement</em>}' containment reference list.
+	 * The cached value of the '{@link #getPlacements() <em>Placements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPlacement()
+	 * @see #getPlacements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Placement> placement;
-
+	protected EList<Placement> placements;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -73,11 +72,11 @@ public class StandingImpl extends MinimalEObjectImpl.Container implements Standi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Placement> getPlacement() {
-		if (placement == null) {
-			placement = new EObjectContainmentEList<Placement>(Placement.class, this, SoccerPackage.STANDING__PLACEMENT);
+	public EList<Placement> getPlacements() {
+		if (placements == null) {
+			placements = new EObjectContainmentEList<Placement>(Placement.class, this, SoccerPackage.STANDING__PLACEMENTS);
 		}
-		return placement;
+		return placements;
 	}
 
 	/**
@@ -145,8 +144,8 @@ public class StandingImpl extends MinimalEObjectImpl.Container implements Standi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SoccerPackage.STANDING__PLACEMENT:
-				return ((InternalEList<?>)getPlacement()).basicRemove(otherEnd, msgs);
+			case SoccerPackage.STANDING__PLACEMENTS:
+				return ((InternalEList<?>)getPlacements()).basicRemove(otherEnd, msgs);
 			case SoccerPackage.STANDING__SEASON:
 				return basicSetSeason(null, msgs);
 		}
@@ -175,8 +174,8 @@ public class StandingImpl extends MinimalEObjectImpl.Container implements Standi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SoccerPackage.STANDING__PLACEMENT:
-				return getPlacement();
+			case SoccerPackage.STANDING__PLACEMENTS:
+				return getPlacements();
 			case SoccerPackage.STANDING__SEASON:
 				return getSeason();
 		}
@@ -192,9 +191,9 @@ public class StandingImpl extends MinimalEObjectImpl.Container implements Standi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SoccerPackage.STANDING__PLACEMENT:
-				getPlacement().clear();
-				getPlacement().addAll((Collection<? extends Placement>)newValue);
+			case SoccerPackage.STANDING__PLACEMENTS:
+				getPlacements().clear();
+				getPlacements().addAll((Collection<? extends Placement>)newValue);
 				return;
 			case SoccerPackage.STANDING__SEASON:
 				setSeason((Season)newValue);
@@ -211,8 +210,8 @@ public class StandingImpl extends MinimalEObjectImpl.Container implements Standi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SoccerPackage.STANDING__PLACEMENT:
-				getPlacement().clear();
+			case SoccerPackage.STANDING__PLACEMENTS:
+				getPlacements().clear();
 				return;
 			case SoccerPackage.STANDING__SEASON:
 				setSeason((Season)null);
@@ -229,8 +228,8 @@ public class StandingImpl extends MinimalEObjectImpl.Container implements Standi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SoccerPackage.STANDING__PLACEMENT:
-				return placement != null && !placement.isEmpty();
+			case SoccerPackage.STANDING__PLACEMENTS:
+				return placements != null && !placements.isEmpty();
 			case SoccerPackage.STANDING__SEASON:
 				return getSeason() != null;
 		}

@@ -2,8 +2,6 @@
  */
 package soccer;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -71,29 +69,39 @@ public interface Country extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>League</b></em>' containment reference list.
-	 * The list contents are of type {@link soccer.League}.
+	 * Returns the value of the '<em><b>League</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link soccer.League#getCountry <em>Country</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>League</em>' containment reference list.
+	 * @return the value of the '<em>League</em>' containment reference.
+	 * @see #setLeague(League)
 	 * @see soccer.SoccerPackage#getCountry_League()
 	 * @see soccer.League#getCountry
 	 * @model opposite="country" containment="true"
 	 * @generated
 	 */
-	EList<League> getLeague();
+	League getLeague();
+
+	/**
+	 * Sets the value of the '{@link soccer.Country#getLeague <em>League</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>League</em>' containment reference.
+	 * @see #getLeague()
+	 * @generated
+	 */
+	void setLeague(League value);
 
 	/**
 	 * Returns the value of the '<em><b>Sport</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link soccer.Sport#getCountry <em>Country</em>}'.
+	 * It is bidirectional and its opposite is '{@link soccer.Sport#getCountries <em>Countries</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sport</em>' container reference.
 	 * @see #setSport(Sport)
 	 * @see soccer.SoccerPackage#getCountry_Sport()
-	 * @see soccer.Sport#getCountry
-	 * @model opposite="country" transient="false"
+	 * @see soccer.Sport#getCountries
+	 * @model opposite="countries" transient="false"
 	 * @generated
 	 */
 	Sport getSport();

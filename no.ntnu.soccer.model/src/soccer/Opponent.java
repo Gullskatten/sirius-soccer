@@ -25,14 +25,14 @@ import org.eclipse.emf.ecore.EObject;
 public interface Opponent extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Match</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link soccer.Match#getOpponent <em>Opponent</em>}'.
+	 * It is bidirectional and its opposite is '{@link soccer.Match#getOpponents <em>Opponents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Match</em>' container reference.
 	 * @see #setMatch(Match)
 	 * @see soccer.SoccerPackage#getOpponent_Match()
-	 * @see soccer.Match#getOpponent
-	 * @model opposite="opponent" required="true" transient="false"
+	 * @see soccer.Match#getOpponents
+	 * @model opposite="opponents" required="true" transient="false"
 	 * @generated
 	 */
 	Match getMatch();

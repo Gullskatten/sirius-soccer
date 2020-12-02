@@ -117,14 +117,14 @@ public interface Player extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Team</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link soccer.Team#getPlayer <em>Player</em>}'.
+	 * It is bidirectional and its opposite is '{@link soccer.Team#getPlayers <em>Players</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Team</em>' container reference.
 	 * @see #setTeam(Team)
 	 * @see soccer.SoccerPackage#getPlayer_Team()
-	 * @see soccer.Team#getPlayer
-	 * @model opposite="player" transient="false"
+	 * @see soccer.Team#getPlayers
+	 * @model opposite="players" transient="false"
 	 * @generated
 	 */
 	Team getTeam();

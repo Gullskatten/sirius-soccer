@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link soccer.League#getId <em>Id</em>}</li>
  *   <li>{@link soccer.League#getName <em>Name</em>}</li>
  *   <li>{@link soccer.League#getCountry <em>Country</em>}</li>
- *   <li>{@link soccer.League#getSeason <em>Season</em>}</li>
- *   <li>{@link soccer.League#getTeam <em>Team</em>}</li>
+ *   <li>{@link soccer.League#getSeasons <em>Seasons</em>}</li>
+ *   <li>{@link soccer.League#getTeams <em>Teams</em>}</li>
  * </ul>
  *
  * @see soccer.SoccerPackage#getLeague()
@@ -96,31 +96,31 @@ public interface League extends EObject {
 	void setCountry(Country value);
 
 	/**
-	 * Returns the value of the '<em><b>Season</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Seasons</b></em>' containment reference list.
 	 * The list contents are of type {@link soccer.Season}.
 	 * It is bidirectional and its opposite is '{@link soccer.Season#getLeague <em>League</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Season</em>' containment reference list.
-	 * @see soccer.SoccerPackage#getLeague_Season()
+	 * @return the value of the '<em>Seasons</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getLeague_Seasons()
 	 * @see soccer.Season#getLeague
 	 * @model opposite="league" containment="true"
 	 * @generated
 	 */
-	EList<Season> getSeason();
+	EList<Season> getSeasons();
 
 	/**
-	 * Returns the value of the '<em><b>Team</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Teams</b></em>' containment reference list.
 	 * The list contents are of type {@link soccer.Team}.
 	 * It is bidirectional and its opposite is '{@link soccer.Team#getLeague <em>League</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Team</em>' containment reference list.
-	 * @see soccer.SoccerPackage#getLeague_Team()
+	 * @return the value of the '<em>Teams</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getLeague_Teams()
 	 * @see soccer.Team#getLeague
 	 * @model opposite="league" containment="true"
 	 * @generated
 	 */
-	EList<Team> getTeam();
+	EList<Team> getTeams();
 
 } // League

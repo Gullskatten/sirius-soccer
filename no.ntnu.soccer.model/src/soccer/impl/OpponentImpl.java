@@ -116,7 +116,7 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newMatch != null)
-				msgs = ((InternalEObject)newMatch).eInverseAdd(this, SoccerPackage.MATCH__OPPONENT, Match.class, msgs);
+				msgs = ((InternalEObject)newMatch).eInverseAdd(this, SoccerPackage.MATCH__OPPONENTS, Match.class, msgs);
 			msgs = basicSetMatch(newMatch, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -222,7 +222,7 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case SoccerPackage.OPPONENT__MATCH:
-				return eInternalContainer().eInverseRemove(this, SoccerPackage.MATCH__OPPONENT, Match.class, msgs);
+				return eInternalContainer().eInverseRemove(this, SoccerPackage.MATCH__OPPONENTS, Match.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}

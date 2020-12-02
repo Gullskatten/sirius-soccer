@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link soccer.Team#getId <em>Id</em>}</li>
  *   <li>{@link soccer.Team#getName <em>Name</em>}</li>
  *   <li>{@link soccer.Team#getShortName <em>Short Name</em>}</li>
- *   <li>{@link soccer.Team#getPlayer <em>Player</em>}</li>
+ *   <li>{@link soccer.Team#getPlayers <em>Players</em>}</li>
  *   <li>{@link soccer.Team#getLeague <em>League</em>}</li>
  * </ul>
  *
@@ -94,29 +94,29 @@ public interface Team extends EObject {
 	void setShortName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Player</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Players</b></em>' containment reference list.
 	 * The list contents are of type {@link soccer.Player}.
 	 * It is bidirectional and its opposite is '{@link soccer.Player#getTeam <em>Team</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Player</em>' containment reference list.
-	 * @see soccer.SoccerPackage#getTeam_Player()
+	 * @return the value of the '<em>Players</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getTeam_Players()
 	 * @see soccer.Player#getTeam
 	 * @model opposite="team" containment="true"
 	 * @generated
 	 */
-	EList<Player> getPlayer();
+	EList<Player> getPlayers();
 
 	/**
 	 * Returns the value of the '<em><b>League</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link soccer.League#getTeam <em>Team</em>}'.
+	 * It is bidirectional and its opposite is '{@link soccer.League#getTeams <em>Teams</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>League</em>' container reference.
 	 * @see #setLeague(League)
 	 * @see soccer.SoccerPackage#getTeam_League()
-	 * @see soccer.League#getTeam
-	 * @model opposite="team" transient="false"
+	 * @see soccer.League#getTeams
+	 * @model opposite="teams" transient="false"
 	 * @generated
 	 */
 	League getLeague();

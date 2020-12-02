@@ -2,23 +2,14 @@
  */
 package soccer.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import soccer.Country;
 import soccer.League;
 import soccer.SoccerPackage;
@@ -82,14 +73,14 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLeague() <em>League</em>}' containment reference list.
+	 * The cached value of the '{@link #getLeague() <em>League</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLeague()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<League> league;
+	protected League league;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -157,11 +148,42 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<League> getLeague() {
-		if (league == null) {
-			league = new EObjectContainmentWithInverseEList<League>(League.class, this, SoccerPackage.COUNTRY__LEAGUE, SoccerPackage.LEAGUE__COUNTRY);
-		}
+	public League getLeague() {
 		return league;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLeague(League newLeague, NotificationChain msgs) {
+		League oldLeague = league;
+		league = newLeague;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SoccerPackage.COUNTRY__LEAGUE, oldLeague, newLeague);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLeague(League newLeague) {
+		if (newLeague != league) {
+			NotificationChain msgs = null;
+			if (league != null)
+				msgs = ((InternalEObject)league).eInverseRemove(this, SoccerPackage.LEAGUE__COUNTRY, League.class, msgs);
+			if (newLeague != null)
+				msgs = ((InternalEObject)newLeague).eInverseAdd(this, SoccerPackage.LEAGUE__COUNTRY, League.class, msgs);
+			msgs = basicSetLeague(newLeague, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.COUNTRY__LEAGUE, newLeague, newLeague));
 	}
 
 	/**
@@ -197,7 +219,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newSport != null)
-				msgs = ((InternalEObject)newSport).eInverseAdd(this, SoccerPackage.SPORT__COUNTRY, Sport.class, msgs);
+				msgs = ((InternalEObject)newSport).eInverseAdd(this, SoccerPackage.SPORT__COUNTRIES, Sport.class, msgs);
 			msgs = basicSetSport(newSport, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -215,7 +237,9 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SoccerPackage.COUNTRY__LEAGUE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLeague()).basicAdd(otherEnd, msgs);
+				if (league != null)
+					msgs = ((InternalEObject)league).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SoccerPackage.COUNTRY__LEAGUE, null, msgs);
+				return basicSetLeague((League)otherEnd, msgs);
 			case SoccerPackage.COUNTRY__SPORT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -233,7 +257,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SoccerPackage.COUNTRY__LEAGUE:
-				return ((InternalEList<?>)getLeague()).basicRemove(otherEnd, msgs);
+				return basicSetLeague(null, msgs);
 			case SoccerPackage.COUNTRY__SPORT:
 				return basicSetSport(null, msgs);
 		}
@@ -249,7 +273,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case SoccerPackage.COUNTRY__SPORT:
-				return eInternalContainer().eInverseRemove(this, SoccerPackage.SPORT__COUNTRY, Sport.class, msgs);
+				return eInternalContainer().eInverseRemove(this, SoccerPackage.SPORT__COUNTRIES, Sport.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -290,8 +314,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 				setName((String)newValue);
 				return;
 			case SoccerPackage.COUNTRY__LEAGUE:
-				getLeague().clear();
-				getLeague().addAll((Collection<? extends League>)newValue);
+				setLeague((League)newValue);
 				return;
 			case SoccerPackage.COUNTRY__SPORT:
 				setSport((Sport)newValue);
@@ -315,7 +338,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 				setName(NAME_EDEFAULT);
 				return;
 			case SoccerPackage.COUNTRY__LEAGUE:
-				getLeague().clear();
+				setLeague((League)null);
 				return;
 			case SoccerPackage.COUNTRY__SPORT:
 				setSport((Sport)null);
@@ -337,7 +360,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 			case SoccerPackage.COUNTRY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SoccerPackage.COUNTRY__LEAGUE:
-				return league != null && !league.isEmpty();
+				return league != null;
 			case SoccerPackage.COUNTRY__SPORT:
 				return getSport() != null;
 		}

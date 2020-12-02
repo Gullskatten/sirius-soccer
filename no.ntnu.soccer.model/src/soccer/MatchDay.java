@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link soccer.MatchDay#getDate <em>Date</em>}</li>
- *   <li>{@link soccer.MatchDay#getMatch <em>Match</em>}</li>
+ *   <li>{@link soccer.MatchDay#getMatches <em>Matches</em>}</li>
  *   <li>{@link soccer.MatchDay#getSeason <em>Season</em>}</li>
  * </ul>
  *
@@ -47,29 +47,29 @@ public interface MatchDay extends EObject {
 	void setDate(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Match</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Matches</b></em>' containment reference list.
 	 * The list contents are of type {@link soccer.Match}.
 	 * It is bidirectional and its opposite is '{@link soccer.Match#getMatchDay <em>Match Day</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Match</em>' containment reference list.
-	 * @see soccer.SoccerPackage#getMatchDay_Match()
+	 * @return the value of the '<em>Matches</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getMatchDay_Matches()
 	 * @see soccer.Match#getMatchDay
 	 * @model opposite="matchDay" containment="true"
 	 * @generated
 	 */
-	EList<Match> getMatch();
+	EList<Match> getMatches();
 
 	/**
 	 * Returns the value of the '<em><b>Season</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link soccer.Season#getMatchDay <em>Match Day</em>}'.
+	 * It is bidirectional and its opposite is '{@link soccer.Season#getMatchDays <em>Match Days</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Season</em>' container reference.
 	 * @see #setSeason(Season)
 	 * @see soccer.SoccerPackage#getMatchDay_Season()
-	 * @see soccer.Season#getMatchDay
-	 * @model opposite="matchDay" transient="false"
+	 * @see soccer.Season#getMatchDays
+	 * @model opposite="matchDays" transient="false"
 	 * @generated
 	 */
 	Season getSeason();
