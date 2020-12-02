@@ -100,6 +100,18 @@ public class SoccerAdapterFactory extends AdapterFactoryImpl {
 				return createPlayerAdapter();
 			}
 			@Override
+			public Adapter caseOpponent(Opponent object) {
+				return createOpponentAdapter();
+			}
+			@Override
+			public Adapter caseStanding(Standing object) {
+				return createStandingAdapter();
+			}
+			@Override
+			public Adapter casePlacement(Placement object) {
+				return createPlacementAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -214,6 +226,48 @@ public class SoccerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPlayerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link soccer.Opponent <em>Opponent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see soccer.Opponent
+	 * @generated
+	 */
+	public Adapter createOpponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link soccer.Standing <em>Standing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see soccer.Standing
+	 * @generated
+	 */
+	public Adapter createStandingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link soccer.Placement <em>Placement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see soccer.Placement
+	 * @generated
+	 */
+	public Adapter createPlacementAdapter() {
 		return null;
 	}
 

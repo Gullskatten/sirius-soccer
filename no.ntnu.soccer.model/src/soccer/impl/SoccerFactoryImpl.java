@@ -3,6 +3,7 @@
 package soccer.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -64,8 +65,41 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
 			case SoccerPackage.MATCH: return createMatch();
 			case SoccerPackage.TEAM: return createTeam();
 			case SoccerPackage.PLAYER: return createPlayer();
+			case SoccerPackage.OPPONENT: return createOpponent();
+			case SoccerPackage.STANDING: return createStanding();
+			case SoccerPackage.PLACEMENT: return createPlacement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case SoccerPackage.MATCH_WINNER:
+				return createMatchWinnerFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case SoccerPackage.MATCH_WINNER:
+				return convertMatchWinnerToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -137,6 +171,56 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
 	public Player createPlayer() {
 		PlayerImpl player = new PlayerImpl();
 		return player;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Opponent createOpponent() {
+		OpponentImpl opponent = new OpponentImpl();
+		return opponent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Standing createStanding() {
+		StandingImpl standing = new StandingImpl();
+		return standing;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Placement createPlacement() {
+		PlacementImpl placement = new PlacementImpl();
+		return placement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MatchWinner createMatchWinnerFromString(EDataType eDataType, String initialValue) {
+		MatchWinner result = MatchWinner.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMatchWinnerToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

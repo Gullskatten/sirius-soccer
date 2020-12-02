@@ -2,8 +2,7 @@
  */
 package soccer;
 
-import java.util.Date;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,12 +15,11 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link soccer.Match#getMatchDay <em>Match Day</em>}</li>
- *   <li>{@link soccer.Match#getDate <em>Date</em>}</li>
- *   <li>{@link soccer.Match#getHomeTeam <em>Home Team</em>}</li>
- *   <li>{@link soccer.Match#getAwayTeam <em>Away Team</em>}</li>
+ *   <li>{@link soccer.Match#getId <em>Id</em>}</li>
  *   <li>{@link soccer.Match#getHomeTeamGoal <em>Home Team Goal</em>}</li>
  *   <li>{@link soccer.Match#getAwayTeamGoal <em>Away Team Goal</em>}</li>
  *   <li>{@link soccer.Match#getWinner <em>Winner</em>}</li>
+ *   <li>{@link soccer.Match#getOpponent <em>Opponent</em>}</li>
  * </ul>
  *
  * @see soccer.SoccerPackage#getMatch()
@@ -54,70 +52,26 @@ public interface Match extends EObject {
 	void setMatchDay(MatchDay value);
 
 	/**
-	 * Returns the value of the '<em><b>Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Date</em>' attribute.
-	 * @see #setDate(Date)
-	 * @see soccer.SoccerPackage#getMatch_Date()
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see soccer.SoccerPackage#getMatch_Id()
 	 * @model
 	 * @generated
 	 */
-	Date getDate();
+	String getId();
 
 	/**
-	 * Sets the value of the '{@link soccer.Match#getDate <em>Date</em>}' attribute.
+	 * Sets the value of the '{@link soccer.Match#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Date</em>' attribute.
-	 * @see #getDate()
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
 	 * @generated
 	 */
-	void setDate(Date value);
-
-	/**
-	 * Returns the value of the '<em><b>Home Team</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Home Team</em>' reference.
-	 * @see #setHomeTeam(Team)
-	 * @see soccer.SoccerPackage#getMatch_HomeTeam()
-	 * @model required="true"
-	 * @generated
-	 */
-	Team getHomeTeam();
-
-	/**
-	 * Sets the value of the '{@link soccer.Match#getHomeTeam <em>Home Team</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Home Team</em>' reference.
-	 * @see #getHomeTeam()
-	 * @generated
-	 */
-	void setHomeTeam(Team value);
-
-	/**
-	 * Returns the value of the '<em><b>Away Team</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Away Team</em>' reference.
-	 * @see #setAwayTeam(Team)
-	 * @see soccer.SoccerPackage#getMatch_AwayTeam()
-	 * @model required="true"
-	 * @generated
-	 */
-	Team getAwayTeam();
-
-	/**
-	 * Sets the value of the '{@link soccer.Match#getAwayTeam <em>Away Team</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Away Team</em>' reference.
-	 * @see #getAwayTeam()
-	 * @generated
-	 */
-	void setAwayTeam(Team value);
+	void setId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Home Team Goal</b></em>' attribute.
@@ -165,24 +119,41 @@ public interface Match extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Winner</b></em>' attribute.
+	 * The literals are from the enumeration {@link soccer.MatchWinner}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Winner</em>' attribute.
-	 * @see #setWinner(String)
+	 * @see soccer.MatchWinner
+	 * @see #setWinner(MatchWinner)
 	 * @see soccer.SoccerPackage#getMatch_Winner()
 	 * @model
 	 * @generated
 	 */
-	String getWinner();
+	MatchWinner getWinner();
 
 	/**
 	 * Sets the value of the '{@link soccer.Match#getWinner <em>Winner</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Winner</em>' attribute.
+	 * @see soccer.MatchWinner
 	 * @see #getWinner()
 	 * @generated
 	 */
-	void setWinner(String value);
+	void setWinner(MatchWinner value);
+
+	/**
+	 * Returns the value of the '<em><b>Opponent</b></em>' containment reference list.
+	 * The list contents are of type {@link soccer.Opponent}.
+	 * It is bidirectional and its opposite is '{@link soccer.Opponent#getMatch <em>Match</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Opponent</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getMatch_Opponent()
+	 * @see soccer.Opponent#getMatch
+	 * @model opposite="match" containment="true" lower="2" upper="2"
+	 * @generated
+	 */
+	EList<Opponent> getOpponent();
 
 } // Match

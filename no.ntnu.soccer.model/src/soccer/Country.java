@@ -86,14 +86,14 @@ public interface Country extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Sport</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link soccer.Sport#getCountries <em>Countries</em>}'.
+	 * It is bidirectional and its opposite is '{@link soccer.Sport#getCountry <em>Country</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sport</em>' container reference.
 	 * @see #setSport(Sport)
 	 * @see soccer.SoccerPackage#getCountry_Sport()
-	 * @see soccer.Sport#getCountries
-	 * @model opposite="countries" transient="false"
+	 * @see soccer.Sport#getCountry
+	 * @model opposite="country" transient="false"
 	 * @generated
 	 */
 	Sport getSport();

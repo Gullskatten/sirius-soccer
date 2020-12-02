@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link soccer.Player#getId <em>Id</em>}</li>
  *   <li>{@link soccer.Player#getName <em>Name</em>}</li>
  *   <li>{@link soccer.Player#getHeight <em>Height</em>}</li>
- *   <li>{@link soccer.Player#getWeigth <em>Weigth</em>}</li>
+ *   <li>{@link soccer.Player#getWeight <em>Weight</em>}</li>
  *   <li>{@link soccer.Player#getTeam <em>Team</em>}</li>
  *   <li>{@link soccer.Player#getPosX <em>Pos X</em>}</li>
  *   <li>{@link soccer.Player#getPosY <em>Pos Y</em>}</li>
@@ -34,7 +34,7 @@ public interface Player extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see soccer.SoccerPackage#getPlayer_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	String getId();
@@ -94,26 +94,26 @@ public interface Player extends EObject {
 	void setHeight(float value);
 
 	/**
-	 * Returns the value of the '<em><b>Weigth</b></em>' attribute.
+	 * Returns the value of the '<em><b>Weight</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Weigth</em>' attribute.
-	 * @see #setWeigth(float)
-	 * @see soccer.SoccerPackage#getPlayer_Weigth()
+	 * @return the value of the '<em>Weight</em>' attribute.
+	 * @see #setWeight(float)
+	 * @see soccer.SoccerPackage#getPlayer_Weight()
 	 * @model
 	 * @generated
 	 */
-	float getWeigth();
+	float getWeight();
 
 	/**
-	 * Sets the value of the '{@link soccer.Player#getWeigth <em>Weigth</em>}' attribute.
+	 * Sets the value of the '{@link soccer.Player#getWeight <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Weigth</em>' attribute.
-	 * @see #getWeigth()
+	 * @param value the new value of the '<em>Weight</em>' attribute.
+	 * @see #getWeight()
 	 * @generated
 	 */
-	void setWeigth(float value);
+	void setWeight(float value);
 
 	/**
 	 * Returns the value of the '<em><b>Team</b></em>' container reference.

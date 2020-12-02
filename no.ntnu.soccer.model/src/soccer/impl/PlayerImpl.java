@@ -28,7 +28,7 @@ import soccer.Team;
  *   <li>{@link soccer.impl.PlayerImpl#getId <em>Id</em>}</li>
  *   <li>{@link soccer.impl.PlayerImpl#getName <em>Name</em>}</li>
  *   <li>{@link soccer.impl.PlayerImpl#getHeight <em>Height</em>}</li>
- *   <li>{@link soccer.impl.PlayerImpl#getWeigth <em>Weigth</em>}</li>
+ *   <li>{@link soccer.impl.PlayerImpl#getWeight <em>Weight</em>}</li>
  *   <li>{@link soccer.impl.PlayerImpl#getTeam <em>Team</em>}</li>
  *   <li>{@link soccer.impl.PlayerImpl#getPosX <em>Pos X</em>}</li>
  *   <li>{@link soccer.impl.PlayerImpl#getPosY <em>Pos Y</em>}</li>
@@ -98,24 +98,24 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	protected float height = HEIGHT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getWeigth() <em>Weigth</em>}' attribute.
+	 * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWeigth()
+	 * @see #getWeight()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float WEIGTH_EDEFAULT = 0.0F;
+	protected static final float WEIGHT_EDEFAULT = 0.0F;
 
 	/**
-	 * The cached value of the '{@link #getWeigth() <em>Weigth</em>}' attribute.
+	 * The cached value of the '{@link #getWeight() <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWeigth()
+	 * @see #getWeight()
 	 * @generated
 	 * @ordered
 	 */
-	protected float weigth = WEIGTH_EDEFAULT;
+	protected float weight = WEIGHT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPosX() <em>Pos X</em>}' attribute.
@@ -244,8 +244,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getWeigth() {
-		return weigth;
+	public float getWeight() {
+		return weight;
 	}
 
 	/**
@@ -253,11 +253,11 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWeigth(float newWeigth) {
-		float oldWeigth = weigth;
-		weigth = newWeigth;
+	public void setWeight(float newWeight) {
+		float oldWeight = weight;
+		weight = newWeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLAYER__WEIGTH, oldWeigth, weigth));
+			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLAYER__WEIGHT, oldWeight, weight));
 	}
 
 	/**
@@ -401,8 +401,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 				return getName();
 			case SoccerPackage.PLAYER__HEIGHT:
 				return getHeight();
-			case SoccerPackage.PLAYER__WEIGTH:
-				return getWeigth();
+			case SoccerPackage.PLAYER__WEIGHT:
+				return getWeight();
 			case SoccerPackage.PLAYER__TEAM:
 				return getTeam();
 			case SoccerPackage.PLAYER__POS_X:
@@ -430,8 +430,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 			case SoccerPackage.PLAYER__HEIGHT:
 				setHeight((Float)newValue);
 				return;
-			case SoccerPackage.PLAYER__WEIGTH:
-				setWeigth((Float)newValue);
+			case SoccerPackage.PLAYER__WEIGHT:
+				setWeight((Float)newValue);
 				return;
 			case SoccerPackage.PLAYER__TEAM:
 				setTeam((Team)newValue);
@@ -463,8 +463,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 			case SoccerPackage.PLAYER__HEIGHT:
 				setHeight(HEIGHT_EDEFAULT);
 				return;
-			case SoccerPackage.PLAYER__WEIGTH:
-				setWeigth(WEIGTH_EDEFAULT);
+			case SoccerPackage.PLAYER__WEIGHT:
+				setWeight(WEIGHT_EDEFAULT);
 				return;
 			case SoccerPackage.PLAYER__TEAM:
 				setTeam((Team)null);
@@ -493,8 +493,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SoccerPackage.PLAYER__HEIGHT:
 				return height != HEIGHT_EDEFAULT;
-			case SoccerPackage.PLAYER__WEIGTH:
-				return weigth != WEIGTH_EDEFAULT;
+			case SoccerPackage.PLAYER__WEIGHT:
+				return weight != WEIGHT_EDEFAULT;
 			case SoccerPackage.PLAYER__TEAM:
 				return getTeam() != null;
 			case SoccerPackage.PLAYER__POS_X:
@@ -521,8 +521,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 		result.append(name);
 		result.append(", height: ");
 		result.append(height);
-		result.append(", weigth: ");
-		result.append(weigth);
+		result.append(", weight: ");
+		result.append(weight);
 		result.append(", posX: ");
 		result.append(posX);
 		result.append(", posY: ");

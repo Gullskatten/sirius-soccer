@@ -197,7 +197,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newSport != null)
-				msgs = ((InternalEObject)newSport).eInverseAdd(this, SoccerPackage.SPORT__COUNTRIES, Sport.class, msgs);
+				msgs = ((InternalEObject)newSport).eInverseAdd(this, SoccerPackage.SPORT__COUNTRY, Sport.class, msgs);
 			msgs = basicSetSport(newSport, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -249,7 +249,7 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case SoccerPackage.COUNTRY__SPORT:
-				return eInternalContainer().eInverseRemove(this, SoccerPackage.SPORT__COUNTRIES, Sport.class, msgs);
+				return eInternalContainer().eInverseRemove(this, SoccerPackage.SPORT__COUNTRY, Sport.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}

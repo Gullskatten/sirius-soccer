@@ -23,6 +23,7 @@ import soccer.Country;
 import soccer.League;
 import soccer.Season;
 import soccer.SoccerPackage;
+import soccer.Team;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,6 +37,7 @@ import soccer.SoccerPackage;
  *   <li>{@link soccer.impl.LeagueImpl#getName <em>Name</em>}</li>
  *   <li>{@link soccer.impl.LeagueImpl#getCountry <em>Country</em>}</li>
  *   <li>{@link soccer.impl.LeagueImpl#getSeason <em>Season</em>}</li>
+ *   <li>{@link soccer.impl.LeagueImpl#getTeam <em>Team</em>}</li>
  * </ul>
  *
  * @generated
@@ -90,6 +92,16 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 	 * @ordered
 	 */
 	protected EList<Season> season;
+
+	/**
+	 * The cached value of the '{@link #getTeam() <em>Team</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTeam()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Team> team;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,6 +222,18 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Team> getTeam() {
+		if (team == null) {
+			team = new EObjectContainmentWithInverseEList<Team>(Team.class, this, SoccerPackage.LEAGUE__TEAM, SoccerPackage.TEAM__LEAGUE);
+		}
+		return team;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -220,6 +244,8 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 				return basicSetCountry((Country)otherEnd, msgs);
 			case SoccerPackage.LEAGUE__SEASON:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSeason()).basicAdd(otherEnd, msgs);
+			case SoccerPackage.LEAGUE__TEAM:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTeam()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -236,6 +262,8 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 				return basicSetCountry(null, msgs);
 			case SoccerPackage.LEAGUE__SEASON:
 				return ((InternalEList<?>)getSeason()).basicRemove(otherEnd, msgs);
+			case SoccerPackage.LEAGUE__TEAM:
+				return ((InternalEList<?>)getTeam()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -270,6 +298,8 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 				return getCountry();
 			case SoccerPackage.LEAGUE__SEASON:
 				return getSeason();
+			case SoccerPackage.LEAGUE__TEAM:
+				return getTeam();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -296,6 +326,10 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 				getSeason().clear();
 				getSeason().addAll((Collection<? extends Season>)newValue);
 				return;
+			case SoccerPackage.LEAGUE__TEAM:
+				getTeam().clear();
+				getTeam().addAll((Collection<? extends Team>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -320,6 +354,9 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 			case SoccerPackage.LEAGUE__SEASON:
 				getSeason().clear();
 				return;
+			case SoccerPackage.LEAGUE__TEAM:
+				getTeam().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -340,6 +377,8 @@ public class LeagueImpl extends MinimalEObjectImpl.Container implements League {
 				return getCountry() != null;
 			case SoccerPackage.LEAGUE__SEASON:
 				return season != null && !season.isEmpty();
+			case SoccerPackage.LEAGUE__TEAM:
+				return team != null && !team.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

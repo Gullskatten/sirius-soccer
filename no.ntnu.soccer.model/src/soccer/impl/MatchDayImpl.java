@@ -2,17 +2,21 @@
  */
 package soccer.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
+import org.eclipse.emf.ecore.util.InternalEList;
 import soccer.Match;
 import soccer.MatchDay;
 import soccer.Season;
@@ -55,14 +59,14 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 	protected String date = DATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getMatch() <em>Match</em>}' containment reference.
+	 * The cached value of the '{@link #getMatch() <em>Match</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMatch()
 	 * @generated
 	 * @ordered
 	 */
-	protected Match match;
+	protected EList<Match> match;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,42 +113,11 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Match getMatch() {
+	public EList<Match> getMatch() {
+		if (match == null) {
+			match = new EObjectContainmentWithInverseEList<Match>(Match.class, this, SoccerPackage.MATCH_DAY__MATCH, SoccerPackage.MATCH__MATCH_DAY);
+		}
 		return match;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetMatch(Match newMatch, NotificationChain msgs) {
-		Match oldMatch = match;
-		match = newMatch;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SoccerPackage.MATCH_DAY__MATCH, oldMatch, newMatch);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMatch(Match newMatch) {
-		if (newMatch != match) {
-			NotificationChain msgs = null;
-			if (match != null)
-				msgs = ((InternalEObject)match).eInverseRemove(this, SoccerPackage.MATCH__MATCH_DAY, Match.class, msgs);
-			if (newMatch != null)
-				msgs = ((InternalEObject)newMatch).eInverseAdd(this, SoccerPackage.MATCH__MATCH_DAY, Match.class, msgs);
-			msgs = basicSetMatch(newMatch, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.MATCH_DAY__MATCH, newMatch, newMatch));
 	}
 
 	/**
@@ -193,13 +166,12 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SoccerPackage.MATCH_DAY__MATCH:
-				if (match != null)
-					msgs = ((InternalEObject)match).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SoccerPackage.MATCH_DAY__MATCH, null, msgs);
-				return basicSetMatch((Match)otherEnd, msgs);
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMatch()).basicAdd(otherEnd, msgs);
 			case SoccerPackage.MATCH_DAY__SEASON:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -217,7 +189,7 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SoccerPackage.MATCH_DAY__MATCH:
-				return basicSetMatch(null, msgs);
+				return ((InternalEList<?>)getMatch()).basicRemove(otherEnd, msgs);
 			case SoccerPackage.MATCH_DAY__SEASON:
 				return basicSetSeason(null, msgs);
 		}
@@ -261,6 +233,7 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -268,7 +241,8 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 				setDate((String)newValue);
 				return;
 			case SoccerPackage.MATCH_DAY__MATCH:
-				setMatch((Match)newValue);
+				getMatch().clear();
+				getMatch().addAll((Collection<? extends Match>)newValue);
 				return;
 			case SoccerPackage.MATCH_DAY__SEASON:
 				setSeason((Season)newValue);
@@ -289,7 +263,7 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 				setDate(DATE_EDEFAULT);
 				return;
 			case SoccerPackage.MATCH_DAY__MATCH:
-				setMatch((Match)null);
+				getMatch().clear();
 				return;
 			case SoccerPackage.MATCH_DAY__SEASON:
 				setSeason((Season)null);
@@ -309,7 +283,7 @@ public class MatchDayImpl extends MinimalEObjectImpl.Container implements MatchD
 			case SoccerPackage.MATCH_DAY__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
 			case SoccerPackage.MATCH_DAY__MATCH:
-				return match != null;
+				return match != null && !match.isEmpty();
 			case SoccerPackage.MATCH_DAY__SEASON:
 				return getSeason() != null;
 		}

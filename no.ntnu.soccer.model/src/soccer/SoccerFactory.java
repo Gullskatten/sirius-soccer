@@ -85,6 +85,33 @@ public interface SoccerFactory extends EFactory {
 	Player createPlayer();
 
 	/**
+	 * Returns a new object of class '<em>Opponent</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Opponent</em>'.
+	 * @generated
+	 */
+	Opponent createOpponent();
+
+	/**
+	 * Returns a new object of class '<em>Standing</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Standing</em>'.
+	 * @generated
+	 */
+	Standing createStanding();
+
+	/**
+	 * Returns a new object of class '<em>Placement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Placement</em>'.
+	 * @generated
+	 */
+	Placement createPlacement();
+
+	/**
 	 * Returns a new object of class '<em>Match</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

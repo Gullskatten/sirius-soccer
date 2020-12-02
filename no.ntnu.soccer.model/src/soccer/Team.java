@@ -16,9 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link soccer.Team#getId <em>Id</em>}</li>
- *   <li>{@link soccer.Team#getTeamName <em>Team Name</em>}</li>
+ *   <li>{@link soccer.Team#getName <em>Name</em>}</li>
  *   <li>{@link soccer.Team#getShortName <em>Short Name</em>}</li>
  *   <li>{@link soccer.Team#getPlayer <em>Player</em>}</li>
+ *   <li>{@link soccer.Team#getLeague <em>League</em>}</li>
  * </ul>
  *
  * @see soccer.SoccerPackage#getTeam()
@@ -33,7 +34,7 @@ public interface Team extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see soccer.SoccerPackage#getTeam_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	String getId();
@@ -49,26 +50,26 @@ public interface Team extends EObject {
 	void setId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Team Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Team Name</em>' attribute.
-	 * @see #setTeamName(String)
-	 * @see soccer.SoccerPackage#getTeam_TeamName()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see soccer.SoccerPackage#getTeam_Name()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getTeamName();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link soccer.Team#getTeamName <em>Team Name</em>}' attribute.
+	 * Sets the value of the '{@link soccer.Team#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Team Name</em>' attribute.
-	 * @see #getTeamName()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setTeamName(String value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Short Name</b></em>' attribute.
@@ -105,5 +106,29 @@ public interface Team extends EObject {
 	 * @generated
 	 */
 	EList<Player> getPlayer();
+
+	/**
+	 * Returns the value of the '<em><b>League</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link soccer.League#getTeam <em>Team</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>League</em>' container reference.
+	 * @see #setLeague(League)
+	 * @see soccer.SoccerPackage#getTeam_League()
+	 * @see soccer.League#getTeam
+	 * @model opposite="team" transient="false"
+	 * @generated
+	 */
+	League getLeague();
+
+	/**
+	 * Sets the value of the '{@link soccer.Team#getLeague <em>League</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>League</em>' container reference.
+	 * @see #getLeague()
+	 * @generated
+	 */
+	void setLeague(League value);
 
 } // Team

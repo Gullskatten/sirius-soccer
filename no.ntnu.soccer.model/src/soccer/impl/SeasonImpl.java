@@ -21,6 +21,7 @@ import soccer.League;
 import soccer.MatchDay;
 import soccer.Season;
 import soccer.SoccerPackage;
+import soccer.Standing;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,6 +34,7 @@ import soccer.SoccerPackage;
  *   <li>{@link soccer.impl.SeasonImpl#getSeasonName <em>Season Name</em>}</li>
  *   <li>{@link soccer.impl.SeasonImpl#getLeague <em>League</em>}</li>
  *   <li>{@link soccer.impl.SeasonImpl#getMatchDay <em>Match Day</em>}</li>
+ *   <li>{@link soccer.impl.SeasonImpl#getStanding <em>Standing</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,6 +71,16 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	protected EList<MatchDay> matchDay;
 
 	/**
+	 * The cached value of the '{@link #getStanding() <em>Standing</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStanding()
+	 * @generated
+	 * @ordered
+	 */
+	protected Standing standing;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -94,6 +106,18 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	 */
 	public String getSeasonName() {
 		return seasonName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSeasonName(String newSeasonName) {
+		String oldSeasonName = seasonName;
+		seasonName = newSeasonName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.SEASON__SEASON_NAME, oldSeasonName, seasonName));
 	}
 
 	/**
@@ -154,6 +178,49 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Standing getStanding() {
+		return standing;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStanding(Standing newStanding, NotificationChain msgs) {
+		Standing oldStanding = standing;
+		standing = newStanding;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SoccerPackage.SEASON__STANDING, oldStanding, newStanding);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStanding(Standing newStanding) {
+		if (newStanding != standing) {
+			NotificationChain msgs = null;
+			if (standing != null)
+				msgs = ((InternalEObject)standing).eInverseRemove(this, SoccerPackage.STANDING__SEASON, Standing.class, msgs);
+			if (newStanding != null)
+				msgs = ((InternalEObject)newStanding).eInverseAdd(this, SoccerPackage.STANDING__SEASON, Standing.class, msgs);
+			msgs = basicSetStanding(newStanding, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.SEASON__STANDING, newStanding, newStanding));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -164,6 +231,10 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 				return basicSetLeague((League)otherEnd, msgs);
 			case SoccerPackage.SEASON__MATCH_DAY:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMatchDay()).basicAdd(otherEnd, msgs);
+			case SoccerPackage.SEASON__STANDING:
+				if (standing != null)
+					msgs = ((InternalEObject)standing).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SoccerPackage.SEASON__STANDING, null, msgs);
+				return basicSetStanding((Standing)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -180,6 +251,8 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 				return basicSetLeague(null, msgs);
 			case SoccerPackage.SEASON__MATCH_DAY:
 				return ((InternalEList<?>)getMatchDay()).basicRemove(otherEnd, msgs);
+			case SoccerPackage.SEASON__STANDING:
+				return basicSetStanding(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -212,6 +285,8 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 				return getLeague();
 			case SoccerPackage.SEASON__MATCH_DAY:
 				return getMatchDay();
+			case SoccerPackage.SEASON__STANDING:
+				return getStanding();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -225,12 +300,18 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case SoccerPackage.SEASON__SEASON_NAME:
+				setSeasonName((String)newValue);
+				return;
 			case SoccerPackage.SEASON__LEAGUE:
 				setLeague((League)newValue);
 				return;
 			case SoccerPackage.SEASON__MATCH_DAY:
 				getMatchDay().clear();
 				getMatchDay().addAll((Collection<? extends MatchDay>)newValue);
+				return;
+			case SoccerPackage.SEASON__STANDING:
+				setStanding((Standing)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -244,11 +325,17 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case SoccerPackage.SEASON__SEASON_NAME:
+				setSeasonName(SEASON_NAME_EDEFAULT);
+				return;
 			case SoccerPackage.SEASON__LEAGUE:
 				setLeague((League)null);
 				return;
 			case SoccerPackage.SEASON__MATCH_DAY:
 				getMatchDay().clear();
+				return;
+			case SoccerPackage.SEASON__STANDING:
+				setStanding((Standing)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -268,6 +355,8 @@ public class SeasonImpl extends MinimalEObjectImpl.Container implements Season {
 				return getLeague() != null;
 			case SoccerPackage.SEASON__MATCH_DAY:
 				return matchDay != null && !matchDay.isEmpty();
+			case SoccerPackage.SEASON__STANDING:
+				return standing != null;
 		}
 		return super.eIsSet(featureID);
 	}

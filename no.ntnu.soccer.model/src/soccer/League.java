@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link soccer.League#getName <em>Name</em>}</li>
  *   <li>{@link soccer.League#getCountry <em>Country</em>}</li>
  *   <li>{@link soccer.League#getSeason <em>Season</em>}</li>
+ *   <li>{@link soccer.League#getTeam <em>Team</em>}</li>
  * </ul>
  *
  * @see soccer.SoccerPackage#getLeague()
@@ -107,5 +108,19 @@ public interface League extends EObject {
 	 * @generated
 	 */
 	EList<Season> getSeason();
+
+	/**
+	 * Returns the value of the '<em><b>Team</b></em>' containment reference list.
+	 * The list contents are of type {@link soccer.Team}.
+	 * It is bidirectional and its opposite is '{@link soccer.Team#getLeague <em>League</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Team</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getLeague_Team()
+	 * @see soccer.Team#getLeague
+	 * @model opposite="league" containment="true"
+	 * @generated
+	 */
+	EList<Team> getTeam();
 
 } // League

@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link soccer.Season#getSeasonName <em>Season Name</em>}</li>
  *   <li>{@link soccer.Season#getLeague <em>League</em>}</li>
  *   <li>{@link soccer.Season#getMatchDay <em>Match Day</em>}</li>
+ *   <li>{@link soccer.Season#getStanding <em>Standing</em>}</li>
  * </ul>
  *
  * @see soccer.SoccerPackage#getSeason()
@@ -30,11 +31,22 @@ public interface Season extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Season Name</em>' attribute.
+	 * @see #setSeasonName(String)
 	 * @see soccer.SoccerPackage#getSeason_SeasonName()
-	 * @model default="" changeable="false" derived="true"
+	 * @model default="" derived="true"
 	 * @generated
 	 */
 	String getSeasonName();
+
+	/**
+	 * Sets the value of the '{@link soccer.Season#getSeasonName <em>Season Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Season Name</em>' attribute.
+	 * @see #getSeasonName()
+	 * @generated
+	 */
+	void setSeasonName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>League</b></em>' container reference.
@@ -73,5 +85,29 @@ public interface Season extends EObject {
 	 * @generated
 	 */
 	EList<MatchDay> getMatchDay();
+
+	/**
+	 * Returns the value of the '<em><b>Standing</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link soccer.Standing#getSeason <em>Season</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Standing</em>' containment reference.
+	 * @see #setStanding(Standing)
+	 * @see soccer.SoccerPackage#getSeason_Standing()
+	 * @see soccer.Standing#getSeason
+	 * @model opposite="season" containment="true"
+	 * @generated
+	 */
+	Standing getStanding();
+
+	/**
+	 * Sets the value of the '{@link soccer.Season#getStanding <em>Standing</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Standing</em>' containment reference.
+	 * @see #getStanding()
+	 * @generated
+	 */
+	void setStanding(Standing value);
 
 } // Season

@@ -2,6 +2,7 @@
  */
 package soccer;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -46,28 +47,18 @@ public interface MatchDay extends EObject {
 	void setDate(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Match</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Match</b></em>' containment reference list.
+	 * The list contents are of type {@link soccer.Match}.
 	 * It is bidirectional and its opposite is '{@link soccer.Match#getMatchDay <em>Match Day</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Match</em>' containment reference.
-	 * @see #setMatch(Match)
+	 * @return the value of the '<em>Match</em>' containment reference list.
 	 * @see soccer.SoccerPackage#getMatchDay_Match()
 	 * @see soccer.Match#getMatchDay
 	 * @model opposite="matchDay" containment="true"
 	 * @generated
 	 */
-	Match getMatch();
-
-	/**
-	 * Sets the value of the '{@link soccer.MatchDay#getMatch <em>Match</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Match</em>' containment reference.
-	 * @see #getMatch()
-	 * @generated
-	 */
-	void setMatch(Match value);
+	EList<Match> getMatch();
 
 	/**
 	 * Returns the value of the '<em><b>Season</b></em>' container reference.
