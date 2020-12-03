@@ -114,14 +114,16 @@ public class PerformParsing {
             sport.toXmi(
                     bufferedWriter,
                     unused -> {
-                        countries.forEach(
+                        countries.stream()
+                                .filter(country -> country.getId() == ENGLISH_COUNTRY_ID) //  -> Limit countries to ENGLAND only! /
+                                .forEach(
                                 country -> country.toXmi(
                                         bufferedWriter,
                                         unused2 -> {
                                             List<Team> teamsInLeague = new ArrayList<>();
 
                                             leagues.stream()
-                                                    .filter(league -> league.getCountryId() ==  ENGLISH_COUNTRY_ID ) // country.getId() -> To include all countries!
+                                                    .filter(league -> league.getCountryId() ==  country.getId())
                                                     .forEach(
                                                     league -> league.toXmi(
                                                             bufferedWriter,
