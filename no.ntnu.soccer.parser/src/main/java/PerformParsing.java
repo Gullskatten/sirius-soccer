@@ -23,6 +23,7 @@ public class PerformParsing {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PerformParsing.class);
     public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd ");
+    private static final int ENGLISH_COUNTRY_ID = 1729;
 
 
     /**
@@ -108,6 +109,8 @@ public class PerformParsing {
         LOGGER.info("Writing XMI file to {}", file.getAbsolutePath());
         try (FileWriter writer = new FileWriter(file);
              BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
+            Map<Integer, Player> allUniquePlayersInSet = new HashMap<>();
+
             sport.toXmi(
                     bufferedWriter,
                     unused -> {
@@ -117,7 +120,9 @@ public class PerformParsing {
                                         unused2 -> {
                                             List<Team> teamsInLeague = new ArrayList<>();
 
-                                            leagues.stream().filter(league -> league.getCountryId() == country.getId()).forEach(
+                                            leagues.stream()
+                                                    .filter(league -> league.getCountryId() ==  ENGLISH_COUNTRY_ID ) // country.getId() -> To include all countries!
+                                                    .forEach(
                                                     league -> league.toXmi(
                                                             bufferedWriter,
                                                             unused1 -> {
@@ -139,7 +144,6 @@ public class PerformParsing {
                                                                                                         matchDay.getMatchDate().isEqual(match.getDate())
                                                                                 ).forEach(
                                                                                         matchOutput -> {
-
                                                                                            Optional<Placement> homeTeamPlacement = allPlacementsInSeason.stream()
                                                                                                     .filter(x -> x.getTeamApiId() == matchOutput.getHomeTeam().getTeamApiId()).findFirst();
 
@@ -155,6 +159,8 @@ public class PerformParsing {
                                                                                                     bufferedWriter,
                                                                                                     null
                                                                                             );
+                                                                                            createPlayersIfNotExists(matchOutput.getHomeTeam().getPlayers(), allUniquePlayersInSet);
+                                                                                            createPlayersIfNotExists(matchOutput.getAwayTeam().getPlayers(), allUniquePlayersInSet);
                                                                                         }
                                                                                 );
 
@@ -179,13 +185,17 @@ public class PerformParsing {
                                             return null;
                                         }
                                 ));
-                        players.forEach(player -> player.toXmi(bufferedWriter, null));
+                        allUniquePlayersInSet.values().forEach(player -> player.toXmi(bufferedWriter, null));
                         return null;
                     });
 
         } catch (IOException e) {
             LOGGER.error("Failed to write output file: {}", e.getMessage());
         }
+    }
+
+    private static void createPlayersIfNotExists(List<Player> players, Map<Integer, Player> allPlayersInSet) {
+        players.forEach(player -> allPlayersInSet.putIfAbsent(player.getId(), player));
     }
 
     private static void createTeamIfNotExists(Team aTeam, List<Team> teamsInLeague) {
