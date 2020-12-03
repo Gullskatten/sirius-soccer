@@ -25,7 +25,6 @@ public class CsvUtil<T> {
             CsvToBean<T> cb = new CsvToBeanBuilder<T>(reader)
                     .withSeparator(delimiter.charAt(0))
                     .withType(typeOfObjects)
-                    .withSkipLines(1)
                     .build();
 
             LOGGER.debug("Parsing file content to CSV");

@@ -86,10 +86,6 @@ public class PerformParsing {
             threadPoolExecutor.invokeAll(workLoad).forEach(listFuture -> {
                 try {
                     matchOutputs.addAll(listFuture.get());
-
-                    if (matchOutputs.size() % 5000 == 0 && matchOutputs.size() > 0) {
-                        LOGGER.info("Processed 5000 matches");
-                    }
                 } catch (InterruptedException | ExecutionException e) {
                     LOGGER.error("Error during invocation: {}", e.getMessage());
                 }
@@ -98,7 +94,6 @@ public class PerformParsing {
             LOGGER.error("Thread was interrupted: {}", e.getMessage());
         }
 
-        LOGGER.info("\n");
         LOGGER.info("GENERATING hierarchy for {} matches", matchOutputs.size());
 
         // Sport -> has participating countries as child
@@ -177,25 +172,17 @@ public class PerformParsing {
                                                                             return null;
                                                                         }
                                                                 ));
-                                                                teamsInLeague.forEach(team -> team.toXmi(bufferedWriter, unused5 -> {
-                                                                    team.getPlayers().forEach(
-                                                                            player -> player.toXmi(bufferedWriter, null)
-                                                                    );
-                                                                    return null;
-                                                                }));
+                                                                teamsInLeague.forEach(team -> team.toXmi(bufferedWriter, null));
                                                                 return null;
                                                             })
                                             );
                                             return null;
                                         }
                                 ));
-
+                        players.forEach(player -> player.toXmi(bufferedWriter, null));
                         return null;
                     });
 
-            /*
-
-             */
         } catch (IOException e) {
             LOGGER.error("Failed to write output file: {}", e.getMessage());
         }

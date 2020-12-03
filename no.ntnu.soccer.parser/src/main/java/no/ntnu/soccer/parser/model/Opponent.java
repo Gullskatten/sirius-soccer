@@ -9,20 +9,29 @@ import java.util.function.Function;
 
 public class Opponent implements XmiParsable {
     private static final Logger LOGGER = LoggerFactory.getLogger(Opponent.class);
-    private final String teamType;
-    private final int teamApiId;
+    private final Team team;
+    private final String type;
 
-    public Opponent(Team originalTeam, String teamType) {
-        this.teamApiId = originalTeam.getTeamApiId();
-        this.teamType = teamType;
+    public Opponent(Team team, String type) {
+        this.team = team;
+        this.type = type;
     }
 
     @Override
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
             writer.write(indent() + "<opponents\n"
-                    + indent() + "    team=" + "\""  + getTeamApiId() + "\"\n"
-                    + indent() + "    type=" + "\""  + teamType + "\"/>\n");
+                    + indent() + "    team=" + "\""  + team.getTeamApiId() + "\"\n"
+                    + indent() + "    type=" + "\""  + type + "\"");
+
+            if(childrenFunction != null) {
+                writer.write(">\n");
+                childrenFunction.apply(null);
+                writer.write(indent() + "</opponents>\n");
+            } else {
+                writer.write("/>\n");
+
+            }
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ",e);
         }
@@ -33,11 +42,11 @@ public class Opponent implements XmiParsable {
         return "            ";
     }
 
-    public String getTeamType() {
-        return teamType;
+    public Team getTeam() {
+        return team;
     }
 
-    public int getTeamApiId() {
-        return teamApiId;
+    public String getType() {
+        return type;
     }
 }

@@ -69,11 +69,7 @@ public class Player implements XmiParsable {
         try {
             writer.write(indent() + "<players\n"
                     + indent() + "    id=" + "\""  + id + "\"\n"
-                    + indent() + "    name=" + "\""  + name + "\"\n"
-                    + indent() + "    posX=" + "\""  + x + "\"\n"
-                    + indent() + "    posY=" + "\""  + y + "\"\n"
-                    + indent() + "    weight=" + "\""  + weight + "\"\n"
-                    + indent() + "    height=" + "\""  + height + "\""
+                    + indent() + "    name=" + "\""  + name + "\""
             );
 
             if(childrenFunction != null) {
