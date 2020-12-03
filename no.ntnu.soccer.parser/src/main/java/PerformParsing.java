@@ -109,7 +109,7 @@ public class PerformParsing {
         // - - - - - Teams -> has players as child
         // - - - - - - Players
 
-        File file = new File(System.currentTimeMillis() + "_" + "football.xmi");
+        File file = new File("football.xmi");
         LOGGER.info("Writing XMI file to {}", file.getAbsolutePath());
         try (FileWriter writer = new FileWriter(file);
              BufferedWriter bufferedWriter = new BufferedWriter(writer)) {

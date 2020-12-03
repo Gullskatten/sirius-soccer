@@ -19,11 +19,9 @@ public class Placement implements XmiParsable {
     private int awayGoals;
     private int goalDifference;
     private int gamesPlayed;
-    private final String name;
 
     public Placement(Team team) {
         this.teamApiId = team.getTeamApiId();
-        this.name = team.getTeamName();
     }
 
     public void updatePlacementInfo(Match match) {
@@ -127,7 +125,6 @@ public class Placement implements XmiParsable {
         try {
             writer.write(indent() + "<placements\n"
                     + indent() + "    team=" + "\"" + getTeamApiId() + "\"\n"
-                    + indent() + "    name=" + "\"" + getName() + "\"\n"
                     + indent() + "    awayTeamGoal=" + "\"" + getAwayGoals() + "\"\n"
                     + indent() + "    homeTeamGoal=" + "\"" + getHomeGoals() + "\"\n"
                     + indent() + "    goalDifference=" + "\"" + getGoalDifference() + "\"\n"
@@ -144,9 +141,5 @@ public class Placement implements XmiParsable {
     @Override
     public String indent() {
         return "            ";
-    }
-
-    public String getName() {
-        return name;
     }
 }
