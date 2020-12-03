@@ -26,7 +26,7 @@ public enum PositionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	KEEPER(0, "KEEPER", "Keeper"),
+	KEEPER(0, "KEEPER", "KEEPER"),
 
 	/**
 	 * The '<em><b>DEFENCE</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum PositionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DEFENCE(1, "DEFENCE", "Defence"),
+	DEFENCE(1, "DEFENCE", "DEFENCE"),
 
 	/**
 	 * The '<em><b>MIDFIELD</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum PositionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MIDFIELD(2, "MIDFIELD", "Midfield"),
+	MIDFIELD(2, "MIDFIELD", "MIDFIELD"),
 
 	/**
 	 * The '<em><b>FORWARD</b></em>' literal object.
@@ -56,14 +56,14 @@ public enum PositionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FORWARD(3, "FORWARD", "Forward");
+	FORWARD(3, "FORWARD", "FORWARD");
 
 	/**
 	 * The '<em><b>KEEPER</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #KEEPER
-	 * @model literal="Keeper"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -74,7 +74,7 @@ public enum PositionType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #DEFENCE
-	 * @model literal="Defence"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -85,7 +85,7 @@ public enum PositionType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #MIDFIELD
-	 * @model literal="Midfield"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -96,7 +96,7 @@ public enum PositionType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #FORWARD
-	 * @model literal="Forward"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
