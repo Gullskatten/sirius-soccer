@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" name="soccer" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" name="soccer" version="12.0.0.2017041100">
   <ownedViewpoints name="soccer" modelFileExtension="ecore">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Soccer" initialisation="true" domainClass="soccer::Sport" enablePopupBars="true">
-      <metamodel href="../../no.ntnu.soccer.model/model/soccer.ecore#/"/>
-      <defaultLayer name="Default"/>
-      <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-    </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="SeasonTable" label="Season Table" domainClass="soccer::Standing">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="SeasonTable" label="Season Table" domainClass="soccer::Standing">
       <metamodel href="../../no.ntnu.soccer.model/model/soccer.ecore#/"/>
       <ownedLineMappings name="Placement Line" domainClass="soccer::Placement" headerLabelExpression="aql:self.team.id"/>
       <ownedColumnMappings name="Placement" headerLabelExpression="#" initialWidth="30" featureName="seasonPoints" labelExpression="aql:self.eContainer().placements->asSequence()->indexOf(self)"/>
