@@ -113,7 +113,7 @@ public class MatchOutput extends Match implements XmiParsable {
                     + indent() + "    id=" + "\"" + getId() + "\"\n"
                     + indent() + "    awayTeamGoal=" + "\"" + getAwayTeamGoal() + "\"\n"
                     + indent() + "    homeTeamGoal=" + "\"" + getHomeTeamGoal() + "\"\n"
-                    + indent() + "    winner=" + "\"" + determineMatchWinner() + "\">\n");
+                    + indent() + "    result=" + "\"" + determineMatchResult() + "\">\n");
             appendOpponent(new Opponent(awayTeam, "awayTeam"), writer);
             appendOpponent(new Opponent(homeTeam, "homeTeam"), writer);
             writer.write(indent() + "</matches>\n");
@@ -122,12 +122,12 @@ public class MatchOutput extends Match implements XmiParsable {
         }
     }
 
-    private String determineMatchWinner() {
+    private String determineMatchResult() {
         if (getHomeTeamGoal() == getAwayTeamGoal()) {
             return "DRAW";
         }
 
-        return getHomeTeamGoal() > getAwayTeamGoal() ? "HOME_TEAM" : "AWAY_TEAM";
+        return getHomeTeamGoal() > getAwayTeamGoal() ? "HOME_WIN" : "AWAY_WIN";
     }
 
     @Override

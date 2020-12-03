@@ -22,7 +22,7 @@ public class Opponent implements XmiParsable {
         try {
             writer.write(indent() + "<opponents\n"
                     + indent() + "    team=" + "\""  + getTeamApiId() + "\"\n"
-                    + indent() + "    opponentType=" + "\""  + teamType + "\"/>\n");
+                    + indent() + "    type=" + "\""  + teamType + "\"/>\n");
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ",e);
         }
