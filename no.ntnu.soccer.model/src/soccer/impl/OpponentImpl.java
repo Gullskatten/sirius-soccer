@@ -2,21 +2,27 @@
  */
 package soccer.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
+import org.eclipse.emf.ecore.util.InternalEList;
 import soccer.Match;
 import soccer.Opponent;
+import soccer.Position;
 import soccer.SoccerPackage;
 import soccer.Team;
+import soccer.TeamType;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +34,8 @@ import soccer.Team;
  * <ul>
  *   <li>{@link soccer.impl.OpponentImpl#getMatch <em>Match</em>}</li>
  *   <li>{@link soccer.impl.OpponentImpl#getTeam <em>Team</em>}</li>
- *   <li>{@link soccer.impl.OpponentImpl#getOpponentType <em>Opponent Type</em>}</li>
+ *   <li>{@link soccer.impl.OpponentImpl#getType <em>Type</em>}</li>
+ *   <li>{@link soccer.impl.OpponentImpl#getLineup <em>Lineup</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,24 +52,34 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 	protected Team team;
 
 	/**
-	 * The default value of the '{@link #getOpponentType() <em>Opponent Type</em>}' attribute.
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOpponentType()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String OPPONENT_TYPE_EDEFAULT = null;
+	protected static final TeamType TYPE_EDEFAULT = TeamType.HOME_TEAM;
 
 	/**
-	 * The cached value of the '{@link #getOpponentType() <em>Opponent Type</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOpponentType()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected String opponentType = OPPONENT_TYPE_EDEFAULT;
+	protected TeamType type = TYPE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLineup() <em>Lineup</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLineup()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Position> lineup;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -167,8 +184,8 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOpponentType() {
-		return opponentType;
+	public TeamType getType() {
+		return type;
 	}
 
 	/**
@@ -176,11 +193,23 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOpponentType(String newOpponentType) {
-		String oldOpponentType = opponentType;
-		opponentType = newOpponentType;
+	public void setType(TeamType newType) {
+		TeamType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.OPPONENT__OPPONENT_TYPE, oldOpponentType, opponentType));
+			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.OPPONENT__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Position> getLineup() {
+		if (lineup == null) {
+			lineup = new EObjectContainmentEList<Position>(Position.class, this, SoccerPackage.OPPONENT__LINEUP);
+		}
+		return lineup;
 	}
 
 	/**
@@ -209,6 +238,8 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 		switch (featureID) {
 			case SoccerPackage.OPPONENT__MATCH:
 				return basicSetMatch(null, msgs);
+			case SoccerPackage.OPPONENT__LINEUP:
+				return ((InternalEList<?>)getLineup()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -240,8 +271,10 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 			case SoccerPackage.OPPONENT__TEAM:
 				if (resolve) return getTeam();
 				return basicGetTeam();
-			case SoccerPackage.OPPONENT__OPPONENT_TYPE:
-				return getOpponentType();
+			case SoccerPackage.OPPONENT__TYPE:
+				return getType();
+			case SoccerPackage.OPPONENT__LINEUP:
+				return getLineup();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -251,6 +284,7 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -260,8 +294,12 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 			case SoccerPackage.OPPONENT__TEAM:
 				setTeam((Team)newValue);
 				return;
-			case SoccerPackage.OPPONENT__OPPONENT_TYPE:
-				setOpponentType((String)newValue);
+			case SoccerPackage.OPPONENT__TYPE:
+				setType((TeamType)newValue);
+				return;
+			case SoccerPackage.OPPONENT__LINEUP:
+				getLineup().clear();
+				getLineup().addAll((Collection<? extends Position>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -281,8 +319,11 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 			case SoccerPackage.OPPONENT__TEAM:
 				setTeam((Team)null);
 				return;
-			case SoccerPackage.OPPONENT__OPPONENT_TYPE:
-				setOpponentType(OPPONENT_TYPE_EDEFAULT);
+			case SoccerPackage.OPPONENT__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
+			case SoccerPackage.OPPONENT__LINEUP:
+				getLineup().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -300,8 +341,10 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 				return getMatch() != null;
 			case SoccerPackage.OPPONENT__TEAM:
 				return team != null;
-			case SoccerPackage.OPPONENT__OPPONENT_TYPE:
-				return OPPONENT_TYPE_EDEFAULT == null ? opponentType != null : !OPPONENT_TYPE_EDEFAULT.equals(opponentType);
+			case SoccerPackage.OPPONENT__TYPE:
+				return type != TYPE_EDEFAULT;
+			case SoccerPackage.OPPONENT__LINEUP:
+				return lineup != null && !lineup.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -316,8 +359,8 @@ public class OpponentImpl extends MinimalEObjectImpl.Container implements Oppone
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (opponentType: ");
-		result.append(opponentType);
+		result.append(" (type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

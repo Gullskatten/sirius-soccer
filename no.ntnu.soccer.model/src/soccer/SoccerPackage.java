@@ -86,13 +86,22 @@ public interface SoccerPackage extends EPackage {
 	int SPORT__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Players</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPORT__PLAYERS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Sport</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPORT_FEATURE_COUNT = 2;
+	int SPORT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Sport</em>' class.
@@ -111,7 +120,130 @@ public interface SoccerPackage extends EPackage {
 	 * @see soccer.impl.SoccerPackageImpl#getCountry()
 	 * @generated
 	 */
-	int COUNTRY = 1;
+	int COUNTRY = 2;
+
+	/**
+	 * The meta object id for the '{@link soccer.impl.LeagueImpl <em>League</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see soccer.impl.LeagueImpl
+	 * @see soccer.impl.SoccerPackageImpl#getLeague()
+	 * @generated
+	 */
+	int LEAGUE = 3;
+
+	/**
+	 * The meta object id for the '{@link soccer.impl.SeasonImpl <em>Season</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see soccer.impl.SeasonImpl
+	 * @see soccer.impl.SoccerPackageImpl#getSeason()
+	 * @generated
+	 */
+	int SEASON = 5;
+
+	/**
+	 * The meta object id for the '{@link soccer.impl.MatchDayImpl <em>Match Day</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see soccer.impl.MatchDayImpl
+	 * @see soccer.impl.SoccerPackageImpl#getMatchDay()
+	 * @generated
+	 */
+	int MATCH_DAY = 8;
+
+	/**
+	 * The meta object id for the '{@link soccer.impl.TeamImpl <em>Team</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see soccer.impl.TeamImpl
+	 * @see soccer.impl.SoccerPackageImpl#getTeam()
+	 * @generated
+	 */
+	int TEAM = 4;
+
+	/**
+	 * The meta object id for the '{@link soccer.impl.PlayerImpl <em>Player</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see soccer.impl.PlayerImpl
+	 * @see soccer.impl.SoccerPackageImpl#getPlayer()
+	 * @generated
+	 */
+	int PLAYER = 1;
+
+	/**
+	 * The meta object id for the '{@link soccer.impl.MatchImpl <em>Match</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see soccer.impl.MatchImpl
+	 * @see soccer.impl.SoccerPackageImpl#getMatch()
+	 * @generated
+	 */
+	int MATCH = 9;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER__HEIGHT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER__WEIGHT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Sport</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER__SPORT = 4;
+
+	/**
+	 * The number of structural features of the '<em>Player</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Player</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -166,16 +298,6 @@ public interface SoccerPackage extends EPackage {
 	 * @ordered
 	 */
 	int COUNTRY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link soccer.impl.LeagueImpl <em>League</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see soccer.impl.LeagueImpl
-	 * @see soccer.impl.SoccerPackageImpl#getLeague()
-	 * @generated
-	 */
-	int LEAGUE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -241,14 +363,58 @@ public interface SoccerPackage extends EPackage {
 	int LEAGUE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link soccer.impl.SeasonImpl <em>Season</em>}' class.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see soccer.impl.SeasonImpl
-	 * @see soccer.impl.SoccerPackageImpl#getSeason()
 	 * @generated
+	 * @ordered
 	 */
-	int SEASON = 3;
+	int TEAM__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM__SHORT_NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>League</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM__LEAGUE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Team</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Team</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -305,308 +471,6 @@ public interface SoccerPackage extends EPackage {
 	int SEASON_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link soccer.impl.MatchDayImpl <em>Match Day</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see soccer.impl.MatchDayImpl
-	 * @see soccer.impl.SoccerPackageImpl#getMatchDay()
-	 * @generated
-	 */
-	int MATCH_DAY = 4;
-
-	/**
-	 * The feature id for the '<em><b>Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH_DAY__DATE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Matches</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH_DAY__MATCHES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Season</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH_DAY__SEASON = 2;
-
-	/**
-	 * The number of structural features of the '<em>Match Day</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH_DAY_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Match Day</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH_DAY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link soccer.impl.TeamImpl <em>Team</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see soccer.impl.TeamImpl
-	 * @see soccer.impl.SoccerPackageImpl#getTeam()
-	 * @generated
-	 */
-	int TEAM = 6;
-
-	/**
-	 * The meta object id for the '{@link soccer.impl.PlayerImpl <em>Player</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see soccer.impl.PlayerImpl
-	 * @see soccer.impl.SoccerPackageImpl#getPlayer()
-	 * @generated
-	 */
-	int PLAYER = 7;
-
-	/**
-	 * The meta object id for the '{@link soccer.impl.MatchImpl <em>Match</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see soccer.impl.MatchImpl
-	 * @see soccer.impl.SoccerPackageImpl#getMatch()
-	 * @generated
-	 */
-	int MATCH = 5;
-
-	/**
-	 * The feature id for the '<em><b>Match Day</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH__MATCH_DAY = 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH__ID = 1;
-
-	/**
-	 * The feature id for the '<em><b>Home Team Goal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH__HOME_TEAM_GOAL = 2;
-
-	/**
-	 * The feature id for the '<em><b>Away Team Goal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH__AWAY_TEAM_GOAL = 3;
-
-	/**
-	 * The feature id for the '<em><b>Winner</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH__WINNER = 4;
-
-	/**
-	 * The feature id for the '<em><b>Opponents</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH__OPPONENTS = 5;
-
-	/**
-	 * The number of structural features of the '<em>Match</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH_FEATURE_COUNT = 6;
-
-	/**
-	 * The number of operations of the '<em>Match</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MATCH_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM__SHORT_NAME = 2;
-
-	/**
-	 * The feature id for the '<em><b>Players</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM__PLAYERS = 3;
-
-	/**
-	 * The feature id for the '<em><b>League</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM__LEAGUE = 4;
-
-	/**
-	 * The number of structural features of the '<em>Team</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM_FEATURE_COUNT = 5;
-
-	/**
-	 * The number of operations of the '<em>Team</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER__HEIGHT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Weight</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER__WEIGHT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Team</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER__TEAM = 4;
-
-	/**
-	 * The feature id for the '<em><b>Pos X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER__POS_X = 5;
-
-	/**
-	 * The feature id for the '<em><b>Pos Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER__POS_Y = 6;
-
-	/**
-	 * The number of structural features of the '<em>Player</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER_FEATURE_COUNT = 7;
-
-	/**
-	 * The number of operations of the '<em>Player</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER_OPERATION_COUNT = 0;
-
-
-	/**
 	 * The meta object id for the '{@link soccer.impl.OpponentImpl <em>Opponent</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -614,53 +478,7 @@ public interface SoccerPackage extends EPackage {
 	 * @see soccer.impl.SoccerPackageImpl#getOpponent()
 	 * @generated
 	 */
-	int OPPONENT = 8;
-
-	/**
-	 * The feature id for the '<em><b>Match</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPPONENT__MATCH = 0;
-
-	/**
-	 * The feature id for the '<em><b>Team</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPPONENT__TEAM = 1;
-
-	/**
-	 * The feature id for the '<em><b>Opponent Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPPONENT__OPPONENT_TYPE = 2;
-
-	/**
-	 * The number of structural features of the '<em>Opponent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPPONENT_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Opponent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPPONENT_OPERATION_COUNT = 0;
-
+	int OPPONENT = 10;
 
 	/**
 	 * The meta object id for the '{@link soccer.impl.StandingImpl <em>Standing</em>}' class.
@@ -670,7 +488,7 @@ public interface SoccerPackage extends EPackage {
 	 * @see soccer.impl.SoccerPackageImpl#getStanding()
 	 * @generated
 	 */
-	int STANDING = 9;
+	int STANDING = 6;
 
 	/**
 	 * The feature id for the '<em><b>Placements</b></em>' containment reference list.
@@ -716,7 +534,7 @@ public interface SoccerPackage extends EPackage {
 	 * @see soccer.impl.SoccerPackageImpl#getPlacement()
 	 * @generated
 	 */
-	int PLACEMENT = 10;
+	int PLACEMENT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Away Team Goal</b></em>' attribute.
@@ -808,17 +626,253 @@ public interface SoccerPackage extends EPackage {
 	 */
 	int PLACEMENT_OPERATION_COUNT = 0;
 
-
 	/**
-	 * The meta object id for the '{@link soccer.MatchWinner <em>Match Winner</em>}' enum.
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see soccer.MatchWinner
-	 * @see soccer.impl.SoccerPackageImpl#getMatchWinner()
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH_DAY__DATE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Matches</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH_DAY__MATCHES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Season</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH_DAY__SEASON = 2;
+
+	/**
+	 * The number of structural features of the '<em>Match Day</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH_DAY_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Match Day</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH_DAY_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Match Day</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH__MATCH_DAY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH__ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Home Team Goal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH__HOME_TEAM_GOAL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Away Team Goal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH__AWAY_TEAM_GOAL = 3;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH__RESULT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Opponents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH__OPPONENTS = 5;
+
+	/**
+	 * The number of structural features of the '<em>Match</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Match</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCH_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Match</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPONENT__MATCH = 0;
+
+	/**
+	 * The feature id for the '<em><b>Team</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPONENT__TEAM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPONENT__TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Lineup</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPONENT__LINEUP = 3;
+
+	/**
+	 * The number of structural features of the '<em>Opponent</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPONENT_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Opponent</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPONENT_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link soccer.impl.PositionImpl <em>Position</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see soccer.impl.PositionImpl
+	 * @see soccer.impl.SoccerPackageImpl#getPosition()
 	 * @generated
 	 */
-	int MATCH_WINNER = 11;
+	int POSITION = 11;
 
+	/**
+	 * The feature id for the '<em><b>Players</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION__PLAYERS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION__TYPE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Position</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link soccer.MatchResult <em>Match Result</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see soccer.MatchResult
+	 * @see soccer.impl.SoccerPackageImpl#getMatchResult()
+	 * @generated
+	 */
+	int MATCH_RESULT = 12;
+
+	/**
+	 * The meta object id for the '{@link soccer.PositionType <em>Position Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see soccer.PositionType
+	 * @see soccer.impl.SoccerPackageImpl#getPositionType()
+	 * @generated
+	 */
+	int POSITION_TYPE = 13;
+
+	/**
+	 * The meta object id for the '{@link soccer.TeamType <em>Team Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see soccer.TeamType
+	 * @see soccer.impl.SoccerPackageImpl#getTeamType()
+	 * @generated
+	 */
+	int TEAM_TYPE = 14;
 
 	/**
 	 * Returns the meta object for class '{@link soccer.Sport <em>Sport</em>}'.
@@ -851,6 +905,17 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSport_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link soccer.Sport#getPlayers <em>Players</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Players</em>'.
+	 * @see soccer.Sport#getPlayers()
+	 * @see #getSport()
+	 * @generated
+	 */
+	EReference getSport_Players();
 
 	/**
 	 * Returns the meta object for class '{@link soccer.Country <em>Country</em>}'.
@@ -1112,17 +1177,6 @@ public interface SoccerPackage extends EPackage {
 	EAttribute getTeam_ShortName();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link soccer.Team#getPlayers <em>Players</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Players</em>'.
-	 * @see soccer.Team#getPlayers()
-	 * @see #getTeam()
-	 * @generated
-	 */
-	EReference getTeam_Players();
-
-	/**
 	 * Returns the meta object for the container reference '{@link soccer.Team#getLeague <em>League</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1188,37 +1242,15 @@ public interface SoccerPackage extends EPackage {
 	EAttribute getPlayer_Weight();
 
 	/**
-	 * Returns the meta object for the container reference '{@link soccer.Player#getTeam <em>Team</em>}'.
+	 * Returns the meta object for the container reference '{@link soccer.Player#getSport <em>Sport</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Team</em>'.
-	 * @see soccer.Player#getTeam()
+	 * @return the meta object for the container reference '<em>Sport</em>'.
+	 * @see soccer.Player#getSport()
 	 * @see #getPlayer()
 	 * @generated
 	 */
-	EReference getPlayer_Team();
-
-	/**
-	 * Returns the meta object for the attribute '{@link soccer.Player#getPosX <em>Pos X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pos X</em>'.
-	 * @see soccer.Player#getPosX()
-	 * @see #getPlayer()
-	 * @generated
-	 */
-	EAttribute getPlayer_PosX();
-
-	/**
-	 * Returns the meta object for the attribute '{@link soccer.Player#getPosY <em>Pos Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pos Y</em>'.
-	 * @see soccer.Player#getPosY()
-	 * @see #getPlayer()
-	 * @generated
-	 */
-	EAttribute getPlayer_PosY();
+	EReference getPlayer_Sport();
 
 	/**
 	 * Returns the meta object for class '{@link soccer.Opponent <em>Opponent</em>}'.
@@ -1253,15 +1285,26 @@ public interface SoccerPackage extends EPackage {
 	EReference getOpponent_Team();
 
 	/**
-	 * Returns the meta object for the attribute '{@link soccer.Opponent#getOpponentType <em>Opponent Type</em>}'.
+	 * Returns the meta object for the attribute '{@link soccer.Opponent#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Opponent Type</em>'.
-	 * @see soccer.Opponent#getOpponentType()
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see soccer.Opponent#getType()
 	 * @see #getOpponent()
 	 * @generated
 	 */
-	EAttribute getOpponent_OpponentType();
+	EAttribute getOpponent_Type();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link soccer.Opponent#getLineup <em>Lineup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lineup</em>'.
+	 * @see soccer.Opponent#getLineup()
+	 * @see #getOpponent()
+	 * @generated
+	 */
+	EReference getOpponent_Lineup();
 
 	/**
 	 * Returns the meta object for class '{@link soccer.Standing <em>Standing</em>}'.
@@ -1394,14 +1437,66 @@ public interface SoccerPackage extends EPackage {
 	EReference getPlacement_Team();
 
 	/**
-	 * Returns the meta object for enum '{@link soccer.MatchWinner <em>Match Winner</em>}'.
+	 * Returns the meta object for class '{@link soccer.Position <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Match Winner</em>'.
-	 * @see soccer.MatchWinner
+	 * @return the meta object for class '<em>Position</em>'.
+	 * @see soccer.Position
 	 * @generated
 	 */
-	EEnum getMatchWinner();
+	EClass getPosition();
+
+	/**
+	 * Returns the meta object for the reference list '{@link soccer.Position#getPlayers <em>Players</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Players</em>'.
+	 * @see soccer.Position#getPlayers()
+	 * @see #getPosition()
+	 * @generated
+	 */
+	EReference getPosition_Players();
+
+	/**
+	 * Returns the meta object for the attribute '{@link soccer.Position#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see soccer.Position#getType()
+	 * @see #getPosition()
+	 * @generated
+	 */
+	EAttribute getPosition_Type();
+
+	/**
+	 * Returns the meta object for enum '{@link soccer.MatchResult <em>Match Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Match Result</em>'.
+	 * @see soccer.MatchResult
+	 * @generated
+	 */
+	EEnum getMatchResult();
+
+	/**
+	 * Returns the meta object for enum '{@link soccer.PositionType <em>Position Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Position Type</em>'.
+	 * @see soccer.PositionType
+	 * @generated
+	 */
+	EEnum getPositionType();
+
+	/**
+	 * Returns the meta object for enum '{@link soccer.TeamType <em>Team Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Team Type</em>'.
+	 * @see soccer.TeamType
+	 * @generated
+	 */
+	EEnum getTeamType();
 
 	/**
 	 * Returns the meta object for class '{@link soccer.Match <em>Match</em>}'.
@@ -1458,15 +1553,15 @@ public interface SoccerPackage extends EPackage {
 	EAttribute getMatch_AwayTeamGoal();
 
 	/**
-	 * Returns the meta object for the attribute '{@link soccer.Match#getWinner <em>Winner</em>}'.
+	 * Returns the meta object for the attribute '{@link soccer.Match#getResult <em>Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Winner</em>'.
-	 * @see soccer.Match#getWinner()
+	 * @return the meta object for the attribute '<em>Result</em>'.
+	 * @see soccer.Match#getResult()
 	 * @see #getMatch()
 	 * @generated
 	 */
-	EAttribute getMatch_Winner();
+	EAttribute getMatch_Result();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link soccer.Match#getOpponents <em>Opponents</em>}'.
@@ -1527,6 +1622,14 @@ public interface SoccerPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SPORT__NAME = eINSTANCE.getSport_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Players</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPORT__PLAYERS = eINSTANCE.getSport_Players();
 
 		/**
 		 * The meta object literal for the '{@link soccer.impl.CountryImpl <em>Country</em>}' class.
@@ -1731,14 +1834,6 @@ public interface SoccerPackage extends EPackage {
 		EAttribute TEAM__SHORT_NAME = eINSTANCE.getTeam_ShortName();
 
 		/**
-		 * The meta object literal for the '<em><b>Players</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TEAM__PLAYERS = eINSTANCE.getTeam_Players();
-
-		/**
 		 * The meta object literal for the '<em><b>League</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1789,28 +1884,12 @@ public interface SoccerPackage extends EPackage {
 		EAttribute PLAYER__WEIGHT = eINSTANCE.getPlayer_Weight();
 
 		/**
-		 * The meta object literal for the '<em><b>Team</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Sport</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PLAYER__TEAM = eINSTANCE.getPlayer_Team();
-
-		/**
-		 * The meta object literal for the '<em><b>Pos X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PLAYER__POS_X = eINSTANCE.getPlayer_PosX();
-
-		/**
-		 * The meta object literal for the '<em><b>Pos Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PLAYER__POS_Y = eINSTANCE.getPlayer_PosY();
+		EReference PLAYER__SPORT = eINSTANCE.getPlayer_Sport();
 
 		/**
 		 * The meta object literal for the '{@link soccer.impl.OpponentImpl <em>Opponent</em>}' class.
@@ -1839,12 +1918,20 @@ public interface SoccerPackage extends EPackage {
 		EReference OPPONENT__TEAM = eINSTANCE.getOpponent_Team();
 
 		/**
-		 * The meta object literal for the '<em><b>Opponent Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OPPONENT__OPPONENT_TYPE = eINSTANCE.getOpponent_OpponentType();
+		EAttribute OPPONENT__TYPE = eINSTANCE.getOpponent_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Lineup</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPPONENT__LINEUP = eINSTANCE.getOpponent_Lineup();
 
 		/**
 		 * The meta object literal for the '{@link soccer.impl.StandingImpl <em>Standing</em>}' class.
@@ -1947,14 +2034,60 @@ public interface SoccerPackage extends EPackage {
 		EReference PLACEMENT__TEAM = eINSTANCE.getPlacement_Team();
 
 		/**
-		 * The meta object literal for the '{@link soccer.MatchWinner <em>Match Winner</em>}' enum.
+		 * The meta object literal for the '{@link soccer.impl.PositionImpl <em>Position</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see soccer.MatchWinner
-		 * @see soccer.impl.SoccerPackageImpl#getMatchWinner()
+		 * @see soccer.impl.PositionImpl
+		 * @see soccer.impl.SoccerPackageImpl#getPosition()
 		 * @generated
 		 */
-		EEnum MATCH_WINNER = eINSTANCE.getMatchWinner();
+		EClass POSITION = eINSTANCE.getPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>Players</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITION__PLAYERS = eINSTANCE.getPosition_Players();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POSITION__TYPE = eINSTANCE.getPosition_Type();
+
+		/**
+		 * The meta object literal for the '{@link soccer.MatchResult <em>Match Result</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see soccer.MatchResult
+		 * @see soccer.impl.SoccerPackageImpl#getMatchResult()
+		 * @generated
+		 */
+		EEnum MATCH_RESULT = eINSTANCE.getMatchResult();
+
+		/**
+		 * The meta object literal for the '{@link soccer.PositionType <em>Position Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see soccer.PositionType
+		 * @see soccer.impl.SoccerPackageImpl#getPositionType()
+		 * @generated
+		 */
+		EEnum POSITION_TYPE = eINSTANCE.getPositionType();
+
+		/**
+		 * The meta object literal for the '{@link soccer.TeamType <em>Team Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see soccer.TeamType
+		 * @see soccer.impl.SoccerPackageImpl#getTeamType()
+		 * @generated
+		 */
+		EEnum TEAM_TYPE = eINSTANCE.getTeamType();
 
 		/**
 		 * The meta object literal for the '{@link soccer.impl.MatchImpl <em>Match</em>}' class.
@@ -1999,12 +2132,12 @@ public interface SoccerPackage extends EPackage {
 		EAttribute MATCH__AWAY_TEAM_GOAL = eINSTANCE.getMatch_AwayTeamGoal();
 
 		/**
-		 * The meta object literal for the '<em><b>Winner</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Result</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MATCH__WINNER = eINSTANCE.getMatch_Winner();
+		EAttribute MATCH__RESULT = eINSTANCE.getMatch_Result();
 
 		/**
 		 * The meta object literal for the '<em><b>Opponents</b></em>' containment reference list feature.

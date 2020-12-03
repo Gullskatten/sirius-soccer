@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link soccer.Sport#getCountries <em>Countries</em>}</li>
  *   <li>{@link soccer.Sport#getName <em>Name</em>}</li>
+ *   <li>{@link soccer.Sport#getPlayers <em>Players</em>}</li>
  * </ul>
  *
  * @see soccer.SoccerPackage#getSport()
@@ -59,5 +60,19 @@ public interface Sport extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Players</b></em>' containment reference list.
+	 * The list contents are of type {@link soccer.Player}.
+	 * It is bidirectional and its opposite is '{@link soccer.Player#getSport <em>Sport</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Players</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getSport_Players()
+	 * @see soccer.Player#getSport
+	 * @model opposite="sport" containment="true"
+	 * @generated
+	 */
+	EList<Player> getPlayers();
 
 } // Sport

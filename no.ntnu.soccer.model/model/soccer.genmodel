@@ -6,14 +6,32 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>soccer.ecore</foreignModel>
   <genPackages prefix="Soccer" disposableProviderFactory="true" ecorePackage="soccer.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="soccer.ecore#//MatchWinner">
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//MatchWinner/DRAW"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//MatchWinner/HOME_TEAM"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//MatchWinner/AWAY_TEAM"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="soccer.ecore#//MatchResult">
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//MatchResult/HOME_WIN"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//MatchResult/DRAW"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//MatchResult/AWAY_WIN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="soccer.ecore#//PositionType">
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//PositionType/KEEPER"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//PositionType/DEFENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//PositionType/MIDFIELD"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//PositionType/FORWARD"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="soccer.ecore#//TeamType">
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//TeamType/HOME_TEAM"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//TeamType/AWAY_TEAM"/>
     </genEnums>
     <genClasses ecoreClass="soccer.ecore#//Sport">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Sport/countries"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Sport/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Sport/players"/>
+    </genClasses>
+    <genClasses ecoreClass="soccer.ecore#//Player">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/weight"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//Player/sport"/>
     </genClasses>
     <genClasses ecoreClass="soccer.ecore#//Country">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Country/id"/>
@@ -28,45 +46,17 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//League/seasons"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//League/teams"/>
     </genClasses>
+    <genClasses ecoreClass="soccer.ecore#//Team">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Team/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Team/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Team/shortName"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//Team/league"/>
+    </genClasses>
     <genClasses ecoreClass="soccer.ecore#//Season">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Season/name"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//Season/league"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Season/matchDays"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Season/standing"/>
-    </genClasses>
-    <genClasses ecoreClass="soccer.ecore#//MatchDay">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//MatchDay/date"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//MatchDay/matches"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//MatchDay/season"/>
-    </genClasses>
-    <genClasses ecoreClass="soccer.ecore#//Match">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//Match/matchDay"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/homeTeamGoal"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/awayTeamGoal"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/winner"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Match/opponents"/>
-    </genClasses>
-    <genClasses ecoreClass="soccer.ecore#//Team">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Team/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Team/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Team/shortName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Team/players"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//Team/league"/>
-    </genClasses>
-    <genClasses ecoreClass="soccer.ecore#//Player">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/height"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/weight"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//Player/team"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/posX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/posY"/>
-    </genClasses>
-    <genClasses ecoreClass="soccer.ecore#//Opponent">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//Opponent/match"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//Opponent/team"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Opponent/opponentType"/>
     </genClasses>
     <genClasses ecoreClass="soccer.ecore#//Standing">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Standing/placements"/>
@@ -81,6 +71,29 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Placement/draws"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Placement/seasonPoints"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//Placement/team"/>
+    </genClasses>
+    <genClasses ecoreClass="soccer.ecore#//MatchDay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//MatchDay/date"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//MatchDay/matches"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//MatchDay/season"/>
+    </genClasses>
+    <genClasses ecoreClass="soccer.ecore#//Match">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//Match/matchDay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/homeTeamGoal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/awayTeamGoal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/result"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Match/opponents"/>
+    </genClasses>
+    <genClasses ecoreClass="soccer.ecore#//Opponent">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//Opponent/match"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//Opponent/team"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Opponent/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//Opponent/lineup"/>
+    </genClasses>
+    <genClasses ecoreClass="soccer.ecore#//Position">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//Position/players"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Position/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

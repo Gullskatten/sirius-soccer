@@ -17,9 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link soccer.Player#getName <em>Name</em>}</li>
  *   <li>{@link soccer.Player#getHeight <em>Height</em>}</li>
  *   <li>{@link soccer.Player#getWeight <em>Weight</em>}</li>
- *   <li>{@link soccer.Player#getTeam <em>Team</em>}</li>
- *   <li>{@link soccer.Player#getPosX <em>Pos X</em>}</li>
- *   <li>{@link soccer.Player#getPosY <em>Pos Y</em>}</li>
+ *   <li>{@link soccer.Player#getSport <em>Sport</em>}</li>
  * </ul>
  *
  * @see soccer.SoccerPackage#getPlayer()
@@ -116,71 +114,27 @@ public interface Player extends EObject {
 	void setWeight(float value);
 
 	/**
-	 * Returns the value of the '<em><b>Team</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link soccer.Team#getPlayers <em>Players</em>}'.
+	 * Returns the value of the '<em><b>Sport</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link soccer.Sport#getPlayers <em>Players</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Team</em>' container reference.
-	 * @see #setTeam(Team)
-	 * @see soccer.SoccerPackage#getPlayer_Team()
-	 * @see soccer.Team#getPlayers
+	 * @return the value of the '<em>Sport</em>' container reference.
+	 * @see #setSport(Sport)
+	 * @see soccer.SoccerPackage#getPlayer_Sport()
+	 * @see soccer.Sport#getPlayers
 	 * @model opposite="players" transient="false"
 	 * @generated
 	 */
-	Team getTeam();
+	Sport getSport();
 
 	/**
-	 * Sets the value of the '{@link soccer.Player#getTeam <em>Team</em>}' container reference.
+	 * Sets the value of the '{@link soccer.Player#getSport <em>Sport</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Team</em>' container reference.
-	 * @see #getTeam()
+	 * @param value the new value of the '<em>Sport</em>' container reference.
+	 * @see #getSport()
 	 * @generated
 	 */
-	void setTeam(Team value);
-
-	/**
-	 * Returns the value of the '<em><b>Pos X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pos X</em>' attribute.
-	 * @see #setPosX(int)
-	 * @see soccer.SoccerPackage#getPlayer_PosX()
-	 * @model
-	 * @generated
-	 */
-	int getPosX();
-
-	/**
-	 * Sets the value of the '{@link soccer.Player#getPosX <em>Pos X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pos X</em>' attribute.
-	 * @see #getPosX()
-	 * @generated
-	 */
-	void setPosX(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Pos Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pos Y</em>' attribute.
-	 * @see #setPosY(int)
-	 * @see soccer.SoccerPackage#getPlayer_PosY()
-	 * @model
-	 * @generated
-	 */
-	int getPosY();
-
-	/**
-	 * Sets the value of the '{@link soccer.Player#getPosY <em>Pos Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pos Y</em>' attribute.
-	 * @see #getPosY()
-	 * @generated
-	 */
-	void setPosY(int value);
+	void setSport(Sport value);
 
 } // Player

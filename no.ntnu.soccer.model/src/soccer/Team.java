@@ -2,8 +2,6 @@
  */
 package soccer;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link soccer.Team#getId <em>Id</em>}</li>
  *   <li>{@link soccer.Team#getName <em>Name</em>}</li>
  *   <li>{@link soccer.Team#getShortName <em>Short Name</em>}</li>
- *   <li>{@link soccer.Team#getPlayers <em>Players</em>}</li>
  *   <li>{@link soccer.Team#getLeague <em>League</em>}</li>
  * </ul>
  *
@@ -92,20 +89,6 @@ public interface Team extends EObject {
 	 * @generated
 	 */
 	void setShortName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Players</b></em>' containment reference list.
-	 * The list contents are of type {@link soccer.Player}.
-	 * It is bidirectional and its opposite is '{@link soccer.Player#getTeam <em>Team</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Players</em>' containment reference list.
-	 * @see soccer.SoccerPackage#getTeam_Players()
-	 * @see soccer.Player#getTeam
-	 * @model opposite="team" containment="true"
-	 * @generated
-	 */
-	EList<Player> getPlayers();
 
 	/**
 	 * Returns the value of the '<em><b>League</b></em>' container reference.

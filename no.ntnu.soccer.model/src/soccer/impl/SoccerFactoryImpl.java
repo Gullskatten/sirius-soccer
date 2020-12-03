@@ -58,16 +58,17 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case SoccerPackage.SPORT: return createSport();
+			case SoccerPackage.PLAYER: return createPlayer();
 			case SoccerPackage.COUNTRY: return createCountry();
 			case SoccerPackage.LEAGUE: return createLeague();
-			case SoccerPackage.SEASON: return createSeason();
-			case SoccerPackage.MATCH_DAY: return createMatchDay();
-			case SoccerPackage.MATCH: return createMatch();
 			case SoccerPackage.TEAM: return createTeam();
-			case SoccerPackage.PLAYER: return createPlayer();
-			case SoccerPackage.OPPONENT: return createOpponent();
+			case SoccerPackage.SEASON: return createSeason();
 			case SoccerPackage.STANDING: return createStanding();
 			case SoccerPackage.PLACEMENT: return createPlacement();
+			case SoccerPackage.MATCH_DAY: return createMatchDay();
+			case SoccerPackage.MATCH: return createMatch();
+			case SoccerPackage.OPPONENT: return createOpponent();
+			case SoccerPackage.POSITION: return createPosition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -81,8 +82,12 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case SoccerPackage.MATCH_WINNER:
-				return createMatchWinnerFromString(eDataType, initialValue);
+			case SoccerPackage.MATCH_RESULT:
+				return createMatchResultFromString(eDataType, initialValue);
+			case SoccerPackage.POSITION_TYPE:
+				return createPositionTypeFromString(eDataType, initialValue);
+			case SoccerPackage.TEAM_TYPE:
+				return createTeamTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -96,8 +101,12 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case SoccerPackage.MATCH_WINNER:
-				return convertMatchWinnerToString(eDataType, instanceValue);
+			case SoccerPackage.MATCH_RESULT:
+				return convertMatchResultToString(eDataType, instanceValue);
+			case SoccerPackage.POSITION_TYPE:
+				return convertPositionTypeToString(eDataType, instanceValue);
+			case SoccerPackage.TEAM_TYPE:
+				return convertTeamTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -208,8 +217,18 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MatchWinner createMatchWinnerFromString(EDataType eDataType, String initialValue) {
-		MatchWinner result = MatchWinner.get(initialValue);
+	public Position createPosition() {
+		PositionImpl position = new PositionImpl();
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MatchResult createMatchResultFromString(EDataType eDataType, String initialValue) {
+		MatchResult result = MatchResult.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -219,7 +238,47 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMatchWinnerToString(EDataType eDataType, Object instanceValue) {
+	public String convertMatchResultToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PositionType createPositionTypeFromString(EDataType eDataType, String initialValue) {
+		PositionType result = PositionType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPositionTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TeamType createTeamTypeFromString(EDataType eDataType, String initialValue) {
+		TeamType result = TeamType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTeamTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

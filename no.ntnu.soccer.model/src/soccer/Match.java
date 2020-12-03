@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link soccer.Match#getId <em>Id</em>}</li>
  *   <li>{@link soccer.Match#getHomeTeamGoal <em>Home Team Goal</em>}</li>
  *   <li>{@link soccer.Match#getAwayTeamGoal <em>Away Team Goal</em>}</li>
- *   <li>{@link soccer.Match#getWinner <em>Winner</em>}</li>
+ *   <li>{@link soccer.Match#getResult <em>Result</em>}</li>
  *   <li>{@link soccer.Match#getOpponents <em>Opponents</em>}</li>
  * </ul>
  *
@@ -118,29 +118,29 @@ public interface Match extends EObject {
 	void setAwayTeamGoal(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Winner</b></em>' attribute.
-	 * The literals are from the enumeration {@link soccer.MatchWinner}.
+	 * Returns the value of the '<em><b>Result</b></em>' attribute.
+	 * The literals are from the enumeration {@link soccer.MatchResult}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Winner</em>' attribute.
-	 * @see soccer.MatchWinner
-	 * @see #setWinner(MatchWinner)
-	 * @see soccer.SoccerPackage#getMatch_Winner()
+	 * @return the value of the '<em>Result</em>' attribute.
+	 * @see soccer.MatchResult
+	 * @see #setResult(MatchResult)
+	 * @see soccer.SoccerPackage#getMatch_Result()
 	 * @model
 	 * @generated
 	 */
-	MatchWinner getWinner();
+	MatchResult getResult();
 
 	/**
-	 * Sets the value of the '{@link soccer.Match#getWinner <em>Winner</em>}' attribute.
+	 * Sets the value of the '{@link soccer.Match#getResult <em>Result</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Winner</em>' attribute.
-	 * @see soccer.MatchWinner
-	 * @see #getWinner()
+	 * @param value the new value of the '<em>Result</em>' attribute.
+	 * @see soccer.MatchResult
+	 * @see #getResult()
 	 * @generated
 	 */
-	void setWinner(MatchWinner value);
+	void setResult(MatchResult value);
 
 	/**
 	 * Returns the value of the '<em><b>Opponents</b></em>' containment reference list.

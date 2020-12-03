@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 import soccer.Match;
 import soccer.MatchDay;
-import soccer.MatchWinner;
+import soccer.MatchResult;
 import soccer.Opponent;
 import soccer.SoccerPackage;
 
@@ -35,7 +35,7 @@ import soccer.SoccerPackage;
  *   <li>{@link soccer.impl.MatchImpl#getId <em>Id</em>}</li>
  *   <li>{@link soccer.impl.MatchImpl#getHomeTeamGoal <em>Home Team Goal</em>}</li>
  *   <li>{@link soccer.impl.MatchImpl#getAwayTeamGoal <em>Away Team Goal</em>}</li>
- *   <li>{@link soccer.impl.MatchImpl#getWinner <em>Winner</em>}</li>
+ *   <li>{@link soccer.impl.MatchImpl#getResult <em>Result</em>}</li>
  *   <li>{@link soccer.impl.MatchImpl#getOpponents <em>Opponents</em>}</li>
  * </ul>
  *
@@ -103,24 +103,24 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 	protected int awayTeamGoal = AWAY_TEAM_GOAL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getWinner() <em>Winner</em>}' attribute.
+	 * The default value of the '{@link #getResult() <em>Result</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWinner()
+	 * @see #getResult()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final MatchWinner WINNER_EDEFAULT = MatchWinner.DRAW;
+	protected static final MatchResult RESULT_EDEFAULT = MatchResult.HOME_WIN;
 
 	/**
-	 * The cached value of the '{@link #getWinner() <em>Winner</em>}' attribute.
+	 * The cached value of the '{@link #getResult() <em>Result</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWinner()
+	 * @see #getResult()
 	 * @generated
 	 * @ordered
 	 */
-	protected MatchWinner winner = WINNER_EDEFAULT;
+	protected MatchResult result = RESULT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getOpponents() <em>Opponents</em>}' containment reference list.
@@ -260,8 +260,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MatchWinner getWinner() {
-		return winner;
+	public MatchResult getResult() {
+		return result;
 	}
 
 	/**
@@ -269,11 +269,11 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWinner(MatchWinner newWinner) {
-		MatchWinner oldWinner = winner;
-		winner = newWinner == null ? WINNER_EDEFAULT : newWinner;
+	public void setResult(MatchResult newResult) {
+		MatchResult oldResult = result;
+		result = newResult == null ? RESULT_EDEFAULT : newResult;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.MATCH__WINNER, oldWinner, winner));
+			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.MATCH__RESULT, oldResult, result));
 	}
 
 	/**
@@ -353,8 +353,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 				return getHomeTeamGoal();
 			case SoccerPackage.MATCH__AWAY_TEAM_GOAL:
 				return getAwayTeamGoal();
-			case SoccerPackage.MATCH__WINNER:
-				return getWinner();
+			case SoccerPackage.MATCH__RESULT:
+				return getResult();
 			case SoccerPackage.MATCH__OPPONENTS:
 				return getOpponents();
 		}
@@ -382,8 +382,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 			case SoccerPackage.MATCH__AWAY_TEAM_GOAL:
 				setAwayTeamGoal((Integer)newValue);
 				return;
-			case SoccerPackage.MATCH__WINNER:
-				setWinner((MatchWinner)newValue);
+			case SoccerPackage.MATCH__RESULT:
+				setResult((MatchResult)newValue);
 				return;
 			case SoccerPackage.MATCH__OPPONENTS:
 				getOpponents().clear();
@@ -413,8 +413,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 			case SoccerPackage.MATCH__AWAY_TEAM_GOAL:
 				setAwayTeamGoal(AWAY_TEAM_GOAL_EDEFAULT);
 				return;
-			case SoccerPackage.MATCH__WINNER:
-				setWinner(WINNER_EDEFAULT);
+			case SoccerPackage.MATCH__RESULT:
+				setResult(RESULT_EDEFAULT);
 				return;
 			case SoccerPackage.MATCH__OPPONENTS:
 				getOpponents().clear();
@@ -439,8 +439,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 				return homeTeamGoal != HOME_TEAM_GOAL_EDEFAULT;
 			case SoccerPackage.MATCH__AWAY_TEAM_GOAL:
 				return awayTeamGoal != AWAY_TEAM_GOAL_EDEFAULT;
-			case SoccerPackage.MATCH__WINNER:
-				return winner != WINNER_EDEFAULT;
+			case SoccerPackage.MATCH__RESULT:
+				return result != RESULT_EDEFAULT;
 			case SoccerPackage.MATCH__OPPONENTS:
 				return opponents != null && !opponents.isEmpty();
 		}
@@ -463,8 +463,8 @@ public class MatchImpl extends MinimalEObjectImpl.Container implements Match {
 		result.append(homeTeamGoal);
 		result.append(", awayTeamGoal: ");
 		result.append(awayTeamGoal);
-		result.append(", winner: ");
-		result.append(winner);
+		result.append(", result: ");
+		result.append(result);
 		result.append(')');
 		return result.toString();
 	}

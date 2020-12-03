@@ -72,6 +72,12 @@ public class SoccerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SoccerPackage.PLAYER: {
+				Player player = (Player)theEObject;
+				T result = casePlayer(player);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SoccerPackage.COUNTRY: {
 				Country country = (Country)theEObject;
 				T result = caseCountry(country);
@@ -84,9 +90,27 @@ public class SoccerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SoccerPackage.TEAM: {
+				Team team = (Team)theEObject;
+				T result = caseTeam(team);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SoccerPackage.SEASON: {
 				Season season = (Season)theEObject;
 				T result = caseSeason(season);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SoccerPackage.STANDING: {
+				Standing standing = (Standing)theEObject;
+				T result = caseStanding(standing);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SoccerPackage.PLACEMENT: {
+				Placement placement = (Placement)theEObject;
+				T result = casePlacement(placement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -102,33 +126,15 @@ public class SoccerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SoccerPackage.TEAM: {
-				Team team = (Team)theEObject;
-				T result = caseTeam(team);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SoccerPackage.PLAYER: {
-				Player player = (Player)theEObject;
-				T result = casePlayer(player);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case SoccerPackage.OPPONENT: {
 				Opponent opponent = (Opponent)theEObject;
 				T result = caseOpponent(opponent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SoccerPackage.STANDING: {
-				Standing standing = (Standing)theEObject;
-				T result = caseStanding(standing);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SoccerPackage.PLACEMENT: {
-				Placement placement = (Placement)theEObject;
-				T result = casePlacement(placement);
+			case SoccerPackage.POSITION: {
+				Position position = (Position)theEObject;
+				T result = casePosition(position);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -283,6 +289,21 @@ public class SoccerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePlacement(Placement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Position</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePosition(Position object) {
 		return null;
 	}
 

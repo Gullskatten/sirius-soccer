@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import soccer.Player;
 import soccer.SoccerPackage;
-import soccer.Team;
+import soccer.Sport;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,9 +29,7 @@ import soccer.Team;
  *   <li>{@link soccer.impl.PlayerImpl#getName <em>Name</em>}</li>
  *   <li>{@link soccer.impl.PlayerImpl#getHeight <em>Height</em>}</li>
  *   <li>{@link soccer.impl.PlayerImpl#getWeight <em>Weight</em>}</li>
- *   <li>{@link soccer.impl.PlayerImpl#getTeam <em>Team</em>}</li>
- *   <li>{@link soccer.impl.PlayerImpl#getPosX <em>Pos X</em>}</li>
- *   <li>{@link soccer.impl.PlayerImpl#getPosY <em>Pos Y</em>}</li>
+ *   <li>{@link soccer.impl.PlayerImpl#getSport <em>Sport</em>}</li>
  * </ul>
  *
  * @generated
@@ -116,46 +114,6 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * @ordered
 	 */
 	protected float weight = WEIGHT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPosX() <em>Pos X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPosX()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int POS_X_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getPosX() <em>Pos X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPosX()
-	 * @generated
-	 * @ordered
-	 */
-	protected int posX = POS_X_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPosY() <em>Pos Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPosY()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int POS_Y_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getPosY() <em>Pos Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPosY()
-	 * @generated
-	 * @ordered
-	 */
-	protected int posY = POS_Y_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -265,9 +223,9 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Team getTeam() {
-		if (eContainerFeatureID() != SoccerPackage.PLAYER__TEAM) return null;
-		return (Team)eInternalContainer();
+	public Sport getSport() {
+		if (eContainerFeatureID() != SoccerPackage.PLAYER__SPORT) return null;
+		return (Sport)eInternalContainer();
 	}
 
 	/**
@@ -275,8 +233,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTeam(Team newTeam, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newTeam, SoccerPackage.PLAYER__TEAM, msgs);
+	public NotificationChain basicSetSport(Sport newSport, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newSport, SoccerPackage.PLAYER__SPORT, msgs);
 		return msgs;
 	}
 
@@ -285,62 +243,20 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTeam(Team newTeam) {
-		if (newTeam != eInternalContainer() || (eContainerFeatureID() != SoccerPackage.PLAYER__TEAM && newTeam != null)) {
-			if (EcoreUtil.isAncestor(this, newTeam))
+	public void setSport(Sport newSport) {
+		if (newSport != eInternalContainer() || (eContainerFeatureID() != SoccerPackage.PLAYER__SPORT && newSport != null)) {
+			if (EcoreUtil.isAncestor(this, newSport))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
-			if (newTeam != null)
-				msgs = ((InternalEObject)newTeam).eInverseAdd(this, SoccerPackage.TEAM__PLAYERS, Team.class, msgs);
-			msgs = basicSetTeam(newTeam, msgs);
+			if (newSport != null)
+				msgs = ((InternalEObject)newSport).eInverseAdd(this, SoccerPackage.SPORT__PLAYERS, Sport.class, msgs);
+			msgs = basicSetSport(newSport, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLAYER__TEAM, newTeam, newTeam));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPosX() {
-		return posX;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPosX(int newPosX) {
-		int oldPosX = posX;
-		posX = newPosX;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLAYER__POS_X, oldPosX, posX));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPosY() {
-		return posY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPosY(int newPosY) {
-		int oldPosY = posY;
-		posY = newPosY;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLAYER__POS_Y, oldPosY, posY));
+			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLAYER__SPORT, newSport, newSport));
 	}
 
 	/**
@@ -351,10 +267,10 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SoccerPackage.PLAYER__TEAM:
+			case SoccerPackage.PLAYER__SPORT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetTeam((Team)otherEnd, msgs);
+				return basicSetSport((Sport)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -367,8 +283,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SoccerPackage.PLAYER__TEAM:
-				return basicSetTeam(null, msgs);
+			case SoccerPackage.PLAYER__SPORT:
+				return basicSetSport(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -381,8 +297,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case SoccerPackage.PLAYER__TEAM:
-				return eInternalContainer().eInverseRemove(this, SoccerPackage.TEAM__PLAYERS, Team.class, msgs);
+			case SoccerPackage.PLAYER__SPORT:
+				return eInternalContainer().eInverseRemove(this, SoccerPackage.SPORT__PLAYERS, Sport.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -403,12 +319,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 				return getHeight();
 			case SoccerPackage.PLAYER__WEIGHT:
 				return getWeight();
-			case SoccerPackage.PLAYER__TEAM:
-				return getTeam();
-			case SoccerPackage.PLAYER__POS_X:
-				return getPosX();
-			case SoccerPackage.PLAYER__POS_Y:
-				return getPosY();
+			case SoccerPackage.PLAYER__SPORT:
+				return getSport();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -433,14 +345,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 			case SoccerPackage.PLAYER__WEIGHT:
 				setWeight((Float)newValue);
 				return;
-			case SoccerPackage.PLAYER__TEAM:
-				setTeam((Team)newValue);
-				return;
-			case SoccerPackage.PLAYER__POS_X:
-				setPosX((Integer)newValue);
-				return;
-			case SoccerPackage.PLAYER__POS_Y:
-				setPosY((Integer)newValue);
+			case SoccerPackage.PLAYER__SPORT:
+				setSport((Sport)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -466,14 +372,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 			case SoccerPackage.PLAYER__WEIGHT:
 				setWeight(WEIGHT_EDEFAULT);
 				return;
-			case SoccerPackage.PLAYER__TEAM:
-				setTeam((Team)null);
-				return;
-			case SoccerPackage.PLAYER__POS_X:
-				setPosX(POS_X_EDEFAULT);
-				return;
-			case SoccerPackage.PLAYER__POS_Y:
-				setPosY(POS_Y_EDEFAULT);
+			case SoccerPackage.PLAYER__SPORT:
+				setSport((Sport)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -495,12 +395,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 				return height != HEIGHT_EDEFAULT;
 			case SoccerPackage.PLAYER__WEIGHT:
 				return weight != WEIGHT_EDEFAULT;
-			case SoccerPackage.PLAYER__TEAM:
-				return getTeam() != null;
-			case SoccerPackage.PLAYER__POS_X:
-				return posX != POS_X_EDEFAULT;
-			case SoccerPackage.PLAYER__POS_Y:
-				return posY != POS_Y_EDEFAULT;
+			case SoccerPackage.PLAYER__SPORT:
+				return getSport() != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -523,10 +419,6 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 		result.append(height);
 		result.append(", weight: ");
 		result.append(weight);
-		result.append(", posX: ");
-		result.append(posX);
-		result.append(", posY: ");
-		result.append(posY);
 		result.append(')');
 		return result.toString();
 	}

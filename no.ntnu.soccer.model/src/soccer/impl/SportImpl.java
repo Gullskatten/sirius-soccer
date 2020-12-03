@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import soccer.Country;
+import soccer.Player;
 import soccer.SoccerPackage;
 import soccer.Sport;
 
@@ -32,6 +33,7 @@ import soccer.Sport;
  * <ul>
  *   <li>{@link soccer.impl.SportImpl#getCountries <em>Countries</em>}</li>
  *   <li>{@link soccer.impl.SportImpl#getName <em>Name</em>}</li>
+ *   <li>{@link soccer.impl.SportImpl#getPlayers <em>Players</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +68,16 @@ public class SportImpl extends MinimalEObjectImpl.Container implements Sport {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPlayers() <em>Players</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlayers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Player> players;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,12 +136,26 @@ public class SportImpl extends MinimalEObjectImpl.Container implements Sport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Player> getPlayers() {
+		if (players == null) {
+			players = new EObjectContainmentWithInverseEList<Player>(Player.class, this, SoccerPackage.SPORT__PLAYERS, SoccerPackage.PLAYER__SPORT);
+		}
+		return players;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SoccerPackage.SPORT__COUNTRIES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCountries()).basicAdd(otherEnd, msgs);
+			case SoccerPackage.SPORT__PLAYERS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPlayers()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -144,6 +170,8 @@ public class SportImpl extends MinimalEObjectImpl.Container implements Sport {
 		switch (featureID) {
 			case SoccerPackage.SPORT__COUNTRIES:
 				return ((InternalEList<?>)getCountries()).basicRemove(otherEnd, msgs);
+			case SoccerPackage.SPORT__PLAYERS:
+				return ((InternalEList<?>)getPlayers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -160,6 +188,8 @@ public class SportImpl extends MinimalEObjectImpl.Container implements Sport {
 				return getCountries();
 			case SoccerPackage.SPORT__NAME:
 				return getName();
+			case SoccerPackage.SPORT__PLAYERS:
+				return getPlayers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -180,6 +210,10 @@ public class SportImpl extends MinimalEObjectImpl.Container implements Sport {
 			case SoccerPackage.SPORT__NAME:
 				setName((String)newValue);
 				return;
+			case SoccerPackage.SPORT__PLAYERS:
+				getPlayers().clear();
+				getPlayers().addAll((Collection<? extends Player>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -198,6 +232,9 @@ public class SportImpl extends MinimalEObjectImpl.Container implements Sport {
 			case SoccerPackage.SPORT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case SoccerPackage.SPORT__PLAYERS:
+				getPlayers().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -214,6 +251,8 @@ public class SportImpl extends MinimalEObjectImpl.Container implements Sport {
 				return countries != null && !countries.isEmpty();
 			case SoccerPackage.SPORT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SoccerPackage.SPORT__PLAYERS:
+				return players != null && !players.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

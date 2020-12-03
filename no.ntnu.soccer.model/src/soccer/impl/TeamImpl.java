@@ -2,24 +2,15 @@
  */
 package soccer.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.util.InternalEList;
 import soccer.League;
-import soccer.Player;
 import soccer.SoccerPackage;
 import soccer.Team;
 
@@ -34,7 +25,6 @@ import soccer.Team;
  *   <li>{@link soccer.impl.TeamImpl#getId <em>Id</em>}</li>
  *   <li>{@link soccer.impl.TeamImpl#getName <em>Name</em>}</li>
  *   <li>{@link soccer.impl.TeamImpl#getShortName <em>Short Name</em>}</li>
- *   <li>{@link soccer.impl.TeamImpl#getPlayers <em>Players</em>}</li>
  *   <li>{@link soccer.impl.TeamImpl#getLeague <em>League</em>}</li>
  * </ul>
  *
@@ -100,16 +90,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	 * @ordered
 	 */
 	protected String shortName = SHORT_NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getPlayers() <em>Players</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPlayers()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Player> players;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,18 +178,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Player> getPlayers() {
-		if (players == null) {
-			players = new EObjectContainmentWithInverseEList<Player>(Player.class, this, SoccerPackage.TEAM__PLAYERS, SoccerPackage.PLAYER__TEAM);
-		}
-		return players;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public League getLeague() {
 		if (eContainerFeatureID() != SoccerPackage.TEAM__LEAGUE) return null;
 		return (League)eInternalContainer();
@@ -255,8 +223,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SoccerPackage.TEAM__PLAYERS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPlayers()).basicAdd(otherEnd, msgs);
 			case SoccerPackage.TEAM__LEAGUE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -273,8 +239,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SoccerPackage.TEAM__PLAYERS:
-				return ((InternalEList<?>)getPlayers()).basicRemove(otherEnd, msgs);
 			case SoccerPackage.TEAM__LEAGUE:
 				return basicSetLeague(null, msgs);
 		}
@@ -309,8 +273,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 				return getName();
 			case SoccerPackage.TEAM__SHORT_NAME:
 				return getShortName();
-			case SoccerPackage.TEAM__PLAYERS:
-				return getPlayers();
 			case SoccerPackage.TEAM__LEAGUE:
 				return getLeague();
 		}
@@ -334,10 +296,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 				return;
 			case SoccerPackage.TEAM__SHORT_NAME:
 				setShortName((String)newValue);
-				return;
-			case SoccerPackage.TEAM__PLAYERS:
-				getPlayers().clear();
-				getPlayers().addAll((Collection<? extends Player>)newValue);
 				return;
 			case SoccerPackage.TEAM__LEAGUE:
 				setLeague((League)newValue);
@@ -363,9 +321,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 			case SoccerPackage.TEAM__SHORT_NAME:
 				setShortName(SHORT_NAME_EDEFAULT);
 				return;
-			case SoccerPackage.TEAM__PLAYERS:
-				getPlayers().clear();
-				return;
 			case SoccerPackage.TEAM__LEAGUE:
 				setLeague((League)null);
 				return;
@@ -387,8 +342,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SoccerPackage.TEAM__SHORT_NAME:
 				return SHORT_NAME_EDEFAULT == null ? shortName != null : !SHORT_NAME_EDEFAULT.equals(shortName);
-			case SoccerPackage.TEAM__PLAYERS:
-				return players != null && !players.isEmpty();
 			case SoccerPackage.TEAM__LEAGUE:
 				return getLeague() != null;
 		}

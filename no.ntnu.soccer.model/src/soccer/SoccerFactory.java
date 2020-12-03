@@ -112,6 +112,15 @@ public interface SoccerFactory extends EFactory {
 	Placement createPlacement();
 
 	/**
+	 * Returns a new object of class '<em>Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Position</em>'.
+	 * @generated
+	 */
+	Position createPosition();
+
+	/**
 	 * Returns a new object of class '<em>Match</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

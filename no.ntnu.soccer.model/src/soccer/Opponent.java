@@ -2,6 +2,7 @@
  */
 package soccer;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link soccer.Opponent#getMatch <em>Match</em>}</li>
  *   <li>{@link soccer.Opponent#getTeam <em>Team</em>}</li>
- *   <li>{@link soccer.Opponent#getOpponentType <em>Opponent Type</em>}</li>
+ *   <li>{@link soccer.Opponent#getType <em>Type</em>}</li>
+ *   <li>{@link soccer.Opponent#getLineup <em>Lineup</em>}</li>
  * </ul>
  *
  * @see soccer.SoccerPackage#getOpponent()
@@ -70,25 +72,40 @@ public interface Opponent extends EObject {
 	void setTeam(Team value);
 
 	/**
-	 * Returns the value of the '<em><b>Opponent Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link soccer.TeamType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Opponent Type</em>' attribute.
-	 * @see #setOpponentType(String)
-	 * @see soccer.SoccerPackage#getOpponent_OpponentType()
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see soccer.TeamType
+	 * @see #setType(TeamType)
+	 * @see soccer.SoccerPackage#getOpponent_Type()
 	 * @model
 	 * @generated
 	 */
-	String getOpponentType();
+	TeamType getType();
 
 	/**
-	 * Sets the value of the '{@link soccer.Opponent#getOpponentType <em>Opponent Type</em>}' attribute.
+	 * Sets the value of the '{@link soccer.Opponent#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Opponent Type</em>' attribute.
-	 * @see #getOpponentType()
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see soccer.TeamType
+	 * @see #getType()
 	 * @generated
 	 */
-	void setOpponentType(String value);
+	void setType(TeamType value);
+
+	/**
+	 * Returns the value of the '<em><b>Lineup</b></em>' containment reference list.
+	 * The list contents are of type {@link soccer.Position}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lineup</em>' containment reference list.
+	 * @see soccer.SoccerPackage#getOpponent_Lineup()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Position> getLineup();
 
 } // Opponent

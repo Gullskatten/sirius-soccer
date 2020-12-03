@@ -72,6 +72,10 @@ public class SoccerAdapterFactory extends AdapterFactoryImpl {
 				return createSportAdapter();
 			}
 			@Override
+			public Adapter casePlayer(Player object) {
+				return createPlayerAdapter();
+			}
+			@Override
 			public Adapter caseCountry(Country object) {
 				return createCountryAdapter();
 			}
@@ -80,8 +84,20 @@ public class SoccerAdapterFactory extends AdapterFactoryImpl {
 				return createLeagueAdapter();
 			}
 			@Override
+			public Adapter caseTeam(Team object) {
+				return createTeamAdapter();
+			}
+			@Override
 			public Adapter caseSeason(Season object) {
 				return createSeasonAdapter();
+			}
+			@Override
+			public Adapter caseStanding(Standing object) {
+				return createStandingAdapter();
+			}
+			@Override
+			public Adapter casePlacement(Placement object) {
+				return createPlacementAdapter();
 			}
 			@Override
 			public Adapter caseMatchDay(MatchDay object) {
@@ -92,24 +108,12 @@ public class SoccerAdapterFactory extends AdapterFactoryImpl {
 				return createMatchAdapter();
 			}
 			@Override
-			public Adapter caseTeam(Team object) {
-				return createTeamAdapter();
-			}
-			@Override
-			public Adapter casePlayer(Player object) {
-				return createPlayerAdapter();
-			}
-			@Override
 			public Adapter caseOpponent(Opponent object) {
 				return createOpponentAdapter();
 			}
 			@Override
-			public Adapter caseStanding(Standing object) {
-				return createStandingAdapter();
-			}
-			@Override
-			public Adapter casePlacement(Placement object) {
-				return createPlacementAdapter();
+			public Adapter casePosition(Position object) {
+				return createPositionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -268,6 +272,20 @@ public class SoccerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPlacementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link soccer.Position <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see soccer.Position
+	 * @generated
+	 */
+	public Adapter createPositionAdapter() {
 		return null;
 	}
 
