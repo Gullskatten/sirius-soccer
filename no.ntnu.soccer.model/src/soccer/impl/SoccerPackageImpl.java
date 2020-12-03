@@ -587,7 +587,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPlacement_Name() {
+	public EAttribute getPlacement_AwayTeamGoal() {
 		return (EAttribute)placementEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -596,7 +596,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPlacement_AwayTeamGoal() {
+	public EAttribute getPlacement_HomeTeamGoal() {
 		return (EAttribute)placementEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -605,7 +605,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPlacement_HomeTeamGoal() {
+	public EAttribute getPlacement_GoalDifference() {
 		return (EAttribute)placementEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -614,7 +614,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPlacement_GoalDifference() {
+	public EAttribute getPlacement_Wins() {
 		return (EAttribute)placementEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -623,7 +623,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPlacement_Wins() {
+	public EAttribute getPlacement_Losses() {
 		return (EAttribute)placementEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -632,7 +632,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPlacement_Losses() {
+	public EAttribute getPlacement_Draws() {
 		return (EAttribute)placementEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -641,7 +641,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPlacement_Draws() {
+	public EAttribute getPlacement_SeasonPoints() {
 		return (EAttribute)placementEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -650,26 +650,8 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPlacement_SeasonPoints() {
-		return (EAttribute)placementEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPlacement_TeamApiId() {
-		return (EAttribute)placementEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getPlacement_Team() {
-		return (EReference)placementEClass.getEStructuralFeatures().get(9);
+		return (EReference)placementEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -834,7 +816,6 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 		createEReference(standingEClass, STANDING__SEASON);
 
 		placementEClass = createEClass(PLACEMENT);
-		createEAttribute(placementEClass, PLACEMENT__NAME);
 		createEAttribute(placementEClass, PLACEMENT__AWAY_TEAM_GOAL);
 		createEAttribute(placementEClass, PLACEMENT__HOME_TEAM_GOAL);
 		createEAttribute(placementEClass, PLACEMENT__GOAL_DIFFERENCE);
@@ -842,7 +823,6 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 		createEAttribute(placementEClass, PLACEMENT__LOSSES);
 		createEAttribute(placementEClass, PLACEMENT__DRAWS);
 		createEAttribute(placementEClass, PLACEMENT__SEASON_POINTS);
-		createEAttribute(placementEClass, PLACEMENT__TEAM_API_ID);
 		createEReference(placementEClass, PLACEMENT__TEAM);
 
 		// Create enums
@@ -941,7 +921,6 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 		initEReference(getStanding_Season(), this.getSeason(), this.getSeason_Standing(), "season", null, 0, 1, Standing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(placementEClass, Placement.class, "Placement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPlacement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlacement_AwayTeamGoal(), ecorePackage.getEInt(), "awayTeamGoal", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlacement_HomeTeamGoal(), ecorePackage.getEInt(), "homeTeamGoal", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlacement_GoalDifference(), ecorePackage.getEInt(), "goalDifference", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -949,7 +928,6 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
 		initEAttribute(getPlacement_Losses(), ecorePackage.getEInt(), "losses", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlacement_Draws(), ecorePackage.getEInt(), "draws", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlacement_SeasonPoints(), ecorePackage.getEInt(), "seasonPoints", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPlacement_TeamApiId(), ecorePackage.getEInt(), "teamApiId", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlacement_Team(), this.getTeam(), null, "team", null, 0, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals

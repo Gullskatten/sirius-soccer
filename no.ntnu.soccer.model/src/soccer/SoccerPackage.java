@@ -719,22 +719,13 @@ public interface SoccerPackage extends EPackage {
 	int PLACEMENT = 10;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACEMENT__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Away Team Goal</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLACEMENT__AWAY_TEAM_GOAL = 1;
+	int PLACEMENT__AWAY_TEAM_GOAL = 0;
 
 	/**
 	 * The feature id for the '<em><b>Home Team Goal</b></em>' attribute.
@@ -743,7 +734,7 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACEMENT__HOME_TEAM_GOAL = 2;
+	int PLACEMENT__HOME_TEAM_GOAL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Goal Difference</b></em>' attribute.
@@ -752,7 +743,7 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACEMENT__GOAL_DIFFERENCE = 3;
+	int PLACEMENT__GOAL_DIFFERENCE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Wins</b></em>' attribute.
@@ -761,7 +752,7 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACEMENT__WINS = 4;
+	int PLACEMENT__WINS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Losses</b></em>' attribute.
@@ -770,7 +761,7 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACEMENT__LOSSES = 5;
+	int PLACEMENT__LOSSES = 4;
 
 	/**
 	 * The feature id for the '<em><b>Draws</b></em>' attribute.
@@ -779,7 +770,7 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACEMENT__DRAWS = 6;
+	int PLACEMENT__DRAWS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Season Points</b></em>' attribute.
@@ -788,16 +779,7 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACEMENT__SEASON_POINTS = 7;
-
-	/**
-	 * The feature id for the '<em><b>Team Api Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACEMENT__TEAM_API_ID = 8;
+	int PLACEMENT__SEASON_POINTS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Team</b></em>' reference.
@@ -806,7 +788,7 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACEMENT__TEAM = 9;
+	int PLACEMENT__TEAM = 7;
 
 	/**
 	 * The number of structural features of the '<em>Placement</em>' class.
@@ -815,7 +797,7 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACEMENT_FEATURE_COUNT = 10;
+	int PLACEMENT_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Placement</em>' class.
@@ -1324,17 +1306,6 @@ public interface SoccerPackage extends EPackage {
 	EClass getPlacement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link soccer.Placement#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see soccer.Placement#getName()
-	 * @see #getPlacement()
-	 * @generated
-	 */
-	EAttribute getPlacement_Name();
-
-	/**
 	 * Returns the meta object for the attribute '{@link soccer.Placement#getAwayTeamGoal <em>Away Team Goal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1410,17 +1381,6 @@ public interface SoccerPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPlacement_SeasonPoints();
-
-	/**
-	 * Returns the meta object for the attribute '{@link soccer.Placement#getTeamApiId <em>Team Api Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Team Api Id</em>'.
-	 * @see soccer.Placement#getTeamApiId()
-	 * @see #getPlacement()
-	 * @generated
-	 */
-	EAttribute getPlacement_TeamApiId();
 
 	/**
 	 * Returns the meta object for the reference '{@link soccer.Placement#getTeam <em>Team</em>}'.
@@ -1923,14 +1883,6 @@ public interface SoccerPackage extends EPackage {
 		EClass PLACEMENT = eINSTANCE.getPlacement();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PLACEMENT__NAME = eINSTANCE.getPlacement_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Away Team Goal</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1985,14 +1937,6 @@ public interface SoccerPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PLACEMENT__SEASON_POINTS = eINSTANCE.getPlacement_SeasonPoints();
-
-		/**
-		 * The meta object literal for the '<em><b>Team Api Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PLACEMENT__TEAM_API_ID = eINSTANCE.getPlacement_TeamApiId();
 
 		/**
 		 * The meta object literal for the '<em><b>Team</b></em>' reference feature.

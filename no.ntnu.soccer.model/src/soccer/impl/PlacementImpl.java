@@ -22,7 +22,6 @@ import soccer.Team;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link soccer.impl.PlacementImpl#getName <em>Name</em>}</li>
  *   <li>{@link soccer.impl.PlacementImpl#getAwayTeamGoal <em>Away Team Goal</em>}</li>
  *   <li>{@link soccer.impl.PlacementImpl#getHomeTeamGoal <em>Home Team Goal</em>}</li>
  *   <li>{@link soccer.impl.PlacementImpl#getGoalDifference <em>Goal Difference</em>}</li>
@@ -30,33 +29,12 @@ import soccer.Team;
  *   <li>{@link soccer.impl.PlacementImpl#getLosses <em>Losses</em>}</li>
  *   <li>{@link soccer.impl.PlacementImpl#getDraws <em>Draws</em>}</li>
  *   <li>{@link soccer.impl.PlacementImpl#getSeasonPoints <em>Season Points</em>}</li>
- *   <li>{@link soccer.impl.PlacementImpl#getTeamApiId <em>Team Api Id</em>}</li>
  *   <li>{@link soccer.impl.PlacementImpl#getTeam <em>Team</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PlacementImpl extends MinimalEObjectImpl.Container implements Placement {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getAwayTeamGoal() <em>Away Team Goal</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -198,26 +176,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 	protected int seasonPoints = SEASON_POINTS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTeamApiId() <em>Team Api Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTeamApiId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int TEAM_API_ID_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getTeamApiId() <em>Team Api Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTeamApiId()
-	 * @generated
-	 * @ordered
-	 */
-	protected int teamApiId = TEAM_API_ID_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getTeam() <em>Team</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -244,27 +202,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 	@Override
 	protected EClass eStaticClass() {
 		return SoccerPackage.Literals.PLACEMENT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLACEMENT__NAME, oldName, name));
 	}
 
 	/**
@@ -419,27 +356,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getTeamApiId() {
-		return teamApiId;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTeamApiId(int newTeamApiId) {
-		int oldTeamApiId = teamApiId;
-		teamApiId = newTeamApiId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLACEMENT__TEAM_API_ID, oldTeamApiId, teamApiId));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Team getTeam() {
 		if (team != null && team.eIsProxy()) {
 			InternalEObject oldTeam = (InternalEObject)team;
@@ -481,8 +397,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SoccerPackage.PLACEMENT__NAME:
-				return getName();
 			case SoccerPackage.PLACEMENT__AWAY_TEAM_GOAL:
 				return getAwayTeamGoal();
 			case SoccerPackage.PLACEMENT__HOME_TEAM_GOAL:
@@ -497,8 +411,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 				return getDraws();
 			case SoccerPackage.PLACEMENT__SEASON_POINTS:
 				return getSeasonPoints();
-			case SoccerPackage.PLACEMENT__TEAM_API_ID:
-				return getTeamApiId();
 			case SoccerPackage.PLACEMENT__TEAM:
 				if (resolve) return getTeam();
 				return basicGetTeam();
@@ -514,9 +426,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SoccerPackage.PLACEMENT__NAME:
-				setName((String)newValue);
-				return;
 			case SoccerPackage.PLACEMENT__AWAY_TEAM_GOAL:
 				setAwayTeamGoal((Integer)newValue);
 				return;
@@ -538,9 +447,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 			case SoccerPackage.PLACEMENT__SEASON_POINTS:
 				setSeasonPoints((Integer)newValue);
 				return;
-			case SoccerPackage.PLACEMENT__TEAM_API_ID:
-				setTeamApiId((Integer)newValue);
-				return;
 			case SoccerPackage.PLACEMENT__TEAM:
 				setTeam((Team)newValue);
 				return;
@@ -556,9 +462,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SoccerPackage.PLACEMENT__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case SoccerPackage.PLACEMENT__AWAY_TEAM_GOAL:
 				setAwayTeamGoal(AWAY_TEAM_GOAL_EDEFAULT);
 				return;
@@ -580,9 +483,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 			case SoccerPackage.PLACEMENT__SEASON_POINTS:
 				setSeasonPoints(SEASON_POINTS_EDEFAULT);
 				return;
-			case SoccerPackage.PLACEMENT__TEAM_API_ID:
-				setTeamApiId(TEAM_API_ID_EDEFAULT);
-				return;
 			case SoccerPackage.PLACEMENT__TEAM:
 				setTeam((Team)null);
 				return;
@@ -598,8 +498,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SoccerPackage.PLACEMENT__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SoccerPackage.PLACEMENT__AWAY_TEAM_GOAL:
 				return awayTeamGoal != AWAY_TEAM_GOAL_EDEFAULT;
 			case SoccerPackage.PLACEMENT__HOME_TEAM_GOAL:
@@ -614,8 +512,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 				return draws != DRAWS_EDEFAULT;
 			case SoccerPackage.PLACEMENT__SEASON_POINTS:
 				return seasonPoints != SEASON_POINTS_EDEFAULT;
-			case SoccerPackage.PLACEMENT__TEAM_API_ID:
-				return teamApiId != TEAM_API_ID_EDEFAULT;
 			case SoccerPackage.PLACEMENT__TEAM:
 				return team != null;
 		}
@@ -632,9 +528,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", awayTeamGoal: ");
+		result.append(" (awayTeamGoal: ");
 		result.append(awayTeamGoal);
 		result.append(", homeTeamGoal: ");
 		result.append(homeTeamGoal);
@@ -648,8 +542,6 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 		result.append(draws);
 		result.append(", seasonPoints: ");
 		result.append(seasonPoints);
-		result.append(", teamApiId: ");
-		result.append(teamApiId);
 		result.append(')');
 		return result.toString();
 	}

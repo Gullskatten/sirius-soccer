@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link soccer.Placement#getName <em>Name</em>}</li>
  *   <li>{@link soccer.Placement#getAwayTeamGoal <em>Away Team Goal</em>}</li>
  *   <li>{@link soccer.Placement#getHomeTeamGoal <em>Home Team Goal</em>}</li>
  *   <li>{@link soccer.Placement#getGoalDifference <em>Goal Difference</em>}</li>
@@ -21,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link soccer.Placement#getLosses <em>Losses</em>}</li>
  *   <li>{@link soccer.Placement#getDraws <em>Draws</em>}</li>
  *   <li>{@link soccer.Placement#getSeasonPoints <em>Season Points</em>}</li>
- *   <li>{@link soccer.Placement#getTeamApiId <em>Team Api Id</em>}</li>
  *   <li>{@link soccer.Placement#getTeam <em>Team</em>}</li>
  * </ul>
  *
@@ -30,28 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Placement extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see soccer.SoccerPackage#getPlacement_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link soccer.Placement#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Away Team Goal</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -205,28 +181,6 @@ public interface Placement extends EObject {
 	 * @generated
 	 */
 	void setSeasonPoints(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Team Api Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Team Api Id</em>' attribute.
-	 * @see #setTeamApiId(int)
-	 * @see soccer.SoccerPackage#getPlacement_TeamApiId()
-	 * @model
-	 * @generated
-	 */
-	int getTeamApiId();
-
-	/**
-	 * Sets the value of the '{@link soccer.Placement#getTeamApiId <em>Team Api Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Team Api Id</em>' attribute.
-	 * @see #getTeamApiId()
-	 * @generated
-	 */
-	void setTeamApiId(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Team</b></em>' reference.

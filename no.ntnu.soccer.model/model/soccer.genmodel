@@ -73,7 +73,6 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soccer.ecore#//Standing/season"/>
     </genClasses>
     <genClasses ecoreClass="soccer.ecore#//Placement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Placement/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Placement/awayTeamGoal"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Placement/homeTeamGoal"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Placement/goalDifference"/>
@@ -81,7 +80,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Placement/losses"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Placement/draws"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Placement/seasonPoints"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Placement/teamApiId"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//Placement/team"/>
     </genClasses>
   </genPackages>
