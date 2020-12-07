@@ -26,7 +26,7 @@ public enum MatchResult implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	HOME_WIN(0, "HOME_WIN", "Home Win"),
+	HOME_WIN(0, "HOME_WIN", "HOME_WIN"),
 
 	/**
 	 * The '<em><b>DRAW</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum MatchResult implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DRAW(1, "DRAW", "Draw"),
+	DRAW(1, "DRAW", "DRAW"),
 
 	/**
 	 * The '<em><b>AWAY WIN</b></em>' literal object.
@@ -46,14 +46,14 @@ public enum MatchResult implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AWAY_WIN(2, "AWAY_WIN", "Away Win");
+	AWAY_WIN(2, "AWAY_WIN", "AWAY_WIN");
 
 	/**
 	 * The '<em><b>HOME WIN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #HOME_WIN
-	 * @model literal="Home Win"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -64,7 +64,7 @@ public enum MatchResult implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #DRAW
-	 * @model literal="Draw"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -75,7 +75,7 @@ public enum MatchResult implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #AWAY_WIN
-	 * @model literal="Away Win"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */

@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" name="soccer" version="12.0.0.2017041100">
-  <ownedViewpoints name="soccer" modelFileExtension="ecore">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Soccer" initialisation="true" domainClass="soccer::Sport" enablePopupBars="true">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" name="soccer" version="12.0.0.2017041100">
+  <ownedViewpoints name="soccer" modelFileExtension="ecore" icon="/no.ntnu.soccer.design/assets/ball.svg">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="SeasonTable" label="Season Table" domainClass="soccer::Standing">
       <metamodel href="../../no.ntnu.soccer.model/model/soccer.ecore#/"/>
-      <defaultLayer name="Default"/>
-      <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-    </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="SeasonTable" label="Season Table" domainClass="soccer::Standing">
-      <ownedLineMappings name="PlacementLine" label="Placement Line" domainClass="soccer::Placement" headerLabelExpression="aql:self.team.id"/>
-      <ownedColumnMappings name="Placement" label="Placement" headerLabelExpression="#" featureName="seasonPoints" labelExpression="aql:self.eContainer().placements->asSequence()->indexOf(self)"/>
+      <ownedLineMappings name="Placement Line" domainClass="soccer::Placement" headerLabelExpression="aql:self.team.id"/>
+      <ownedColumnMappings name="Placement" headerLabelExpression="#" initialWidth="30" featureName="seasonPoints" labelExpression="aql:self.eContainer().placements->asSequence()->indexOf(self)"/>
       <ownedColumnMappings name="Team" headerLabelExpression="Team" featureName="team" labelExpression="aql:self.team.name"/>
-      <ownedColumnMappings name="Points" headerLabelExpression="P" featureName="seasonPoints"/>
-      <ownedColumnMappings name="Wins" headerLabelExpression="W" featureName="wins"/>
-      <ownedColumnMappings name="Draws" headerLabelExpression="D" featureName="draws"/>
-      <ownedColumnMappings name="Losses" headerLabelExpression="L" featureName="losses"/>
-      <ownedColumnMappings name="GoalDifference" label="Goal Difference" headerLabelExpression="GD" featureName="goalDifference">
+      <ownedColumnMappings name="Points" headerLabelExpression="P" initialWidth="30" featureName="seasonPoints"/>
+      <ownedColumnMappings name="Wins" headerLabelExpression="W" initialWidth="30" featureName="wins"/>
+      <ownedColumnMappings name="Draws" headerLabelExpression="D" initialWidth="30" featureName="draws"/>
+      <ownedColumnMappings name="Losses" headerLabelExpression="L" initialWidth="30" featureName="losses"/>
+      <ownedColumnMappings name="Goal Difference" headerLabelExpression="GD" initialWidth="30" featureName="goalDifference">
         <foregroundConditionalStyle predicateExpression="aql:self.goalDifference &lt; 0">
           <style labelSize="8">
             <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
           </style>
         </foregroundConditionalStyle>
       </ownedColumnMappings>
-      <ownedColumnMappings name="HomeGoal" label="Home Goal" headerLabelExpression="HG" featureName="homeTeamGoal"/>
-      <ownedColumnMappings name="AwayGoal" label="Away Goal" headerLabelExpression="AG" featureName="awayTeamGoal"/>
+      <ownedColumnMappings name="Home Goal" headerLabelExpression="HG" initialWidth="30" featureName="homeTeamGoal"/>
+      <ownedColumnMappings name="Away Goal" headerLabelExpression="AG" initialWidth="30" featureName="awayTeamGoal"/>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="no.ntnu.soccer.design.Services"/>
   </ownedViewpoints>

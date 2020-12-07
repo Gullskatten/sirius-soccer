@@ -26,7 +26,7 @@ public enum TeamType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	HOME_TEAM(1, "HOME_TEAM", "Home Team"),
+	HOME_TEAM(1, "HOME_TEAM", "HOME_TEAM"),
 
 	/**
 	 * The '<em><b>AWAY TEAM</b></em>' literal object.
@@ -36,14 +36,14 @@ public enum TeamType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AWAY_TEAM(2, "AWAY_TEAM", "Away Team");
+	AWAY_TEAM(2, "AWAY_TEAM", "AWAY_TEAM");
 
 	/**
 	 * The '<em><b>HOME TEAM</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #HOME_TEAM
-	 * @model literal="Home Team"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -54,7 +54,7 @@ public enum TeamType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #AWAY_TEAM
-	 * @model literal="Away Team"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */

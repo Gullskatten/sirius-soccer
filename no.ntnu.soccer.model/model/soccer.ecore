@@ -102,18 +102,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PositionType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MatchResult">
-    <eLiterals name="HOME_WIN" literal="Home Win"/>
-    <eLiterals name="DRAW" value="1" literal="Draw"/>
-    <eLiterals name="AWAY_WIN" value="2" literal="Away Win"/>
+    <eLiterals name="HOME_WIN" literal="HOME_WIN"/>
+    <eLiterals name="DRAW" value="1" literal="DRAW"/>
+    <eLiterals name="AWAY_WIN" value="2" literal="AWAY_WIN"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PositionType">
-    <eLiterals name="KEEPER" literal="Keeper"/>
-    <eLiterals name="DEFENCE" value="1" literal="Defence"/>
-    <eLiterals name="MIDFIELD" value="2" literal="Midfield"/>
-    <eLiterals name="FORWARD" value="3" literal="Forward"/>
+    <eLiterals name="KEEPER" literal="KEEPER"/>
+    <eLiterals name="DEFENCE" value="1" literal="DEFENCE"/>
+    <eLiterals name="MIDFIELD" value="2" literal="MIDFIELD"/>
+    <eLiterals name="FORWARD" value="3" literal="FORWARD"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TeamType">
-    <eLiterals name="HOME_TEAM" value="1" literal="Home Team"/>
-    <eLiterals name="AWAY_TEAM" value="2" literal="Away Team"/>
+    <eLiterals name="HOME_TEAM" value="1" literal="HOME_TEAM"/>
+    <eLiterals name="AWAY_TEAM" value="2" literal="AWAY_TEAM"/>
   </eClassifiers>
 </ecore:EPackage>
