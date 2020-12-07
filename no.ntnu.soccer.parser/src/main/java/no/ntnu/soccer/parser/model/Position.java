@@ -34,4 +34,8 @@ public class Position implements XmiParsable {
     public String indent() {
         return "              ";
     }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
 }

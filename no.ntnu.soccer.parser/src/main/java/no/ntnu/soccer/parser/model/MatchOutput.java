@@ -150,20 +150,34 @@ public class MatchOutput extends Match implements XmiParsable {
 
     private void appendOpponent(Opponent opponent, BufferedWriter writer) {
         opponent.toXmi(writer, unused -> {
+            List<Position> existingPositions = new ArrayList<>();
+
             Arrays.asList(KEEPER, DEFENCE, MIDFIELD, FORWARD).forEach(type -> {
-                Position position = new Position(findPlayersByPosition(opponent.getTeam().getPlayers(), type), type);
+                Position position = new Position(findPlayersByPosition(opponent.getTeam().getPlayers(), existingPositions, type), type);
+                existingPositions.add(position);
                 position.toXmi(writer, null);
             });
         return null;
         });
     }
 
-    private List<Player> findPlayersByPosition(List<Player> players, FieldPositionType type) {
+    private List<Player> findPlayersByPosition(List<Player> players, List<Position> existingPositions, FieldPositionType type) {
         switch (type) {
             case KEEPER:
-                return players.stream().filter(player -> player.getY() == 1).collect(Collectors.toList());
+                // In the data set, there are some players who plays as back with position 1,1 (indicating keeper) -> hence limit(1).
+                return players.stream().filter(player -> player.getY() == 1 && player.getX() == 1).limit(1).collect(Collectors.toList());
             case DEFENCE:
-                return players.stream().filter(player -> player.getY() >= 2 && player.getY() <= 5).collect(Collectors.toList());
+                if(players.stream().filter(player -> player.getX() == 1 && player.getY() == 1).count() == 1) {
+                    return players.stream().filter(player -> player.getY() >= 1 && player.getY() <= 5 && player.getX() > 1).collect(Collectors.toList());
+                } else {
+                    return players.stream()
+                            .filter(player -> player.getY() >= 1 && player.getY() <= 5)
+                            .filter(playersNotKeeper ->
+                                    // filter the already existing keeper
+                                    existingPositions.get(0).getPlayers().stream().noneMatch(keeper -> playersNotKeeper.getId() == keeper.getId()))
+                            .collect(Collectors.toList());
+                }
+
             case MIDFIELD:
                 return players.stream().filter(player -> player.getY() >= 6 && player.getY() <= 7).collect(Collectors.toList());
             case FORWARD:
