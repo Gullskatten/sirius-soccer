@@ -10,7 +10,7 @@
       <!-- @generated soccer -->
       <package
             uri="platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore"
-            class="soccer.SoccerPackage"
+            class="no.ntnu.soccer.model.soccer.SoccerPackage"
             genModel="model/soccer.genmodel"/>
    </extension>
 
