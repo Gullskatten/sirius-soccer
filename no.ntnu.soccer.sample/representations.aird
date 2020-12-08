@@ -1,0 +1,1308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:soccer="platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_J3MKcDlbEeupMsgxXxr8xg" selectedViews="_eM8T4DlhEeuAsuX09KtZVw" version="14.3.1.202003261200">
+    <semanticResources>sample.soccer</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_eM8T4DlhEeuAsuX09KtZVw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_gUeBEDlhEeuAsuX09KtZVw" name="Premier League 2015/2016" repPath="#_gRxSYDlhEeuAsuX09KtZVw" changeId="2e2e2dc4-a3ff-48f7-aa81-6cb4a6386c94">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']"/>
+        <target xmi:type="soccer:Standing" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kdmZoDlhEeuAsuX09KtZVw" name="Example Match" repPath="#_kc_VoDlhEeuAsuX09KtZVw" changeId="53a28e52-85e9-4771-a457-463bbb5146fa">
+        <description xmi:type="description_2:DiagramDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']"/>
+        <target xmi:type="soccer:Match" href="sample.soccer#4389"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <table:DTable uid="_gRxSYDlhEeuAsuX09KtZVw" headerColumnWidth="84">
+    <target xmi:type="soccer:Standing" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing"/>
+    <lines xmi:type="table:DLine" uid="_gSBxEDlhEeuAsuX09KtZVw" label="8197">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gTzSsDlhEeuAsuX09KtZVw" label="1" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gTz5wTlhEeuAsuX09KtZVw" label="Leicester City" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT1H4TlhEeuAsuX09KtZVw" label="23" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT1H4zlhEeuAsuX09KtZVw" label="12" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT1H5TlhEeuAsuX09KtZVw" label="3" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT1H6TlhEeuAsuX09KtZVw" label="32" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT4LMTlhEeuAsuX09KtZVw" label="🥇" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.0"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gSsfcDlhEeuAsuX09KtZVw" backgroundColor="252,233,79"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gSxX8DlhEeuAsuX09KtZVw" label="9825">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gT4LMzlhEeuAsuX09KtZVw" label="2" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT4LNTlhEeuAsuX09KtZVw" label="Arsenal" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT4LNzlhEeuAsuX09KtZVw" label="20" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT4LOTlhEeuAsuX09KtZVw" label="11" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT4LOzlhEeuAsuX09KtZVw" label="7" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT4yQjlhEeuAsuX09KtZVw" label="29" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT4yRTlhEeuAsuX09KtZVw" label="🥈" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.1"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gSymEDlhEeuAsuX09KtZVw" backgroundColor="209,209,209"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gS3ekDlhEeuAsuX09KtZVw" label="8586">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gT4yRzlhEeuAsuX09KtZVw" label="3" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT4ySTlhEeuAsuX09KtZVw" label="Tottenham Hotspur" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT5ZUTlhEeuAsuX09KtZVw" label="19" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT5ZUzlhEeuAsuX09KtZVw" label="13" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT5ZVTlhEeuAsuX09KtZVw" label="6" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT5ZWTlhEeuAsuX09KtZVw" label="34" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT5ZXDlhEeuAsuX09KtZVw" label="🥉" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.2"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gS4FoDlhEeuAsuX09KtZVw" backgroundColor="253,206,137"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gS560DlhEeuAsuX09KtZVw" label="8456">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gT5ZXjlhEeuAsuX09KtZVw" label="4" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6AYDlhEeuAsuX09KtZVw" label="Manchester City" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6AYjlhEeuAsuX09KtZVw" label="19" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6AZDlhEeuAsuX09KtZVw" label="9" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6AZjlhEeuAsuX09KtZVw" label="10" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6AajlhEeuAsuX09KtZVw" label="30" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6AbTlhEeuAsuX09KtZVw" label="⚽" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.3"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gS560TlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTS8YDlhEeuAsuX09KtZVw" label="10260">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gT6ncDlhEeuAsuX09KtZVw" label="5" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6ncjlhEeuAsuX09KtZVw" label="Manchester United" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6ndDlhEeuAsuX09KtZVw" label="19" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6ndjlhEeuAsuX09KtZVw" label="9" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6neDlhEeuAsuX09KtZVw" label="10" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT6nfDlhEeuAsuX09KtZVw" label="14" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT7OgTlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.4"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTTjcDlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTTjcTlhEeuAsuX09KtZVw" label="8466">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gT7OgzlhEeuAsuX09KtZVw" label="6" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT7OhTlhEeuAsuX09KtZVw" label="Southampton" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT9qwTlhEeuAsuX09KtZVw" label="18" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-R0DlhEeuAsuX09KtZVw" label="9" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-R0jlhEeuAsuX09KtZVw" label="11" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-R1jlhEeuAsuX09KtZVw" label="18" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-R2TlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.5"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTUKgDlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTUKgTlhEeuAsuX09KtZVw" label="8654">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gT-R2zlhEeuAsuX09KtZVw" label="7" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-R3TlhEeuAsuX09KtZVw" label="West Ham United" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-R3zlhEeuAsuX09KtZVw" label="16" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-R4TlhEeuAsuX09KtZVw" label="14" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-R4zlhEeuAsuX09KtZVw" label="8" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-44DlhEeuAsuX09KtZVw" label="14" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-44zlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.6"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTUKgjlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTUKgzlhEeuAsuX09KtZVw" label="8650">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gT-45TlhEeuAsuX09KtZVw" label="8" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-45zlhEeuAsuX09KtZVw" label="Liverpool" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-46TlhEeuAsuX09KtZVw" label="16" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-46zlhEeuAsuX09KtZVw" label="12" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-47TlhEeuAsuX09KtZVw" label="10" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT-48TlhEeuAsuX09KtZVw" label="13" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT_f8jlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.7"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTUxkDlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTVYoDlhEeuAsuX09KtZVw" label="10194">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gT_f9DlhEeuAsuX09KtZVw" label="9" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT_f9jlhEeuAsuX09KtZVw" label="Stoke City" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT_f-DlhEeuAsuX09KtZVw" label="14" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gT_f-jlhEeuAsuX09KtZVw" label="9" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUDxYDlhEeuAsuX09KtZVw" label="15" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUEYczlhEeuAsuX09KtZVw" label="-14" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_gUEYdDlhEeuAsuX09KtZVw" foregroundColor="239,41,41">
+          <labelFormat>bold</labelFormat>
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+        </currentStyle>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUIp4jlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.8"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTVYoTlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTV_sDlhEeuAsuX09KtZVw" label="8455">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gUJQ8DlhEeuAsuX09KtZVw" label="10" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUJQ8jlhEeuAsuX09KtZVw" label="Chelsea" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUJQ9DlhEeuAsuX09KtZVw" label="12" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUJQ9jlhEeuAsuX09KtZVw" label="14" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUJQ-DlhEeuAsuX09KtZVw" label="12" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUJ4AjlhEeuAsuX09KtZVw" label="6" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUJ4BTlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.9"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTV_sTlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTWmwDlhEeuAsuX09KtZVw" label="8668">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gUJ4BzlhEeuAsuX09KtZVw" label="11" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUJ4CTlhEeuAsuX09KtZVw" label="Everton" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUJ4CzlhEeuAsuX09KtZVw" label="11" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUJ4DTlhEeuAsuX09KtZVw" label="14" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUJ4DzlhEeuAsuX09KtZVw" label="13" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUKfEzlhEeuAsuX09KtZVw" label="4" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUKfFjlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.10"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTWmwTlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTWmwjlhEeuAsuX09KtZVw" label="10003">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gUKfGDlhEeuAsuX09KtZVw" label="12" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUKfGjlhEeuAsuX09KtZVw" label="Swansea City" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gULtMTlhEeuAsuX09KtZVw" label="12" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gULtMzlhEeuAsuX09KtZVw" label="11" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gULtNTlhEeuAsuX09KtZVw" label="15" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gULtOTlhEeuAsuX09KtZVw" label="-10" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_gULtOjlhEeuAsuX09KtZVw" foregroundColor="239,41,41">
+          <labelFormat>bold</labelFormat>
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+        </currentStyle>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUMUQTlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.11"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTWmwzlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTZqEDlhEeuAsuX09KtZVw" label="9817">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gUMUQzlhEeuAsuX09KtZVw" label="13" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUMURTlhEeuAsuX09KtZVw" label="Watford" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUMURzlhEeuAsuX09KtZVw" label="12" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUMUSTlhEeuAsuX09KtZVw" label="9" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUMUSzlhEeuAsuX09KtZVw" label="17" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUMUTzlhEeuAsuX09KtZVw" label="-10" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_gUM7UDlhEeuAsuX09KtZVw" foregroundColor="239,41,41">
+          <labelFormat>bold</labelFormat>
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+        </currentStyle>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUM7UjlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.12"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTaRIDlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTa4MDlhEeuAsuX09KtZVw" label="8659">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gUM7VDlhEeuAsuX09KtZVw" label="14" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUM7VjlhEeuAsuX09KtZVw" label="West Bromwich Albion" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUM7WDlhEeuAsuX09KtZVw" label="10" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUM7WjlhEeuAsuX09KtZVw" label="13" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUM7XDlhEeuAsuX09KtZVw" label="15" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUM7YDlhEeuAsuX09KtZVw" label="-14" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_gUM7YTlhEeuAsuX09KtZVw" foregroundColor="239,41,41">
+          <labelFormat>bold</labelFormat>
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+        </currentStyle>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUNiYTlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.13"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTa4MTlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTa4MjlhEeuAsuX09KtZVw" label="9826">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gUP-oDlhEeuAsuX09KtZVw" label="15" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUP-ojlhEeuAsuX09KtZVw" label="Crystal Palace" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUQlsTlhEeuAsuX09KtZVw" label="11" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUQlszlhEeuAsuX09KtZVw" label="9" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUQltTlhEeuAsuX09KtZVw" label="18" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUQluTlhEeuAsuX09KtZVw" label="-12" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_gUQlujlhEeuAsuX09KtZVw" foregroundColor="239,41,41">
+          <labelFormat>bold</labelFormat>
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+        </currentStyle>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUQlvDlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.14"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTa4MzlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTa4NDlhEeuAsuX09KtZVw" label="8678">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gURMwDlhEeuAsuX09KtZVw" label="16" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gURMwjlhEeuAsuX09KtZVw" label="Bournemouth" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gURMxDlhEeuAsuX09KtZVw" label="11" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gURMxjlhEeuAsuX09KtZVw" label="9" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gURMyDlhEeuAsuX09KtZVw" label="18" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gURMzDlhEeuAsuX09KtZVw" label="-22" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_gURMzTlhEeuAsuX09KtZVw" foregroundColor="239,41,41">
+          <labelFormat>bold</labelFormat>
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+        </currentStyle>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gURz0TlhEeuAsuX09KtZVw" label="" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.15"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTbfQDlhEeuAsuX09KtZVw" defaultBackgroundStyle="true" backgroundColor="204,242,166"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTbfQTlhEeuAsuX09KtZVw" label="8472">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gURz0zlhEeuAsuX09KtZVw" label="17" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUSa4TlhEeuAsuX09KtZVw" label="Sunderland" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUSa4zlhEeuAsuX09KtZVw" label="9" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUSa5TlhEeuAsuX09KtZVw" label="12" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUSa5zlhEeuAsuX09KtZVw" label="17" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUSa6zlhEeuAsuX09KtZVw" label="-14" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_gUSa7DlhEeuAsuX09KtZVw" foregroundColor="239,41,41">
+          <labelFormat>bold</labelFormat>
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+        </currentStyle>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUSa7jlhEeuAsuX09KtZVw" label="😰" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.16"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTbfQjlhEeuAsuX09KtZVw" backgroundColor="194,239,255"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTbfQzlhEeuAsuX09KtZVw" label="10261">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gUTB8DlhEeuAsuX09KtZVw" label="18" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTB8jlhEeuAsuX09KtZVw" label="Newcastle United" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTB9DlhEeuAsuX09KtZVw" label="9" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTB9jlhEeuAsuX09KtZVw" label="10" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTB-DlhEeuAsuX09KtZVw" label="19" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTB_DlhEeuAsuX09KtZVw" label="-21" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_gUTB_TlhEeuAsuX09KtZVw" foregroundColor="239,41,41">
+          <labelFormat>bold</labelFormat>
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+        </currentStyle>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTB_zlhEeuAsuX09KtZVw" label="👎" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.17"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTbfRDlhEeuAsuX09KtZVw" backgroundColor="246,139,139"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTcGUDlhEeuAsuX09KtZVw" label="9850">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gUTpADlhEeuAsuX09KtZVw" label="19" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTpAjlhEeuAsuX09KtZVw" label="Norwich City" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTpBDlhEeuAsuX09KtZVw" label="9" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTpBjlhEeuAsuX09KtZVw" label="7" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTpCDlhEeuAsuX09KtZVw" label="22" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTpDDlhEeuAsuX09KtZVw" label="-28" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_gUTpDTlhEeuAsuX09KtZVw" foregroundColor="239,41,41">
+          <labelFormat>bold</labelFormat>
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+        </currentStyle>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTpDzlhEeuAsuX09KtZVw" label="👎" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.18"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTcGUTlhEeuAsuX09KtZVw" backgroundColor="246,139,139"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_gTd7gDlhEeuAsuX09KtZVw" label="10252">
+      <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+      <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedLineMappings[name='Placement%20Line']"/>
+      <cells xmi:type="table:DCell" uid="_gUTpETlhEeuAsuX09KtZVw" label="20" column="_gTo6oDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUTpEzlhEeuAsuX09KtZVw" label="Aston Villa" column="_gTo6ojlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUUQETlhEeuAsuX09KtZVw" label="3" column="_gTphsDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUUQEzlhEeuAsuX09KtZVw" label="8" column="_gTr98DlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUVeMTlhEeuAsuX09KtZVw" label="27" column="_gTslATlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUVeNTlhEeuAsuX09KtZVw" label="-49" column="_gTslBzlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_gUVeNjlhEeuAsuX09KtZVw" foregroundColor="239,41,41">
+          <labelFormat>bold</labelFormat>
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+        </currentStyle>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_gUVeODlhEeuAsuX09KtZVw" label="👎" column="_gTxdgDlhEeuAsuX09KtZVw">
+        <target xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+        <semanticElements xmi:type="soccer:Placement" href="sample.soccer#//@countries.0/@league/@seasons.0/@standing/@placements.19"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTd7gTlhEeuAsuX09KtZVw" backgroundColor="246,139,139"/>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_gTo6oDlhEeuAsuX09KtZVw" label="#" cells="_gTzSsDlhEeuAsuX09KtZVw _gT4LMzlhEeuAsuX09KtZVw _gT4yRzlhEeuAsuX09KtZVw _gT5ZXjlhEeuAsuX09KtZVw _gT6ncDlhEeuAsuX09KtZVw _gT7OgzlhEeuAsuX09KtZVw _gT-R2zlhEeuAsuX09KtZVw _gT-45TlhEeuAsuX09KtZVw _gT_f9DlhEeuAsuX09KtZVw _gUJQ8DlhEeuAsuX09KtZVw _gUJ4BzlhEeuAsuX09KtZVw _gUKfGDlhEeuAsuX09KtZVw _gUMUQzlhEeuAsuX09KtZVw _gUM7VDlhEeuAsuX09KtZVw _gUP-oDlhEeuAsuX09KtZVw _gURMwDlhEeuAsuX09KtZVw _gURz0zlhEeuAsuX09KtZVw _gUTB8DlhEeuAsuX09KtZVw _gUTpADlhEeuAsuX09KtZVw _gUTpETlhEeuAsuX09KtZVw" width="35" featureName="rank">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Rank']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_gTo6ojlhEeuAsuX09KtZVw" label="Team" cells="_gTz5wTlhEeuAsuX09KtZVw _gT4LNTlhEeuAsuX09KtZVw _gT4ySTlhEeuAsuX09KtZVw _gT6AYDlhEeuAsuX09KtZVw _gT6ncjlhEeuAsuX09KtZVw _gT7OhTlhEeuAsuX09KtZVw _gT-R3TlhEeuAsuX09KtZVw _gT-45zlhEeuAsuX09KtZVw _gT_f9jlhEeuAsuX09KtZVw _gUJQ8jlhEeuAsuX09KtZVw _gUJ4CTlhEeuAsuX09KtZVw _gUKfGjlhEeuAsuX09KtZVw _gUMURTlhEeuAsuX09KtZVw _gUM7VjlhEeuAsuX09KtZVw _gUP-ojlhEeuAsuX09KtZVw _gURMwjlhEeuAsuX09KtZVw _gUSa4TlhEeuAsuX09KtZVw _gUTB8jlhEeuAsuX09KtZVw _gUTpAjlhEeuAsuX09KtZVw _gUTpEzlhEeuAsuX09KtZVw" width="113" featureName="team">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Team']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_gTphsDlhEeuAsuX09KtZVw" label="W" cells="_gT1H4TlhEeuAsuX09KtZVw _gT4LNzlhEeuAsuX09KtZVw _gT5ZUTlhEeuAsuX09KtZVw _gT6AYjlhEeuAsuX09KtZVw _gT6ndDlhEeuAsuX09KtZVw _gT9qwTlhEeuAsuX09KtZVw _gT-R3zlhEeuAsuX09KtZVw _gT-46TlhEeuAsuX09KtZVw _gT_f-DlhEeuAsuX09KtZVw _gUJQ9DlhEeuAsuX09KtZVw _gUJ4CzlhEeuAsuX09KtZVw _gULtMTlhEeuAsuX09KtZVw _gUMURzlhEeuAsuX09KtZVw _gUM7WDlhEeuAsuX09KtZVw _gUQlsTlhEeuAsuX09KtZVw _gURMxDlhEeuAsuX09KtZVw _gUSa4zlhEeuAsuX09KtZVw _gUTB9DlhEeuAsuX09KtZVw _gUTpBDlhEeuAsuX09KtZVw _gUUQETlhEeuAsuX09KtZVw" width="35" featureName="wins">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Wins']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_gTr98DlhEeuAsuX09KtZVw" label="D" cells="_gT1H4zlhEeuAsuX09KtZVw _gT4LOTlhEeuAsuX09KtZVw _gT5ZUzlhEeuAsuX09KtZVw _gT6AZDlhEeuAsuX09KtZVw _gT6ndjlhEeuAsuX09KtZVw _gT-R0DlhEeuAsuX09KtZVw _gT-R4TlhEeuAsuX09KtZVw _gT-46zlhEeuAsuX09KtZVw _gT_f-jlhEeuAsuX09KtZVw _gUJQ9jlhEeuAsuX09KtZVw _gUJ4DTlhEeuAsuX09KtZVw _gULtMzlhEeuAsuX09KtZVw _gUMUSTlhEeuAsuX09KtZVw _gUM7WjlhEeuAsuX09KtZVw _gUQlszlhEeuAsuX09KtZVw _gURMxjlhEeuAsuX09KtZVw _gUSa5TlhEeuAsuX09KtZVw _gUTB9jlhEeuAsuX09KtZVw _gUTpBjlhEeuAsuX09KtZVw _gUUQEzlhEeuAsuX09KtZVw" width="35" featureName="draws">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Draws']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_gTslATlhEeuAsuX09KtZVw" label="L" cells="_gT1H5TlhEeuAsuX09KtZVw _gT4LOzlhEeuAsuX09KtZVw _gT5ZVTlhEeuAsuX09KtZVw _gT6AZjlhEeuAsuX09KtZVw _gT6neDlhEeuAsuX09KtZVw _gT-R0jlhEeuAsuX09KtZVw _gT-R4zlhEeuAsuX09KtZVw _gT-47TlhEeuAsuX09KtZVw _gUDxYDlhEeuAsuX09KtZVw _gUJQ-DlhEeuAsuX09KtZVw _gUJ4DzlhEeuAsuX09KtZVw _gULtNTlhEeuAsuX09KtZVw _gUMUSzlhEeuAsuX09KtZVw _gUM7XDlhEeuAsuX09KtZVw _gUQltTlhEeuAsuX09KtZVw _gURMyDlhEeuAsuX09KtZVw _gUSa5zlhEeuAsuX09KtZVw _gUTB-DlhEeuAsuX09KtZVw _gUTpCDlhEeuAsuX09KtZVw _gUVeMTlhEeuAsuX09KtZVw" width="35" featureName="losses">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Losses']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_gTslAzlhEeuAsuX09KtZVw" label="F" width="35" featureName="homeTeamGoal">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goals%20For']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_gTslBTlhEeuAsuX09KtZVw" label="A" width="35" featureName="awayTeamGoal">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goals%20Against']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_gTslBzlhEeuAsuX09KtZVw" label="+/-" cells="_gT1H6TlhEeuAsuX09KtZVw _gT4yQjlhEeuAsuX09KtZVw _gT5ZWTlhEeuAsuX09KtZVw _gT6AajlhEeuAsuX09KtZVw _gT6nfDlhEeuAsuX09KtZVw _gT-R1jlhEeuAsuX09KtZVw _gT-44DlhEeuAsuX09KtZVw _gT-48TlhEeuAsuX09KtZVw _gUEYczlhEeuAsuX09KtZVw _gUJ4AjlhEeuAsuX09KtZVw _gUKfEzlhEeuAsuX09KtZVw _gULtOTlhEeuAsuX09KtZVw _gUMUTzlhEeuAsuX09KtZVw _gUM7YDlhEeuAsuX09KtZVw _gUQluTlhEeuAsuX09KtZVw _gURMzDlhEeuAsuX09KtZVw _gUSa6zlhEeuAsuX09KtZVw _gUTB_DlhEeuAsuX09KtZVw _gUTpDDlhEeuAsuX09KtZVw _gUVeNTlhEeuAsuX09KtZVw" width="35" featureName="goalDifference">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Goal%20Difference']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_gTslCTlhEeuAsuX09KtZVw" label="Pts" width="35" featureName="seasonPoints">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Points']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_gTslCjlhEeuAsuX09KtZVw" defaultForegroundStyle="true">
+        <labelFormat>bold</labelFormat>
+      </currentStyle>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_gTxdgDlhEeuAsuX09KtZVw" cells="_gT4LMTlhEeuAsuX09KtZVw _gT4yRTlhEeuAsuX09KtZVw _gT5ZXDlhEeuAsuX09KtZVw _gT6AbTlhEeuAsuX09KtZVw _gT7OgTlhEeuAsuX09KtZVw _gT-R2TlhEeuAsuX09KtZVw _gT-44zlhEeuAsuX09KtZVw _gT_f8jlhEeuAsuX09KtZVw _gUIp4jlhEeuAsuX09KtZVw _gUJ4BTlhEeuAsuX09KtZVw _gUKfFjlhEeuAsuX09KtZVw _gUMUQTlhEeuAsuX09KtZVw _gUM7UjlhEeuAsuX09KtZVw _gUNiYTlhEeuAsuX09KtZVw _gUQlvDlhEeuAsuX09KtZVw _gURz0TlhEeuAsuX09KtZVw _gUSa7jlhEeuAsuX09KtZVw _gUTB_zlhEeuAsuX09KtZVw _gUTpDzlhEeuAsuX09KtZVw _gUVeODlhEeuAsuX09KtZVw" featureName="rank">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']/@ownedColumnMappings[name='Emoji']"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Season%20Table']"/>
+  </table:DTable>
+  <diagram:DSemanticDiagram uid="_kc_VoDlhEeuAsuX09KtZVw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_keSWIDlhEeuAsuX09KtZVw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_keSWITlhEeuAsuX09KtZVw" type="Sirius" element="_kc_VoDlhEeuAsuX09KtZVw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_kgsJ4DlhEeuAsuX09KtZVw" type="2001" element="_ker-wDlhEeuAsuX09KtZVw">
+          <children xmi:type="notation:Node" xmi:id="_kg0swDlhEeuAsuX09KtZVw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_kg0swTlhEeuAsuX09KtZVw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_khGZkDlhEeuAsuX09KtZVw" type="3003" element="_ke1IsDlhEeuAsuX09KtZVw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_khGZkTlhEeuAsuX09KtZVw" fontName="Roboto"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khGZkjlhEeuAsuX09KtZVw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_kgsJ4TlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kgsJ4jlhEeuAsuX09KtZVw" x="145" y="470" width="120" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_kg92sDlhEeuAsuX09KtZVw" type="2002" element="_ke8dcDlhEeuAsuX09KtZVw">
+          <children xmi:type="notation:Node" xmi:id="_kg-dwDlhEeuAsuX09KtZVw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_khA6ADlhEeuAsuX09KtZVw" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_khHnsDlhEeuAsuX09KtZVw" type="3009" element="_kfFnYDlhEeuAsuX09KtZVw">
+              <children xmi:type="notation:Node" xmi:id="_khIOwDlhEeuAsuX09KtZVw" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_khI10DlhEeuAsuX09KtZVw" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_khNuUDlhEeuAsuX09KtZVw" type="3010" element="_kfRNkDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khNuUTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khNuUjlhEeuAsuX09KtZVw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_khI10TlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_khI10jlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_khJc4DlhEeuAsuX09KtZVw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_khHnsTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khHnsjlhEeuAsuX09KtZVw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_khKD8DlhEeuAsuX09KtZVw" type="3009" element="_kfHckTlhEeuAsuX09KtZVw">
+              <children xmi:type="notation:Node" xmi:id="_khKrADlhEeuAsuX09KtZVw" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_khKrATlhEeuAsuX09KtZVw" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_khO8cDlhEeuAsuX09KtZVw" type="3010" element="_kfUQ4DlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khO8cTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khO8cjlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_khO8czlhEeuAsuX09KtZVw" type="3010" element="_kfWGEDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khO8dDlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khO8dTlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_khXfUDlhEeuAsuX09KtZVw" type="3010" element="_kfXUMDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khXfUTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khXfUjlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_khYGYDlhEeuAsuX09KtZVw" type="3010" element="_kfX7QDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khYGYTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khYGYjlhEeuAsuX09KtZVw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_khKrAjlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_khKrAzlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_khKrBDlhEeuAsuX09KtZVw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_khKD8TlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khKD8jlhEeuAsuX09KtZVw" y="40"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_khLSEDlhEeuAsuX09KtZVw" type="3009" element="_kfLuADlhEeuAsuX09KtZVw">
+              <children xmi:type="notation:Node" xmi:id="_khL5IDlhEeuAsuX09KtZVw" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_khL5ITlhEeuAsuX09KtZVw" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_khYtcDlhEeuAsuX09KtZVw" type="3010" element="_kfa-kDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khYtcTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khYtcjlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_khaioDlhEeuAsuX09KtZVw" type="3010" element="_kfbloTlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khaioTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khaiojlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_khaiozlhEeuAsuX09KtZVw" type="3010" element="_kfcMsTlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khaipDlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khaipTlhEeuAsuX09KtZVw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_khL5IjlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_khL5IzlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_khL5JDlhEeuAsuX09KtZVw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_khLSETlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khLSEjlhEeuAsuX09KtZVw" y="80"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_khMgMDlhEeuAsuX09KtZVw" type="3009" element="_kfOKQDlhEeuAsuX09KtZVw">
+              <children xmi:type="notation:Node" xmi:id="_khMgMzlhEeuAsuX09KtZVw" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_khMgNDlhEeuAsuX09KtZVw" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_kheNADlhEeuAsuX09KtZVw" type="3010" element="_kfda0DlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_kheNATlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_kheNAjlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_khjFgDlhEeuAsuX09KtZVw" type="3010" element="_kfeB4DlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khjFgTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khjFgjlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_khjFgzlhEeuAsuX09KtZVw" type="3010" element="_kfeo8DlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khjFhDlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khjFhTlhEeuAsuX09KtZVw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_khMgNTlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_khMgNjlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_khNHQDlhEeuAsuX09KtZVw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_khMgMTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khMgMjlhEeuAsuX09KtZVw" y="120"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_khA6ATlhEeuAsuX09KtZVw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_khA6AjlhEeuAsuX09KtZVw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_kg92sTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="18" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kg92sjlhEeuAsuX09KtZVw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_khEkYDlhEeuAsuX09KtZVw" type="2002" element="_ke_gwTlhEeuAsuX09KtZVw">
+          <children xmi:type="notation:Node" xmi:id="_khFLcDlhEeuAsuX09KtZVw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_khFLcTlhEeuAsuX09KtZVw" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_khjskDlhEeuAsuX09KtZVw" type="3009" element="_kffQADlhEeuAsuX09KtZVw">
+              <children xmi:type="notation:Node" xmi:id="_khmv4DlhEeuAsuX09KtZVw" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_khmv4TlhEeuAsuX09KtZVw" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_khtdlDlhEeuAsuX09KtZVw" type="3010" element="_kfjhcDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khtdlTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khtdljlhEeuAsuX09KtZVw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_khmv4jlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_khmv4zlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_khmv5DlhEeuAsuX09KtZVw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_khjskTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khjskjlhEeuAsuX09KtZVw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_khnW8DlhEeuAsuX09KtZVw" type="3009" element="_kff3ETlhEeuAsuX09KtZVw">
+              <children xmi:type="notation:Node" xmi:id="_khnW8zlhEeuAsuX09KtZVw" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_khnW9DlhEeuAsuX09KtZVw" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_khuEoDlhEeuAsuX09KtZVw" type="3010" element="_kfkIgDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khuEoTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khuEojlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_khuEozlhEeuAsuX09KtZVw" type="3010" element="_kfkvkTlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khuEpDlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khuEpTlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_khxvADlhEeuAsuX09KtZVw" type="3010" element="_kfl9sDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khxvATlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khxvAjlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_khy9IDlhEeuAsuX09KtZVw" type="3010" element="_kfmkwDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khy9ITlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khy9IjlhEeuAsuX09KtZVw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_khnW9TlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_khnW9jlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_khn-ADlhEeuAsuX09KtZVw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_khnW8TlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khnW8jlhEeuAsuX09KtZVw" y="40"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_khn-ATlhEeuAsuX09KtZVw" type="3009" element="_kfhFMTlhEeuAsuX09KtZVw">
+              <children xmi:type="notation:Node" xmi:id="_khn-BDlhEeuAsuX09KtZVw" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_khn-BTlhEeuAsuX09KtZVw" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_khzkMDlhEeuAsuX09KtZVw" type="3010" element="_kfsEUDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_khzkMTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_khzkMjlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_kh0LQDlhEeuAsuX09KtZVw" type="3010" element="_kfsrYDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_kh0LQTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_kh0LQjlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_kh0LQzlhEeuAsuX09KtZVw" type="3010" element="_kft5gDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_kh0LRDlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_kh0LRTlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_kh0yUDlhEeuAsuX09KtZVw" type="3010" element="_kfugkTlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_kh0yUTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_kh0yUjlhEeuAsuX09KtZVw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_khn-BjlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_khn-BzlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_kholEDlhEeuAsuX09KtZVw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_khn-AjlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khn-AzlhEeuAsuX09KtZVw" y="80"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_khs2gDlhEeuAsuX09KtZVw" type="3009" element="_kfiTUDlhEeuAsuX09KtZVw">
+              <children xmi:type="notation:Node" xmi:id="_khs2gzlhEeuAsuX09KtZVw" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_khtdkDlhEeuAsuX09KtZVw" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_kh2ngDlhEeuAsuX09KtZVw" type="3010" element="_kfvusDlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_kh2ngTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_kh2ngjlhEeuAsuX09KtZVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_kh3OkDlhEeuAsuX09KtZVw" type="3010" element="_kfw80DlhEeuAsuX09KtZVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_kh3OkTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_kh3OkjlhEeuAsuX09KtZVw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_khtdkTlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_khtdkjlhEeuAsuX09KtZVw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_khtdkzlhEeuAsuX09KtZVw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_khs2gTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khs2gjlhEeuAsuX09KtZVw" y="120"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_khFLcjlhEeuAsuX09KtZVw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_khFLczlhEeuAsuX09KtZVw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_khEkYTlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="18" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khEkYjlhEeuAsuX09KtZVw" x="250"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_keSWIjlhEeuAsuX09KtZVw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_kiHGMDlhEeuAsuX09KtZVw" type="4001" element="_kgD3wDlhEeuAsuX09KtZVw" source="_kgsJ4DlhEeuAsuX09KtZVw" target="_kg92sDlhEeuAsuX09KtZVw">
+          <children xmi:type="notation:Node" xmi:id="_kiLXoDlhEeuAsuX09KtZVw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kiLXoTlhEeuAsuX09KtZVw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_kiL-sDlhEeuAsuX09KtZVw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kiL-sTlhEeuAsuX09KtZVw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_kiL-sjlhEeuAsuX09KtZVw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kiL-szlhEeuAsuX09KtZVw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_kiHGMTlhEeuAsuX09KtZVw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_kiHGMjlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kiHGMzlhEeuAsuX09KtZVw" points="[0, 0, 111, 60]$[-112, -60, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kihV4DlhEeuAsuX09KtZVw" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kihV4TlhEeuAsuX09KtZVw" id="(0.5026455026455027,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_kih88DlhEeuAsuX09KtZVw" type="4001" element="_kgHiIDlhEeuAsuX09KtZVw" source="_kgsJ4DlhEeuAsuX09KtZVw" target="_khEkYDlhEeuAsuX09KtZVw">
+          <children xmi:type="notation:Node" xmi:id="_kih89DlhEeuAsuX09KtZVw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kih89TlhEeuAsuX09KtZVw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_kiikADlhEeuAsuX09KtZVw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kiikATlhEeuAsuX09KtZVw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_kiikAjlhEeuAsuX09KtZVw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kiikAzlhEeuAsuX09KtZVw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_kih88TlhEeuAsuX09KtZVw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_kih88jlhEeuAsuX09KtZVw" fontName="Roboto" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kih88zlhEeuAsuX09KtZVw" points="[0, 0, -113, 60]$[112, -60, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kikZMDlhEeuAsuX09KtZVw" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kikZMTlhEeuAsuX09KtZVw" id="(0.5074626865671642,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_kgJXUDlhEeuAsuX09KtZVw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_kgKlcDlhEeuAsuX09KtZVw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ker-wDlhEeuAsuX09KtZVw" name="WHU vs ARS" outgoingEdges="_kgD3wDlhEeuAsuX09KtZVw _kgHiIDlhEeuAsuX09KtZVw" width="12" height="6" resizeKind="NSEW">
+      <target xmi:type="soccer:Match" href="sample.soccer#4389"/>
+      <semanticElements xmi:type="soccer:Match" href="sample.soccer#4389"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_ke1IsDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" width="12" height="6" color="209,209,209">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@nodeMappings[name='Match%20Node']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@nodeMappings[name='Match%20Node']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ke8dcDlhEeuAsuX09KtZVw" name="West Ham United" incomingEdges="_kgD3wDlhEeuAsuX09KtZVw" childrenPresentation="VerticalStack">
+      <target xmi:type="soccer:Opponent" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.0"/>
+      <semanticElements xmi:type="soccer:Opponent" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ke-5sDlhEeuAsuX09KtZVw" labelSize="18" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_kfFnYDlhEeuAsuX09KtZVw" name="KEEPER">
+        <target xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.0/@lineup.0"/>
+        <semanticElements xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.0/@lineup.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kfG1gDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfRNkDlhEeuAsuX09KtZVw" name="Carlos Cuellar">
+          <target xmi:type="soccer:Player" href="sample.soccer#33863"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#33863"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfSbsDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_kfHckTlhEeuAsuX09KtZVw" name="DEFENCE">
+        <target xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.0/@lineup.1"/>
+        <semanticElements xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.0/@lineup.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kfIDoDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="239,41,41" foregroundColor="246,139,139">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfUQ4DlhEeuAsuX09KtZVw" name="Curtis Davies">
+          <target xmi:type="soccer:Player" href="sample.soccer#24658"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#24658"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfUQ4TlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfWGEDlhEeuAsuX09KtZVw" name="Nicky Shorey">
+          <target xmi:type="soccer:Player" href="sample.soccer#23282"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#23282"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfWtIDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfXUMDlhEeuAsuX09KtZVw" name="Luke Young">
+          <target xmi:type="soccer:Player" href="sample.soccer#30357"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#30357"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfXUMTlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfX7QDlhEeuAsuX09KtZVw" name="Brad Friedel">
+          <target xmi:type="soccer:Player" href="sample.soccer#30380"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#30380"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfaXgDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_kfLuADlhEeuAsuX09KtZVw" name="MIDFIELD">
+        <target xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.0/@lineup.2"/>
+        <semanticElements xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.0/@lineup.2"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kfMVEDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="239,41,41" foregroundColor="246,139,139">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfa-kDlhEeuAsuX09KtZVw" name="Stiliyan Petrov">
+          <target xmi:type="soccer:Player" href="sample.soccer#38609"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#38609"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfbloDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfbloTlhEeuAsuX09KtZVw" name="Gareth Barry">
+          <target xmi:type="soccer:Player" href="sample.soccer#23782"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#23782"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfcMsDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfcMsTlhEeuAsuX09KtZVw" name="Ashley Young">
+          <target xmi:type="soccer:Player" href="sample.soccer#23354"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#23354"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfczwDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_kfOKQDlhEeuAsuX09KtZVw" name="FORWARD">
+        <target xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.0/@lineup.3"/>
+        <semanticElements xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.0/@lineup.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kfPYYDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="239,41,41" foregroundColor="246,139,139">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfda0DlhEeuAsuX09KtZVw" name="Emile Heskey">
+          <target xmi:type="soccer:Player" href="sample.soccer#34466"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#34466"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfda0TlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfeB4DlhEeuAsuX09KtZVw" name="John Carew">
+          <target xmi:type="soccer:Player" href="sample.soccer#26165"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#26165"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfeB4TlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfeo8DlhEeuAsuX09KtZVw" name="James Milner">
+          <target xmi:type="soccer:Player" href="sample.soccer#38807"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#38807"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfeo8TlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ke_gwTlhEeuAsuX09KtZVw" name="Arsenal" incomingEdges="_kgHiIDlhEeuAsuX09KtZVw" childrenPresentation="VerticalStack">
+      <target xmi:type="soccer:Opponent" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.1"/>
+      <semanticElements xmi:type="soccer:Opponent" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.1"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kfAH0DlhEeuAsuX09KtZVw" labelSize="18" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_kffQADlhEeuAsuX09KtZVw" name="KEEPER">
+        <target xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.1/@lineup.0"/>
+        <semanticElements xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.1/@lineup.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kffQATlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfjhcDlhEeuAsuX09KtZVw" name="Manuel Almunia">
+          <target xmi:type="soccer:Player" href="sample.soccer#23686"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#23686"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfjhcTlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_kff3ETlhEeuAsuX09KtZVw" name="DEFENCE">
+        <target xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.1/@lineup.1"/>
+        <semanticElements xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.1/@lineup.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kfgeIDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="239,41,41" foregroundColor="246,139,139">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfkIgDlhEeuAsuX09KtZVw" name="Kieran Gibbs">
+          <target xmi:type="soccer:Player" href="sample.soccer#78513"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#78513"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfkvkDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfkvkTlhEeuAsuX09KtZVw" name="Emmanuel Eboue">
+          <target xmi:type="soccer:Player" href="sample.soccer#30935"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#30935"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kflWoDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfl9sDlhEeuAsuX09KtZVw" name="Mikael Silvestre">
+          <target xmi:type="soccer:Player" href="sample.soccer#30616"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#30616"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfl9sTlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfmkwDlhEeuAsuX09KtZVw" name="Kolo Toure">
+          <target xmi:type="soccer:Player" href="sample.soccer#30831"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#30831"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfnL0DlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_kfhFMTlhEeuAsuX09KtZVw" name="MIDFIELD">
+        <target xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.1/@lineup.2"/>
+        <semanticElements xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.1/@lineup.2"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kfhsQDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="239,41,41" foregroundColor="246,139,139">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfsEUDlhEeuAsuX09KtZVw" name="Denilson">
+          <target xmi:type="soccer:Player" href="sample.soccer#39297"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#39297"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfsEUTlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfsrYDlhEeuAsuX09KtZVw" name="Theo Walcott">
+          <target xmi:type="soccer:Player" href="sample.soccer#31013"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#31013"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kftScDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kft5gDlhEeuAsuX09KtZVw" name="Cesc Fabregas">
+          <target xmi:type="soccer:Player" href="sample.soccer#30613"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#30613"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfugkDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfugkTlhEeuAsuX09KtZVw" name="Samir Nasri">
+          <target xmi:type="soccer:Player" href="sample.soccer#26181"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#26181"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfvHoDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_kfiTUDlhEeuAsuX09KtZVw" name="FORWARD">
+        <target xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.1/@lineup.3"/>
+        <semanticElements xmi:type="soccer:Position" href="sample.soccer#//@countries.0/@league/@seasons.0/@matchDays.0/@matches.0/@opponents.1/@lineup.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kfiTUTlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfvusDlhEeuAsuX09KtZVw" name="Andrey Arshavin">
+          <target xmi:type="soccer:Player" href="sample.soccer#3520"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#3520"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfwVwDlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_kfw80DlhEeuAsuX09KtZVw" name="Nicklas Bendtner">
+          <target xmi:type="soccer:Player" href="sample.soccer#36410"/>
+          <semanticElements xmi:type="soccer:Player" href="sample.soccer#36410"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_kfw80TlhEeuAsuX09KtZVw" labelSize="12" showIcon="false" labelPosition="node" strokeSizeComputationExpression="0">
+            <description xmi:type="style:DotDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_kgD3wDlhEeuAsuX09KtZVw" sourceNode="_ker-wDlhEeuAsuX09KtZVw" targetNode="_ke8dcDlhEeuAsuX09KtZVw">
+      <target xmi:type="soccer:Match" href="sample.soccer#4389"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_kgFs8DlhEeuAsuX09KtZVw" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@edgeMappings[name='Opponent%20Edge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_kgGUADlhEeuAsuX09KtZVw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@edgeMappings[name='Opponent%20Edge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_kgHiIDlhEeuAsuX09KtZVw" sourceNode="_ker-wDlhEeuAsuX09KtZVw" targetNode="_ke_gwTlhEeuAsuX09KtZVw">
+      <target xmi:type="soccer:Match" href="sample.soccer#4389"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_kgIJMDlhEeuAsuX09KtZVw" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@edgeMappings[name='Opponent%20Edge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_kgIJMTlhEeuAsuX09KtZVw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@edgeMappings[name='Opponent%20Edge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_2:DiagramDescription" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_kdY-QDlhEeuAsuX09KtZVw"/>
+    <activatedLayers xmi:type="description_2:Layer" href="platform:/resource/no.ntnu.soccer.design/description/soccer.odesign#//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer"/>
+    <target xmi:type="soccer:Match" href="sample.soccer#4389"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
