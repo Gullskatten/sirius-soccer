@@ -32,7 +32,7 @@ public class PerformParsing {
      * @param args (Unused) Optional arguments to runnable
      */
     public static void main(String[] args) {
-        Sport sport = new Sport("Football");
+        Federation sport = new Federation("FIFA");
 
         final CsvUtil<Player> playerCsvUtil = new CsvUtil<>();
         final List<Player> players = playerCsvUtil.readCsv(Player.RESOURCE_CSV_FILE, Player.class, Player.CSV_DELIMITER, Charset.defaultCharset());
@@ -105,7 +105,7 @@ public class PerformParsing {
         // - - - - - Teams -> has players as child
         // - - - - - - Players
 
-        File file = new File("football.xmi");
+        File file = new File("sample.soccer");
         LOGGER.info("Writing XMI file to {}", file.getAbsolutePath());
         try (FileWriter writer = new FileWriter(file);
              BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
@@ -174,7 +174,12 @@ public class PerformParsing {
                                                                                     List<Placement> placementsSorted = allPlacementsInSeason.stream()
                                                                                             .sorted(Comparator.comparingInt(Placement::getSeasonPoints)).collect(Collectors.toList());
                                                                                     Collections.reverse(placementsSorted);
-                                                                                    placementsSorted.forEach(placement -> placement.toXmi(bufferedWriter, null));
+                                                                                    int rank = 1;
+                                                                                    for (Placement placement : placementsSorted) {
+																						placement.setRank(rank);
+																						placement.toXmi(bufferedWriter, null);
+																						rank++;
+																					}
                                                                                 return null;
                                                                             });
                                                                             return null;

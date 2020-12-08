@@ -11,12 +11,13 @@ public class Placement implements XmiParsable {
     private static final Logger LOGGER = LoggerFactory.getLogger(Placement.class);
 
     private final int teamApiId;
+    private int rank;
     private int draws;
     private int wins;
     private int losses;
     private int seasonPoints;
-    private int homeGoals;
-    private int awayGoals;
+    private int goalsFor;
+    private int goalsAgainst;
     private int goalDifference;
     private int gamesPlayed;
 
@@ -29,13 +30,14 @@ public class Placement implements XmiParsable {
 
         if(match.getHomeTeamApiId() == teamApiId) {
             updateMatchResult(match.getHomeTeamGoal(), match.getAwayTeamGoal());
-            this.homeGoals += match.getHomeTeamGoal();
-            this.goalDifference += match.getHomeTeamGoal() - match.getAwayTeamGoal();
+            this.goalsFor += match.getHomeTeamGoal();
+            this.goalsAgainst += match.getAwayTeamGoal();
         } else if (match.getAwayTeamApiId() == teamApiId) {
             updateMatchResult(match.getAwayTeamGoal(), match.getHomeTeamGoal());
-            this.awayGoals += match.getAwayTeamGoal();
-            this.goalDifference += match.getAwayTeamGoal() - match.getHomeTeamGoal();
+            this.goalsFor += match.getAwayTeamGoal();
+            this.goalsAgainst += match.getHomeTeamGoal();
         }
+		this.goalDifference = this.goalsFor - this.goalsAgainst;
     }
 
     private void updateMatchResult(int teamGoals, int otherTeamGoals) {
@@ -54,6 +56,14 @@ public class Placement implements XmiParsable {
 
     public int getTeamApiId() {
         return teamApiId;
+    }
+    
+    public int getRank() {
+    	return rank;
+    }
+    
+    public void setRank(int rank) {
+    	this.rank = rank;
     }
 
     public int getDraws() {
@@ -89,19 +99,19 @@ public class Placement implements XmiParsable {
     }
 
     public int getHomeGoals() {
-        return homeGoals;
+        return goalsFor;
     }
 
     public void setHomeGoals(int homeGoals) {
-        this.homeGoals = homeGoals;
+        this.goalsFor = homeGoals;
     }
 
     public int getAwayGoals() {
-        return awayGoals;
+        return goalsAgainst;
     }
 
     public void setAwayGoals(int awayGoals) {
-        this.awayGoals = awayGoals;
+        this.goalsAgainst = awayGoals;
     }
 
     public int getGoalDifference() {
@@ -125,6 +135,7 @@ public class Placement implements XmiParsable {
         try {
             writer.write(indent() + "<placements\n"
                     + indent() + "    team=" + "\"" + getTeamApiId() + "\"\n"
+                    + indent() + "    rank=" + "\"" + getRank() + "\"\n"
                     + indent() + "    awayTeamGoal=" + "\"" + getAwayGoals() + "\"\n"
                     + indent() + "    homeTeamGoal=" + "\"" + getHomeGoals() + "\"\n"
                     + indent() + "    goalDifference=" + "\"" + getGoalDifference() + "\"\n"

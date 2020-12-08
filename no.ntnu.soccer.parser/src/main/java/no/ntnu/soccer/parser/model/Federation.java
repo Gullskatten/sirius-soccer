@@ -10,11 +10,11 @@ import java.util.function.Function;
 /**
  * "Artificial" top-level entity for our e-core model
  */
-public class Sport implements XmiParsable {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Sport.class);
+public class Federation implements XmiParsable {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Federation.class);
     private String name;
 
-    public Sport(String name) {
+    public Federation(String name) {
     this.name = name;
     }
 
@@ -30,17 +30,17 @@ public class Sport implements XmiParsable {
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
             writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-                    "<no.ntnu:Sport\n" +
+                    "<soccer:Federation\n" +
                     "    xmi:version=\"2.0\"\n" +
                     "    xmlns:xmi=\"http://www.omg.org/XMI\"\n" +
                     "    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-                    "    xmlns:no.ntnu=\"platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore\"\n" +
+                    "    xmlns:soccer=\"platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore\"\n" +
                     "    name=\"" + getName() + "\"");
 
             if(childrenFunction != null) {
                 writer.write(">\n");
                 childrenFunction.apply(null);
-                writer.write("</no.ntnu:Sport>");
+                writer.write("</soccer:Federation>");
             } else {
                 writer.write("/>\n");
 

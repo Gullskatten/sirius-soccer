@@ -53,7 +53,6 @@ public class League implements XmiParsable {
     public void toXmi(BufferedWriter writer, Function<Void, Void> childrenFunction) {
         try {
             writer.write(indent() + "<league\n"
-                    + indent() + "    id=" + "\""  + id + "\""+ "\n"
                     + indent() + "    name=" + "\""  + name + "\"");
 
             if(childrenFunction != null) {
