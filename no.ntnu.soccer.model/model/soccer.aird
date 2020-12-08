@@ -5,7 +5,7 @@
     <semanticResources>soccer.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_D0d5YDbyEeup8630bL1dsw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_D08agTbyEeup8630bL1dsw" name="soccer" repPath="#_D01s0DbyEeup8630bL1dsw" changeId="f1c3a09c-bbd5-4f85-9c18-932c6dd82ff7">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_D08agTbyEeup8630bL1dsw" name="soccer" repPath="#_D01s0DbyEeup8630bL1dsw" changeId="0fa1d856-4460-4f80-8f90-b275938afcd4">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="soccer.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -565,9 +565,9 @@
         </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_Mr2JwDbyEeup8630bL1dsw" name="Sport" tooltipText="" outgoingEdges="_82xxsDb1Eeup8630bL1dsw _988vljb1Eeup8630bL1dsw" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="soccer.ecore#//Sport"/>
-      <semanticElements xmi:type="ecore:EClass" href="soccer.ecore#//Sport"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_Mr2JwDbyEeup8630bL1dsw" name="Federation" tooltipText="" outgoingEdges="_82xxsDb1Eeup8630bL1dsw _988vljb1Eeup8630bL1dsw" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="soccer.ecore#//Federation"/>
+      <semanticElements xmi:type="ecore:EClass" href="soccer.ecore#//Federation"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -576,8 +576,8 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_qg-7kDb0Eeup8630bL1dsw" name="name : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="soccer.ecore#//Sport/name"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="soccer.ecore#//Sport/name"/>
+        <target xmi:type="ecore:EAttribute" href="soccer.ecore#//Federation/name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="soccer.ecore#//Federation/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_q912sTb0Eeup8630bL1dsw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -772,17 +772,17 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_13VlQDbzEeup8630bL1dsw" name="homeGoals : EInt" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="soccer.ecore#//Placement/homeGoals"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="soccer.ecore#//Placement/homeGoals"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_13VlQDbzEeup8630bL1dsw" name="goalsFor : EInt" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="soccer.ecore#//Placement/goalsFor"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="soccer.ecore#//Placement/goalsFor"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_43othTbzEeup8630bL1dsw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_5OpfUDbzEeup8630bL1dsw" name="awayGoals : EInt" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="soccer.ecore#//Placement/awayGoals"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="soccer.ecore#//Placement/awayGoals"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_5OpfUDbzEeup8630bL1dsw" name="goalsAgainst : EInt" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="soccer.ecore#//Placement/goalsAgainst"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="soccer.ecore#//Placement/goalsAgainst"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_6Ece5DbzEeup8630bL1dsw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -834,17 +834,17 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="__PJeoDbyEeup8630bL1dsw" name="homeTeamGoals : EInt" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="soccer.ecore#//Match/homeTeamGoals"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="soccer.ecore#//Match/homeTeamGoals"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="__PJeoDbyEeup8630bL1dsw" name="homeTeamGoal : EInt" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="soccer.ecore#//Match/homeTeamGoal"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="soccer.ecore#//Match/homeTeamGoal"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_Alto8jbzEeup8630bL1dsw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_A6fmIDbzEeup8630bL1dsw" name="awayTeamGoals : EInt" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="soccer.ecore#//Match/awayTeamGoals"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="soccer.ecore#//Match/awayTeamGoals"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_A6fmIDbzEeup8630bL1dsw" name="awayTeamGoal : EInt" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="soccer.ecore#//Match/awayTeamGoal"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="soccer.ecore#//Match/awayTeamGoal"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_B1LswjbzEeup8630bL1dsw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -1003,8 +1003,8 @@
       </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_82xxsDb1Eeup8630bL1dsw" name="[0..*] players" sourceNode="_Mr2JwDbyEeup8630bL1dsw" targetNode="_NdS00DbyEeup8630bL1dsw">
-      <target xmi:type="ecore:EReference" href="soccer.ecore#//Sport/players"/>
-      <semanticElements xmi:type="ecore:EReference" href="soccer.ecore#//Sport/players"/>
+      <target xmi:type="ecore:EReference" href="soccer.ecore#//Federation/players"/>
+      <semanticElements xmi:type="ecore:EReference" href="soccer.ecore#//Federation/players"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_82y_0zb1Eeup8630bL1dsw" description="_82y_0Db1Eeup8630bL1dsw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_82y_1Tb1Eeup8630bL1dsw" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -1016,8 +1016,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_988vljb1Eeup8630bL1dsw" name="[0..*] countries" sourceNode="_Mr2JwDbyEeup8630bL1dsw" targetNode="_NCyDEDbyEeup8630bL1dsw">
-      <target xmi:type="ecore:EReference" href="soccer.ecore#//Sport/countries"/>
-      <semanticElements xmi:type="ecore:EReference" href="soccer.ecore#//Sport/countries"/>
+      <target xmi:type="ecore:EReference" href="soccer.ecore#//Federation/countries"/>
+      <semanticElements xmi:type="ecore:EReference" href="soccer.ecore#//Federation/countries"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_989WoDb1Eeup8630bL1dsw" description="_82y_0Db1Eeup8630bL1dsw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_989Wojb1Eeup8630bL1dsw" showIcon="false">
           <customFeatures>labelSize</customFeatures>

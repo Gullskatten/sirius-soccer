@@ -77,8 +77,8 @@
     </genClasses>
     <genClasses ecoreClass="soccer.ecore#//Match">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/homeTeamGoals"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/awayTeamGoals"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/homeTeamGoal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/awayTeamGoal"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Match/result"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Match/opponents"/>
     </genClasses>
