@@ -15,7 +15,7 @@ public class Placement implements XmiParsable {
     private int draws;
     private int wins;
     private int losses;
-    private int seasonPoints;
+    private int points;
     private int goalsFor;
     private int goalsAgainst;
     private int goalDifference;
@@ -43,14 +43,14 @@ public class Placement implements XmiParsable {
     private void updateMatchResult(int teamGoals, int otherTeamGoals) {
         if(teamGoals > otherTeamGoals) {
             this.wins += 1;
-            this.seasonPoints += 3;
+            this.points += 3;
         }
         if(teamGoals < otherTeamGoals) {
             this.losses += 1;
         }
         if(teamGoals == otherTeamGoals) {
             this.draws += 1;
-            this.seasonPoints += 1;
+            this.points += 1;
         }
     }
 
@@ -90,28 +90,28 @@ public class Placement implements XmiParsable {
         this.losses = losses;
     }
 
-    public int getSeasonPoints() {
-        return seasonPoints;
+    public int getPoints() {
+        return points;
     }
 
-    public void setSeasonPoints(int seasonPoints) {
-        this.seasonPoints = seasonPoints;
+    public void setPoints(int points) {
+        this.points = points;
     }
 
-    public int getHomeGoals() {
+    public int getGoalsFor() {
         return goalsFor;
     }
 
-    public void setHomeGoals(int homeGoals) {
-        this.goalsFor = homeGoals;
+    public void setGoalsFor(int goalsFor) {
+        this.goalsFor = goalsFor;
     }
 
-    public int getAwayGoals() {
+    public int getGoalsAgainst() {
         return goalsAgainst;
     }
 
-    public void setAwayGoals(int awayGoals) {
-        this.goalsAgainst = awayGoals;
+    public void setGoalsAgainst(int goalsAgainst) {
+        this.goalsAgainst = goalsAgainst;
     }
 
     public int getGoalDifference() {
@@ -136,13 +136,13 @@ public class Placement implements XmiParsable {
             writer.write(indent() + "<placements\n"
                     + indent() + "    team=" + "\"" + getTeamApiId() + "\"\n"
                     + indent() + "    rank=" + "\"" + getRank() + "\"\n"
-                    + indent() + "    awayTeamGoal=" + "\"" + getAwayGoals() + "\"\n"
-                    + indent() + "    homeTeamGoal=" + "\"" + getHomeGoals() + "\"\n"
+                    + indent() + "    goalsFor=" + "\"" + getGoalsFor() + "\"\n"
+                    + indent() + "    goalsAgainst=" + "\"" + getGoalsAgainst() + "\"\n"
                     + indent() + "    goalDifference=" + "\"" + getGoalDifference() + "\"\n"
                     + indent() + "    wins=" + "\"" + getWins() + "\"\n"
                     + indent() + "    losses=" + "\"" + getLosses() + "\"\n"
                     + indent() + "    draws=" + "\"" + getDraws() + "\"\n"
-                    + indent() + "    seasonPoints=" + "\"" + getSeasonPoints() + "\">\n");
+                    + indent() + "    points=" + "\"" + getPoints() + "\">\n");
             writer.write(indent() + "</placements>\n");
         } catch (IOException e) {
             LOGGER.info("Exception occurred: ", e);

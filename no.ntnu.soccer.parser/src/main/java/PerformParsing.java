@@ -172,7 +172,7 @@ public class PerformParsing {
                                                                             new Standing().toXmi(bufferedWriter,
                                                                                 unused5 -> {
                                                                                     List<Placement> placementsSorted = allPlacementsInSeason.stream()
-                                                                                            .sorted(Comparator.comparingInt(Placement::getSeasonPoints)).collect(Collectors.toList());
+                                                                                            .sorted(Comparator.comparingInt(Placement::getPoints)).collect(Collectors.toList());
                                                                                     Collections.reverse(placementsSorted);
                                                                                     int rank = 1;
                                                                                     for (Placement placement : placementsSorted) {
