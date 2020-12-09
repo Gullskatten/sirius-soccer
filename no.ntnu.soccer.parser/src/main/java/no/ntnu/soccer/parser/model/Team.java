@@ -6,8 +6,10 @@ import org.slf4j.LoggerFactory;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Team implements XmiParsable {
     private static final Logger LOGGER = LoggerFactory.getLogger(Team.class);
@@ -27,8 +29,10 @@ public class Team implements XmiParsable {
     private String shortName;
 
     private List<Player> players;
+    private List<Placement> placements;
 
     public Team() {
+        this.placements = new ArrayList<>();
     }
 
     public int getId() {
@@ -69,6 +73,7 @@ public class Team implements XmiParsable {
             writer.write(indent() + "<teams\n"
                     + indent() + "    name=" + "\""  + name + "\"\n"
                     + indent() + "    shortName=" + "\""  + shortName + "\"\n"
+                    + indent() + "    placements=" + "\""  + placements.stream().map(Placement::getId).collect(Collectors.joining(" ")) + "\"\n"
                     + indent() + "    id=" + "\""  + apiId + "\""
             );
 
@@ -96,5 +101,22 @@ public class Team implements XmiParsable {
 
     public void setPlayers(List<Player> players) {
         this.players = players;
+    }
+
+    public List<Placement> getPlacements() {
+        return placements;
+    }
+
+    public void setPlacements(List<Placement> placements) {
+        this.placements = placements;
+    }
+
+    public void addPlacement(Placement placement) {
+
+        if(placements == null) {
+            this.placements = new ArrayList<>();
+        }
+
+        this.placements.add(placement);
     }
 }

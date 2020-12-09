@@ -149,12 +149,12 @@ public class PerformParsing {
                                                                                            Optional<Placement> homeTeamPlacement = allPlacementsInSeason.stream()
                                                                                                     .filter(x -> x.getTeamApiId() == matchOutput.getHomeTeam().getTeamApiId()).findFirst();
 
-                                                                                            createOrUpdatePlacement(allPlacementsInSeason, matchOutput, homeTeamPlacement, matchOutput.getHomeTeam());
+                                                                                            createOrUpdatePlacement(allPlacementsInSeason, matchOutput, homeTeamPlacement, matchOutput.getHomeTeam(), season);
 
                                                                                             Optional<Placement> awayTeamPlacement = allPlacementsInSeason.stream()
                                                                                                     .filter(x -> x.getTeamApiId() == matchOutput.getAwayTeam().getTeamApiId()).findFirst();
 
-                                                                                            createOrUpdatePlacement(allPlacementsInSeason, matchOutput, awayTeamPlacement, matchOutput.getAwayTeam());
+                                                                                            createOrUpdatePlacement(allPlacementsInSeason, matchOutput, awayTeamPlacement, matchOutput.getAwayTeam(), season);
                                                                                             createTeamIfNotExists(matchOutput.getHomeTeam(), teamsInLeague);
                                                                                             createTeamIfNotExists(matchOutput.getAwayTeam(), teamsInLeague);
                                                                                             matchOutput.toXmi(
@@ -176,10 +176,17 @@ public class PerformParsing {
                                                                                     Collections.reverse(placementsSorted);
                                                                                     int rank = 1;
                                                                                     for (Placement placement : placementsSorted) {
+                                                                                        teamsInLeague
+                                                                                                .stream()
+                                                                                                .filter(team -> team.getTeamApiId() == placement.getTeamApiId())
+                                                                                                .findFirst()
+                                                                                                .ifPresent(team -> team.addPlacement(placement));
+
 																						placement.setRank(rank);
 																						placement.toXmi(bufferedWriter, null);
 																						rank++;
 																					}
+
                                                                                 return null;
                                                                             });
                                                                             return null;
@@ -211,11 +218,11 @@ public class PerformParsing {
         }
     }
 
-    private static void createOrUpdatePlacement(List<Placement> allPlacementsInSeason, MatchOutput matchOutput, Optional<Placement> awayTeamPlacement, Team awayTeam) {
+    private static void createOrUpdatePlacement(List<Placement> allPlacementsInSeason, MatchOutput matchOutput, Optional<Placement> awayTeamPlacement, Team awayTeam, Season season) {
         if (awayTeamPlacement.isPresent()) {
             awayTeamPlacement.get().updatePlacementInfo(matchOutput);
         } else {
-            Placement placement = new Placement(awayTeam);
+            Placement placement = new Placement(awayTeam, season.getSeasonName());
             placement.updatePlacementInfo(matchOutput);
             allPlacementsInSeason.add(placement);
         }

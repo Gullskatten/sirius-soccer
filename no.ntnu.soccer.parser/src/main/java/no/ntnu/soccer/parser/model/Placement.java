@@ -5,11 +5,12 @@ import org.slf4j.LoggerFactory;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.util.UUID;
 import java.util.function.Function;
 
 public class Placement implements XmiParsable {
     private static final Logger LOGGER = LoggerFactory.getLogger(Placement.class);
-
+    private final String id;
     private final int teamApiId;
     private int rank;
     private int draws;
@@ -20,8 +21,11 @@ public class Placement implements XmiParsable {
     private int goalsAgainst;
     private int goalDifference;
     private int gamesPlayed;
+    private String season;
 
-    public Placement(Team team) {
+    public Placement(Team team, String season) {
+        this.id = UUID.randomUUID().toString();
+        this.season = season;
         this.teamApiId = team.getTeamApiId();
     }
 
@@ -134,8 +138,10 @@ public class Placement implements XmiParsable {
     public void toXmi(BufferedWriter writer, Function<Void, Void> unusedFunction) {
         try {
             writer.write(indent() + "<placements\n"
+                    + indent() + "    id=" + "\"" + getId() + "\"\n"
                     + indent() + "    team=" + "\"" + getTeamApiId() + "\"\n"
                     + indent() + "    rank=" + "\"" + getRank() + "\"\n"
+                    + indent() + "    season=" + "\"" + getSeason() + "\"\n"
                     + indent() + "    goalsFor=" + "\"" + getGoalsFor() + "\"\n"
                     + indent() + "    goalsAgainst=" + "\"" + getGoalsAgainst() + "\"\n"
                     + indent() + "    goalDifference=" + "\"" + getGoalDifference() + "\"\n"
@@ -152,5 +158,17 @@ public class Placement implements XmiParsable {
     @Override
     public String indent() {
         return "            ";
+    }
+
+    public String getSeason() {
+        return season;
+    }
+
+    public void setSeason(String season) {
+        this.season = season;
+    }
+
+    public String getId() {
+        return id;
     }
 }
