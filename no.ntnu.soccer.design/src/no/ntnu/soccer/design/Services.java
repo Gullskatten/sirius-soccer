@@ -81,9 +81,11 @@ public class Services {
         case KEEPER:
             return numPlayers != 1;
         case DEFENCE:
+        	return numPlayers < 3 && numPlayers > 5;
         case MIDFIELD:
+        	return numPlayers < 3 && numPlayers > 5;
         case FORWARD:
-            return numPlayers > 2;
+            return numPlayers <= 1;
         }
         return false;
     }

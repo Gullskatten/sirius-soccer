@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="soccer" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="soccer" version="12.0.0.2017041100">
   <ownedViewpoints name="Soccer" modelFileExtension="soccer">
     <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Season Table" domainClass="soccer::Standing">
       <metamodel href="platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore#/"/>
@@ -60,11 +60,10 @@
       <metamodel href="platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="Match Node" semanticCandidatesExpression="aql:self" domainClass="soccer::Match">
-          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="service:getMatchName()" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" width="12" height="6">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="service:getMatchName()" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
         <edgeMappings name="Opponent Edge" sourceMapping="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@nodeMappings[name='Match%20Node']" targetMapping="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']" targetFinderExpression="aql:self.opponents">
@@ -76,20 +75,35 @@
           </style>
         </edgeMappings>
         <containerMappings name="Opponent Container" semanticCandidatesExpression="feature:eAllContents" domainClass="soccer::Opponent" childrenPresentation="VerticalStack">
+          <borderedNodeMappings name="TeamInfo" semanticCandidatesExpression="aql:self.team" domainClass="soccer::Team">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" tooltipExpression="Show Team Details" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/no.ntnu.soccer.design/assets/info.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>SOUTH</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+            </style>
+          </borderedNodeMappings>
+          <subNodeMappings name="View Details" semanticCandidatesExpression="aql:self.team" domainClass="soccer::Team">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="Open Team Details" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>underline</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subNodeMappings>
           <subContainerMappings name="Position Container" semanticCandidatesExpression="aql:self.lineup" domainClass="soccer::Position" childrenPresentation="List">
             <subNodeMappings name="Player Position Node" semanticCandidatesExpression="aql:self.players" domainClass="soccer::Player">
               <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="aql:self.name" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="0">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.type">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelSize="14" showIcon="false" labelExpression="aql:self.type" workspacePath="/no.ntnu.soccer.design/assets/Blank_square.svg">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
             <conditionnalStyles predicateExpression="service:positionsNotFilled()">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.type">
@@ -101,9 +115,198 @@
               </style>
             </conditionnalStyles>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="18" showIcon="false" labelExpression="aql:self.team.name">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="16" showIcon="false" labelExpression="aql:self.team.name" tooltipExpression="aql:self.team.name.size()" sizeComputationExpression="20" resizeKind="NSEW" arcWidth="50" roundedCorner="true" workspacePath="/no.ntnu.soccer.design/assets/football_field.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPlayer" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@subContainerMappings[name='Position%20Container']/@subNodeMappings[name='Player%20Position%20Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eResource()->first().getContents()->first().eContents()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="soccer::Player" referenceName="player">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="69696"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Ola Plassen"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Match Day Representation" domainClass="soccer::MatchDay">
+      <metamodel href="platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore#/"/>
+      <validationSet>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="Enough Opponents" level="ERROR" message="The Match needs two Opponents" targetClass="soccer::Match">
+          <audits auditExpression="aql:self.opponents->size() == 2"/>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="Enough Players in Each Position" message="Each Position needs one player" targetClass="soccer::Position">
+          <audits auditExpression="aql:self.players->size() > 0"/>
+        </ownedRules>
+      </validationSet>
+      <defaultLayer name="Default">
+        <nodeMappings name="MatchDay" semanticCandidatesExpression="aql:self" domainClass="soccer::MatchDay">
+          <style xsi:type="style:SquareDescription" labelSize="16" showIcon="false" labelExpression="aql: 'MatchDay ' + self.date" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Match Edge" sourceMapping="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Day%20Representation']/@defaultLayer/@nodeMappings[name='MatchDay']" targetMapping="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Day%20Representation']/@defaultLayer/@containerMappings[name='Match%20Container']" targetFinderExpression="aql:self. matches">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Match Container" semanticCandidatesExpression="aql:self.matches" domainClass="soccer::Match">
+          <subContainerMappings name="Opponent Container" semanticCandidatesExpression="aql:self.opponents" domainClass="soccer::Opponent">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.team.name + ' lost '">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+            <conditionnalStyles predicateExpression="aql:(self.type == soccer::TeamType::AWAY_TEAM) and self.eContainer().result == soccer::MatchResult::AWAY_WIN">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql: ' Away Team (' + self.eContainer().awayTeamGoal + ')'">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:(self.type == soccer::TeamType::HOME_TEAM) and self.eContainer().result == soccer::MatchResult::HOME_WIN">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql: ' Home Team (' + self.eContainer().homeTeamGoal + ')'">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:(self.type == soccer::TeamType::HOME_TEAM) and self.eContainer().result == soccer::MatchResult::DRAW">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql: ' Home Team (' + self.eContainer().homeTeamGoal + ')'">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:(self.type == soccer::TeamType::AWAY_TEAM) and self.eContainer().result == soccer::MatchResult::DRAW">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql: ' Away Team (' + self.eContainer().homeTeamGoal + ')'">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:(self.type == soccer::TeamType::AWAY_TEAM) and self.eContainer().result == soccer::MatchResult::HOME_WIN">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql: ' Away Team (' + self.eContainer().awayTeamGoal + ')'">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:(self.type == soccer::TeamType::HOME_TEAM) and self.eContainer().result == soccer::MatchResult::AWAY_WIN">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql: ' Home Team (' + self.eContainer().homeTeamGoal + ')'">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </conditionnalStyles>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="service:getMatchName()">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Team Diagram" domainClass="soccer::Team">
+      <defaultLayer name="Default">
+        <edgeMappings name="TeamToPlacementRel" sourceMapping="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Team%20Diagram']/@defaultLayer/@containerMappings[name='Team%20Container']" targetMapping="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Team%20Diagram']/@defaultLayer/@containerMappings[name='Placement%20Container']" targetFinderExpression="aql:self.placements">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Placement Container" semanticCandidatesExpression="aql:self.placements" domainClass="soccer::Placement" childrenPresentation="List">
+          <subNodeMappings name="Rank" semanticCandidatesExpression="aql:self" domainClass="soccer::Placement">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: ' Rank: ' + self.rank" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Wins" semanticCandidatesExpression="aql:self" domainClass="soccer::Placement">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: ' Wins: ' + self.wins" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Draws" semanticCandidatesExpression="aql:self" domainClass="soccer::Placement">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: ' Draws: ' + self.draws" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="GoalsScored" semanticCandidatesExpression="aql:self" domainClass="soccer::Placement">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: ' Goals Scored: ' + self.goalsFor" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="GoalsAgainst" semanticCandidatesExpression="aql:self" domainClass="soccer::Placement">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: ' Goals Against: ' + self.goalsAgainst" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Points" semanticCandidatesExpression="aql:self" domainClass="soccer::Placement">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: ' Points: ' + self.points" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Season" semanticCandidatesExpression="aql:self" domainClass="soccer::Placement">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql: ' Season: ' + self.season" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.season">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Team Container" semanticCandidatesExpression="aql:self" domainClass="soccer::Team" childrenPresentation="List">
+          <subNodeMappings name="ShortName" semanticCandidatesExpression="aql:self" domainClass="soccer::Team">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:' Short Name: ' + self.shortName" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>

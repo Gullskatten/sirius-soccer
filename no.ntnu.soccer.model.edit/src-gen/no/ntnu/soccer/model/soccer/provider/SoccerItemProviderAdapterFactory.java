@@ -33,444 +33,444 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * @generated
  */
 public class SoccerItemProviderAdapterFactory extends SoccerAdapterFactory
-        implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
-    /**
-     * This keeps track of the root adapter factory that delegates to this adapter factory.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected ComposedAdapterFactory parentAdapterFactory;
+		implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+	/**
+	 * This keeps track of the root adapter factory that delegates to this adapter factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ComposedAdapterFactory parentAdapterFactory;
 
-    /**
-     * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected IChangeNotifier changeNotifier = new ChangeNotifier();
+	/**
+	 * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IChangeNotifier changeNotifier = new ChangeNotifier();
 
-    /**
-     * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected Collection<Object> supportedTypes = new ArrayList<Object>();
+	/**
+	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
-    /**
-     * This constructs an instance.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public SoccerItemProviderAdapterFactory() {
-        supportedTypes.add(IEditingDomainItemProvider.class);
-        supportedTypes.add(IStructuredItemContentProvider.class);
-        supportedTypes.add(ITreeItemContentProvider.class);
-        supportedTypes.add(IItemLabelProvider.class);
-        supportedTypes.add(IItemPropertySource.class);
-    }
+	/**
+	 * This constructs an instance.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SoccerItemProviderAdapterFactory() {
+		supportedTypes.add(IEditingDomainItemProvider.class);
+		supportedTypes.add(IStructuredItemContentProvider.class);
+		supportedTypes.add(ITreeItemContentProvider.class);
+		supportedTypes.add(IItemLabelProvider.class);
+		supportedTypes.add(IItemPropertySource.class);
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Federation} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected FederationItemProvider federationItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Federation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FederationItemProvider federationItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Federation}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createFederationAdapter() {
-        if (federationItemProvider == null) {
-            federationItemProvider = new FederationItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Federation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFederationAdapter() {
+		if (federationItemProvider == null) {
+			federationItemProvider = new FederationItemProvider(this);
+		}
 
-        return federationItemProvider;
-    }
+		return federationItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Country} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected CountryItemProvider countryItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Country} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CountryItemProvider countryItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Country}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createCountryAdapter() {
-        if (countryItemProvider == null) {
-            countryItemProvider = new CountryItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Country}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCountryAdapter() {
+		if (countryItemProvider == null) {
+			countryItemProvider = new CountryItemProvider(this);
+		}
 
-        return countryItemProvider;
-    }
+		return countryItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.League} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected LeagueItemProvider leagueItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.League} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LeagueItemProvider leagueItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.League}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createLeagueAdapter() {
-        if (leagueItemProvider == null) {
-            leagueItemProvider = new LeagueItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.League}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLeagueAdapter() {
+		if (leagueItemProvider == null) {
+			leagueItemProvider = new LeagueItemProvider(this);
+		}
 
-        return leagueItemProvider;
-    }
+		return leagueItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Season} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected SeasonItemProvider seasonItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Season} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SeasonItemProvider seasonItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Season}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createSeasonAdapter() {
-        if (seasonItemProvider == null) {
-            seasonItemProvider = new SeasonItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Season}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSeasonAdapter() {
+		if (seasonItemProvider == null) {
+			seasonItemProvider = new SeasonItemProvider(this);
+		}
 
-        return seasonItemProvider;
-    }
+		return seasonItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.MatchDay} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected MatchDayItemProvider matchDayItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.MatchDay} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MatchDayItemProvider matchDayItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.MatchDay}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createMatchDayAdapter() {
-        if (matchDayItemProvider == null) {
-            matchDayItemProvider = new MatchDayItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.MatchDay}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMatchDayAdapter() {
+		if (matchDayItemProvider == null) {
+			matchDayItemProvider = new MatchDayItemProvider(this);
+		}
 
-        return matchDayItemProvider;
-    }
+		return matchDayItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Player} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected PlayerItemProvider playerItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Player} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PlayerItemProvider playerItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Player}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createPlayerAdapter() {
-        if (playerItemProvider == null) {
-            playerItemProvider = new PlayerItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Player}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPlayerAdapter() {
+		if (playerItemProvider == null) {
+			playerItemProvider = new PlayerItemProvider(this);
+		}
 
-        return playerItemProvider;
-    }
+		return playerItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Team} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected TeamItemProvider teamItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Team} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TeamItemProvider teamItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Team}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createTeamAdapter() {
-        if (teamItemProvider == null) {
-            teamItemProvider = new TeamItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Team}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTeamAdapter() {
+		if (teamItemProvider == null) {
+			teamItemProvider = new TeamItemProvider(this);
+		}
 
-        return teamItemProvider;
-    }
+		return teamItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Placement} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected PlacementItemProvider placementItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Placement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PlacementItemProvider placementItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Placement}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createPlacementAdapter() {
-        if (placementItemProvider == null) {
-            placementItemProvider = new PlacementItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Placement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPlacementAdapter() {
+		if (placementItemProvider == null) {
+			placementItemProvider = new PlacementItemProvider(this);
+		}
 
-        return placementItemProvider;
-    }
+		return placementItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Standing} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected StandingItemProvider standingItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Standing} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StandingItemProvider standingItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Standing}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createStandingAdapter() {
-        if (standingItemProvider == null) {
-            standingItemProvider = new StandingItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Standing}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStandingAdapter() {
+		if (standingItemProvider == null) {
+			standingItemProvider = new StandingItemProvider(this);
+		}
 
-        return standingItemProvider;
-    }
+		return standingItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Match} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected MatchItemProvider matchItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Match} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MatchItemProvider matchItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Match}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createMatchAdapter() {
-        if (matchItemProvider == null) {
-            matchItemProvider = new MatchItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Match}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMatchAdapter() {
+		if (matchItemProvider == null) {
+			matchItemProvider = new MatchItemProvider(this);
+		}
 
-        return matchItemProvider;
-    }
+		return matchItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Opponent} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected OpponentItemProvider opponentItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Opponent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OpponentItemProvider opponentItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Opponent}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createOpponentAdapter() {
-        if (opponentItemProvider == null) {
-            opponentItemProvider = new OpponentItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Opponent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOpponentAdapter() {
+		if (opponentItemProvider == null) {
+			opponentItemProvider = new OpponentItemProvider(this);
+		}
 
-        return opponentItemProvider;
-    }
+		return opponentItemProvider;
+	}
 
-    /**
-     * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Position} instances.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected PositionItemProvider positionItemProvider;
+	/**
+	 * This keeps track of the one adapter used for all {@link no.ntnu.soccer.model.soccer.Position} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PositionItemProvider positionItemProvider;
 
-    /**
-     * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Position}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter createPositionAdapter() {
-        if (positionItemProvider == null) {
-            positionItemProvider = new PositionItemProvider(this);
-        }
+	/**
+	 * This creates an adapter for a {@link no.ntnu.soccer.model.soccer.Position}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPositionAdapter() {
+		if (positionItemProvider == null) {
+			positionItemProvider = new PositionItemProvider(this);
+		}
 
-        return positionItemProvider;
-    }
+		return positionItemProvider;
+	}
 
-    /**
-     * This returns the root adapter factory that contains this factory.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public ComposeableAdapterFactory getRootAdapterFactory() {
-        return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
-    }
+	/**
+	 * This returns the root adapter factory that contains this factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComposeableAdapterFactory getRootAdapterFactory() {
+		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+	}
 
-    /**
-     * This sets the composed adapter factory that contains this factory.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
-        this.parentAdapterFactory = parentAdapterFactory;
-    }
+	/**
+	 * This sets the composed adapter factory that contains this factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
+		this.parentAdapterFactory = parentAdapterFactory;
+	}
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public boolean isFactoryForType(Object type) {
-        return supportedTypes.contains(type) || super.isFactoryForType(type);
-    }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isFactoryForType(Object type) {
+		return supportedTypes.contains(type) || super.isFactoryForType(type);
+	}
 
-    /**
-     * This implementation substitutes the factory itself as the key for the adapter.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Adapter adapt(Notifier notifier, Object type) {
-        return super.adapt(notifier, this);
-    }
+	/**
+	 * This implementation substitutes the factory itself as the key for the adapter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter adapt(Notifier notifier, Object type) {
+		return super.adapt(notifier, this);
+	}
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Object adapt(Object object, Object type) {
-        if (isFactoryForType(type)) {
-            Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
-                return adapter;
-            }
-        }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object adapt(Object object, Object type) {
+		if (isFactoryForType(type)) {
+			Object adapter = super.adapt(object, type);
+			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
+				return adapter;
+			}
+		}
 
-        return null;
-    }
+		return null;
+	}
 
-    /**
-     * This adds a listener.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void addListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.addListener(notifyChangedListener);
-    }
+	/**
+	 * This adds a listener.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void addListener(INotifyChangedListener notifyChangedListener) {
+		changeNotifier.addListener(notifyChangedListener);
+	}
 
-    /**
-     * This removes a listener.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void removeListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.removeListener(notifyChangedListener);
-    }
+	/**
+	 * This removes a listener.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void removeListener(INotifyChangedListener notifyChangedListener) {
+		changeNotifier.removeListener(notifyChangedListener);
+	}
 
-    /**
-     * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void fireNotifyChanged(Notification notification) {
-        changeNotifier.fireNotifyChanged(notification);
+	/**
+	 * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void fireNotifyChanged(Notification notification) {
+		changeNotifier.fireNotifyChanged(notification);
 
-        if (parentAdapterFactory != null) {
-            parentAdapterFactory.fireNotifyChanged(notification);
-        }
-    }
+		if (parentAdapterFactory != null) {
+			parentAdapterFactory.fireNotifyChanged(notification);
+		}
+	}
 
-    /**
-     * This disposes all of the item providers created by this factory. 
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void dispose() {
-        if (federationItemProvider != null)
-            federationItemProvider.dispose();
-        if (countryItemProvider != null)
-            countryItemProvider.dispose();
-        if (leagueItemProvider != null)
-            leagueItemProvider.dispose();
-        if (seasonItemProvider != null)
-            seasonItemProvider.dispose();
-        if (matchDayItemProvider != null)
-            matchDayItemProvider.dispose();
-        if (playerItemProvider != null)
-            playerItemProvider.dispose();
-        if (teamItemProvider != null)
-            teamItemProvider.dispose();
-        if (placementItemProvider != null)
-            placementItemProvider.dispose();
-        if (standingItemProvider != null)
-            standingItemProvider.dispose();
-        if (matchItemProvider != null)
-            matchItemProvider.dispose();
-        if (opponentItemProvider != null)
-            opponentItemProvider.dispose();
-        if (positionItemProvider != null)
-            positionItemProvider.dispose();
-    }
+	/**
+	 * This disposes all of the item providers created by this factory. 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void dispose() {
+		if (federationItemProvider != null)
+			federationItemProvider.dispose();
+		if (countryItemProvider != null)
+			countryItemProvider.dispose();
+		if (leagueItemProvider != null)
+			leagueItemProvider.dispose();
+		if (seasonItemProvider != null)
+			seasonItemProvider.dispose();
+		if (matchDayItemProvider != null)
+			matchDayItemProvider.dispose();
+		if (playerItemProvider != null)
+			playerItemProvider.dispose();
+		if (teamItemProvider != null)
+			teamItemProvider.dispose();
+		if (placementItemProvider != null)
+			placementItemProvider.dispose();
+		if (standingItemProvider != null)
+			standingItemProvider.dispose();
+		if (matchItemProvider != null)
+			matchItemProvider.dispose();
+		if (opponentItemProvider != null)
+			opponentItemProvider.dispose();
+		if (positionItemProvider != null)
+			positionItemProvider.dispose();
+	}
 
 }

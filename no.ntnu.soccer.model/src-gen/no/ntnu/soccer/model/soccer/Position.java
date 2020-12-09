@@ -24,41 +24,41 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Position extends EObject {
-    /**
-     * Returns the value of the '<em><b>Type</b></em>' attribute.
-     * The literals are from the enumeration {@link no.ntnu.soccer.model.soccer.PositionType}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Type</em>' attribute.
-     * @see no.ntnu.soccer.model.soccer.PositionType
-     * @see #setType(PositionType)
-     * @see no.ntnu.soccer.model.soccer.SoccerPackage#getPosition_Type()
-     * @model
-     * @generated
-     */
-    PositionType getType();
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link no.ntnu.soccer.model.soccer.PositionType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see no.ntnu.soccer.model.soccer.PositionType
+	 * @see #setType(PositionType)
+	 * @see no.ntnu.soccer.model.soccer.SoccerPackage#getPosition_Type()
+	 * @model
+	 * @generated
+	 */
+	PositionType getType();
 
-    /**
-     * Sets the value of the '{@link no.ntnu.soccer.model.soccer.Position#getType <em>Type</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Type</em>' attribute.
-     * @see no.ntnu.soccer.model.soccer.PositionType
-     * @see #getType()
-     * @generated
-     */
-    void setType(PositionType value);
+	/**
+	 * Sets the value of the '{@link no.ntnu.soccer.model.soccer.Position#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see no.ntnu.soccer.model.soccer.PositionType
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(PositionType value);
 
-    /**
-     * Returns the value of the '<em><b>Players</b></em>' reference list.
-     * The list contents are of type {@link no.ntnu.soccer.model.soccer.Player}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Players</em>' reference list.
-     * @see no.ntnu.soccer.model.soccer.SoccerPackage#getPosition_Players()
-     * @model upper="11"
-     * @generated
-     */
-    EList<Player> getPlayers();
+	/**
+	 * Returns the value of the '<em><b>Players</b></em>' reference list.
+	 * The list contents are of type {@link no.ntnu.soccer.model.soccer.Player}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Players</em>' reference list.
+	 * @see no.ntnu.soccer.model.soccer.SoccerPackage#getPosition_Players()
+	 * @model upper="11"
+	 * @generated
+	 */
+	EList<Player> getPlayers();
 
 } // Position
