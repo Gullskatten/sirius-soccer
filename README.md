@@ -27,4 +27,7 @@ The parser code for part 1 of the assignment can be found [here](https://github.
 **Figure 2:** _Screenshot of the database tables defined in the SQLite-database (from Database view in IntelliJ)_
 
 ### Parser output (XMI)
-The output file of the transformation can be found and opened directly in your browser [here](https://github.com/Gullskatten/sirius-soccer/blob/main/no.ntnu.soccer.parser/sample.soccer).
+The output file of the transformation can be found and opened directly in your browser [here](https://github.com/Gullskatten/sirius-soccer/blob/main/no.ntnu.soccer.parser/sample.soccer). In order to limit the file size of the data set, the group decided to perform parsing selecting only data from the country "England" and a single season "2015/2016". The [PerformParser.java](https://github.com/Gullskatten/sirius-soccer/blob/main/no.ntnu.soccer.parser/src/main/java/PerformParsing.java) may however easily be modified to include all countries and seasons.
+
+
+
