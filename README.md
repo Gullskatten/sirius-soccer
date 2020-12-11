@@ -17,9 +17,9 @@ The group chose to use a [Soccer data set from kaggle.com](https://www.kaggle.co
 ### Running the Soccer DB parser code
 The parser code for part 1 of the assignment can be found [here](https://github.com/Gullskatten/sirius-soccer/blob/master/no.ntnu.soccer.parser/). Running the parser requires you to download the [data set](https://www.kaggle.com/hugomathien/soccer) from kaggle.com, then extract every table into separate CSV files using the same file name as each table (see screenshots below).
 
-![CSV files in Resources folder](https://github.com/Gullskatten/sirius-soccer/blob/master/docs/csv-files-in-resources.PNG)
+![CSV files in Resources folder](https://github.com/Gullskatten/sirius-soccer/blob/master/docs/csv-files-in-resources.png)
 
-![Database View IntelliJ](https://github.com/Gullskatten/sirius-soccer/blob/master/docs/database-view-soccerdb.PNG)
+![Database View IntelliJ](https://github.com/Gullskatten/sirius-soccer/blob/master/docs/database-view-soccerdb.png)
 
 
 ### Parser output (XMI)
