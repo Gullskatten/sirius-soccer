@@ -14,8 +14,8 @@ This project is a solution to the semester group project in the course "TDT4250 
 The group chose to use a [Soccer data set from kaggle.com](https://www.kaggle.com/hugomathien/soccer), which consist of soccer matches, teams and players from eight leagues for the seasons 2009-2016. The data was stored in an SQLite-database, which would first be parsed into a CSV-format using capabilities within IntelliJ and then be processed by a custom parser created by the group. In addition to the original structure of the data set, the parser creates multiple new tables and relations between the data - like season standings for teams, and player positions within a match (e.g., "keeper", "defence"). The format of the output from the parser corresponds to the e-core model definition, so the tasks of modeling and parsing were done in parallel. Finally, a graphical tool using Sirius was made, which supports navigation of the data set with details about the teams and matches.
 
 
-### Running the Soccer DB parser code
-The parser code for part 1 of the assignment can be found [here](https://github.com/Gullskatten/sirius-soccer/blob/main/no.ntnu.soccer.parser/). Running the parser requires you to download the [data set](https://www.kaggle.com/hugomathien/soccer) from kaggle.com, then extract every table into separate CSV files using the filenames as shown in Figure 1, corresponding to the table from Figure 2 (see screenshots below).
+### Part 1: Running the Soccer DB parser code
+This step expects that you to have an IDEA installed, preferrably IntelliJ (for the database view). The parser code for part 1 of the assignment can be found [here](https://github.com/Gullskatten/sirius-soccer/blob/main/no.ntnu.soccer.parser/). Running the parser requires you to download the [data set](https://www.kaggle.com/hugomathien/soccer) from kaggle.com, then extract every table into separate CSV files using the filenames as shown in Figure 1, corresponding to the table from Figure 2 (see screenshots below).
 
 ![CSV files in Resources folder](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/csv-files-in-resources.png)
 
