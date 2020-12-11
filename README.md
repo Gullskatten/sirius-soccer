@@ -31,3 +31,11 @@ The output file of the transformation can be found and opened directly in your b
 
 
 
+### Part 2: E-core Model
+An e-core model is in essence a representation of the domain, in this context, the soccer matches domain. It describes the various relations between the entities of the domain, and the constraints of both attributes and relations within an entity. 
+
+![E-core model](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/ecore-model.png)
+**Figure 3:** _Screenshot of the e-core model_
+
+
+### Part 3: Sirius 
