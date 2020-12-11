@@ -15,12 +15,12 @@ The group chose to use a [Soccer data set from kaggle.com](https://www.kaggle.co
 
 
 ### Running the Soccer DB parser code
-The parser code for part 1 of the assignment can be found [here](https://github.com/Gullskatten/sirius-soccer/blob/master/no.ntnu.soccer.parser/). Running the parser requires you to download the [data set](https://www.kaggle.com/hugomathien/soccer) from kaggle.com, then extract every table into separate CSV files using the same file name as each table (see screenshots below).
+The parser code for part 1 of the assignment can be found [here](https://github.com/Gullskatten/sirius-soccer/blob/main/no.ntnu.soccer.parser/). Running the parser requires you to download the [data set](https://www.kaggle.com/hugomathien/soccer) from kaggle.com, then extract every table into separate CSV files using the same file name as each table (see screenshots below).
 
-![CSV files in Resources folder](https://github.com/Gullskatten/sirius-soccer/blob/master/docs/csv-files-in-resources.png)
+![CSV files in Resources folder](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/csv-files-in-resources.png)
 
-![Database View IntelliJ](https://github.com/Gullskatten/sirius-soccer/blob/master/docs/database-view-soccerdb.png)
+![Database View IntelliJ](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/database-view-soccerdb.png)
 
 
 ### Parser output (XMI)
-The output file of the transformation can be found and opened directly in your browser [here](https://github.com/Gullskatten/sirius-soccer/blob/master/no.ntnu.soccer.parser/sample.soccer).
+The output file of the transformation can be found and opened directly in your browser [here](https://github.com/Gullskatten/sirius-soccer/blob/main/no.ntnu.soccer.parser/sample.soccer).
