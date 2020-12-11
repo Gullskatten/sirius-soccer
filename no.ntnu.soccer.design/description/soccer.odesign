@@ -38,8 +38,8 @@
       <ownedColumnMappings name="Wins" headerLabelExpression="W" initialWidth="35" featureName="wins"/>
       <ownedColumnMappings name="Draws" headerLabelExpression="D" initialWidth="35" featureName="draws"/>
       <ownedColumnMappings name="Losses" headerLabelExpression="L" initialWidth="35" featureName="losses"/>
-      <ownedColumnMappings name="Goals For" headerLabelExpression="F" initialWidth="35" featureName="homeTeamGoal"/>
-      <ownedColumnMappings name="Goals Against" headerLabelExpression="A" initialWidth="35" featureName="awayTeamGoal"/>
+      <ownedColumnMappings name="Goals For" headerLabelExpression="F" initialWidth="35" featureName="goalsFor"/>
+      <ownedColumnMappings name="Goals Against" headerLabelExpression="A" initialWidth="35" featureName="goalsAgainst"/>
       <ownedColumnMappings name="Goal Difference" headerLabelExpression="+/-" initialWidth="35" featureName="goalDifference">
         <foregroundConditionalStyle predicateExpression="aql:self.goalDifference &lt; 0">
           <style labelSize="8">
@@ -48,7 +48,7 @@
           </style>
         </foregroundConditionalStyle>
       </ownedColumnMappings>
-      <ownedColumnMappings name="Points" headerLabelExpression="Pts" initialWidth="35" featureName="seasonPoints">
+      <ownedColumnMappings name="Points" headerLabelExpression="Pts" initialWidth="35" featureName="points">
         <defaultForeground labelSize="8">
           <labelFormat>bold</labelFormat>
           <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -60,7 +60,7 @@
       <metamodel href="platform:/plugin/no.ntnu.soccer.model/model/soccer.ecore#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="Match Node" semanticCandidatesExpression="aql:self" domainClass="soccer::Match">
-          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="service:getMatchName()" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="service:getMatchName()" labelPosition="node" resizeKind="NSEW" width="15" height="10">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -75,21 +75,21 @@
           </style>
         </edgeMappings>
         <containerMappings name="Opponent Container" semanticCandidatesExpression="feature:eAllContents" domainClass="soccer::Opponent" childrenPresentation="VerticalStack">
-          <borderedNodeMappings name="TeamInfo" semanticCandidatesExpression="aql:self.team" domainClass="soccer::Team">
-            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" tooltipExpression="Show Team Details" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/no.ntnu.soccer.design/assets/info.png">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <forbiddenSides>WEST</forbiddenSides>
-              <forbiddenSides>SOUTH</forbiddenSides>
-              <forbiddenSides>NORTH</forbiddenSides>
-            </style>
-          </borderedNodeMappings>
-          <subNodeMappings name="View Details" semanticCandidatesExpression="aql:self.team" domainClass="soccer::Team">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="Open Team Details" labelPosition="node" resizeKind="NSEW">
+          <borderedNodeMappings name="TeamInfo" semanticCandidatesExpression="aql:self.team" doubleClickDescription="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TeamInfo']" domainClass="soccer::Team">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="Show Team Information" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/no.ntnu.soccer.design/assets/Icon 2.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>underline</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>SOUTH</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+            </style>
+          </borderedNodeMappings>
+          <subNodeMappings name="width" semanticCandidatesExpression="aql:self" domainClass="soccer::Team">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.shortName" labelPosition="node" resizeKind="NSEW" width="40" height="10">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
           <subContainerMappings name="Position Container" semanticCandidatesExpression="aql:self.lineup" domainClass="soccer::Position" childrenPresentation="List">
@@ -100,7 +100,7 @@
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </subNodeMappings>
-            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelSize="14" showIcon="false" labelExpression="aql:self.type" workspacePath="/no.ntnu.soccer.design/assets/Blank_square.svg">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelSize="14" showIcon="false" labelExpression="aql:self.type" sizeComputationExpression="-1" workspacePath="/no.ntnu.soccer.design/assets/Blank_square.svg">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -115,7 +115,7 @@
               </style>
             </conditionnalStyles>
           </subContainerMappings>
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="16" showIcon="false" labelExpression="aql:self.team.name" tooltipExpression="aql:self.team.name.size()" sizeComputationExpression="20" resizeKind="NSEW" arcWidth="50" roundedCorner="true" workspacePath="/no.ntnu.soccer.design/assets/football_field.svg">
+          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelSize="30" showIcon="false" labelExpression="aql:self.team.name" tooltipExpression="aql:self.team.name.size()" sizeComputationExpression="-1" resizeKind="NSEW" arcWidth="0" arcHeight="8" workspacePath="/no.ntnu.soccer.design/assets/football_field.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -132,6 +132,13 @@
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Ola Plassen"/>
                 </subModelOperations>
               </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="TeamInfo" forceRefresh="true" mappings="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']/@defaultLayer/@containerMappings[name='Opponent%20Container']/@borderedNodeMappings[name='TeamInfo']">
+            <element name="TeamInfo"/>
+            <elementView name="ElementInfoView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Team%20Diagram']"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
@@ -165,6 +172,15 @@
           </style>
         </edgeMappings>
         <containerMappings name="Match Container" semanticCandidatesExpression="aql:self.matches" domainClass="soccer::Match">
+          <borderedNodeMappings name="MatchDetails" semanticCandidatesExpression="aql:self" doubleClickDescription="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Day%20Representation']/@defaultLayer/@toolSections.0/@ownedTools[name='ViewMatch']" domainClass="soccer::Match">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="Show Match Information" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/no.ntnu.soccer.design/assets/Icon 2.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>SOUTH</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+            </style>
+          </borderedNodeMappings>
           <subContainerMappings name="Opponent Container" semanticCandidatesExpression="aql:self.opponents" domainClass="soccer::Opponent">
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.team.name + ' lost '">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -228,6 +244,15 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="ViewMatch" forceRefresh="true" mappings="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Day%20Representation']/@defaultLayer/@containerMappings[name='Match%20Container']/@borderedNodeMappings[name='MatchDetails']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Soccer']/@ownedRepresentations[name='Match%20Diagram']"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Team Diagram" domainClass="soccer::Team">
