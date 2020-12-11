@@ -19,5 +19,5 @@ The parser code for part 1 of the assignment can be found [here](https://github.
 
 
 
-### Assignment 2: Sample soccer parser output
+### Sample soccer parser output
 The output of the transformation can be found and opened directly in your browser [here](https://github.com/Gullskatten/sirius-soccer/blob/master/no.ntnu.soccer.parser/sample.soccer).
