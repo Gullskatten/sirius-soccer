@@ -19,8 +19,12 @@ The parser code for part 1 of the assignment can be found [here](https://github.
 
 ![CSV files in Resources folder](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/csv-files-in-resources.png)
 
+**Figure 1:** _Screenhot of csv-files required in order to perform the parsing (from file explorer in IntelliJ)_
+
+
 ![Database View IntelliJ](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/database-view-soccerdb.png)
 
+**Figure 2:** _Screenshot of the database tables defined in the SQLite-database (from Database view in IntelliJ)_
 
 ### Parser output (XMI)
 The output file of the transformation can be found and opened directly in your browser [here](https://github.com/Gullskatten/sirius-soccer/blob/main/no.ntnu.soccer.parser/sample.soccer).
