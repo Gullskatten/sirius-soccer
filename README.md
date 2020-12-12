@@ -94,4 +94,10 @@ To be able to navigate between different diagrams we have added a bordered node 
 
 ### Creation Tool
 
+- Create a Match and Opponents in the matchday diagram
 
+We use a container creation tool to create a Match container. Since there are several values that needs to be set for a match we create a dialog windows where every feature of a match is displayed to the user so he can fill out necesssary information.
+
+- Create Positions and Players in the match diagram
+
+After a new match is created we can use the createOpponent tool to create one of the match opponents. A dialog window will appear where the user can chooce team and if the team is HOME or AWAY team. The references between match and opponents wil be automaticly set. You will have to repeat the last step twice since each match needs two opponents.
