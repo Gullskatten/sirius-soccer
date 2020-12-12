@@ -7,7 +7,7 @@ This project is a solution to the semester group project in the course [TDT4250]
 [TDT4250]: https://www.ntnu.edu/studies/courses/TDT4250/2020/
 
 ## Case
-**Part 1:** Create a parser to transform a publicly available data set into a format which can be used within the [Eclipse Modelling Framework (EMF)](https://www.eclipse.org/modeling/emf/) with Eclipse (XMI). 
+**Part 1:** Create a parser to transform a publicly available data set into a format which can be used within the [Eclipse Modelling Framework (EMF)](https://www.eclipse.org/modeling/emf/) with Eclipse (XMI).
 
 **Part 2:** Create an Ecore model of the data set using EMF.
 
@@ -41,7 +41,7 @@ An Ecore model is in essence a representation of the domain, in this context, th
 **Figure 3:** _Screenshot of the Ecore model_
 
 
-### Part 3: Sirius 
+### Part 3: Sirius
 
 - Right click on the 'no.ntnu.soccer.model.editor' project and create a new run configuration with default settings.
 ![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/run.png)
@@ -101,7 +101,7 @@ Some semantic validation rules has been added on the Match day representation to
 
 ### Filter
 
-Three filter functions have been added. 
+Three filter functions have been added.
 
 - Draw filter in match day diagram
 
