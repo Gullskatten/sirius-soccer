@@ -62,7 +62,7 @@ An e-core model is in essence a representation of the domain, in this context, t
 
 ## ViewPoints
 
-- MatchDay: This diagram presents one matchday in a season. A matchday is consists of a date and one or several matches. This diagram presents every match on a specified matchday and vizualizes if a team won, lost or if the match ended in a draw. The diagram consists of a MatchDay Node that presents the match date. Inside each match container we have set several conditinal styles to determine which team won and colour their respectitve container green, red or grey depending on the match result. A relation based edge is created to link the match day to each match. For each match there is an bordered node that links to a more detailed view of the match. This is done with the 'Double Click-Navigation' tool.
-![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/MatchDay.png)
+- MatchDay: This diagram presents one matchday in a season. A matchday is consists of a date and one or several matches. This diagram presents every match on a specified matchday and vizualizes if a team won, lost or if the match ended in a draw. The diagram consists of a MatchDay Node that presents the match date square, and inside each match container we have set several conditinal styles to determine which team won and colour their respectitve container green, red or grey depending on the match result. A relation based edge is created to link the match day to each match. For each match there is an bordered node with an "Info-icon" that links to a more detailed view of the match(Match View). This is done with the 'Double Click-Navigation' tool.
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/MatchDay.jng)
 **Figure 9:** _Screenshot of the match day view_
 - 
