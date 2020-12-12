@@ -88,6 +88,10 @@ To be able to navigate between different diagrams we have added a bordered node 
 - From match to team: Double-Click on the information icon labeled with 'Show team information'
 
 
+### Validation
+
+### Filter
+
 ### Creation Tool
 
 
