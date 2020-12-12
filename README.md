@@ -40,7 +40,7 @@ An e-core model is in essence a representation of the domain, in this context, t
 
 ### Part 3: Sirius 
 
-- Right click on the 'no.ntnu.soccer.editor' project and create a new run configuration with default settings.
+- Right click on the 'no.ntnu.soccer.model.editor' project and create a new run configuration with default settings.
 ![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/run.png)
 **Figure 4:** _Screenshot of run configuration setup_
 
@@ -48,7 +48,7 @@ An e-core model is in essence a representation of the domain, in this context, t
 ![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/import_projects.png)
 **Figure 5:** _Import projects_
 
-- Import these projects into the new workspace: "no.ntnu.soccer.deisgn", "no.ntnu.soccer.sample".
+- Import these projects into the new workspace: "no.ntnu.soccer.design", "no.ntnu.soccer.sample".
 ![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/select_projects.png)
 **Figure 6:** _Screenshot of the projects that needs to be imported_
 
