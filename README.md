@@ -76,6 +76,7 @@ An e-core model is in essence a representation of the domain, in this context, t
 **Figure 11:** _Screenshot of the team view_
 
 ### Table
+A table representation was created to vizualize the standings of each season.
 
 ![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/table.png)
 **Figure 12:** _Screenshot of the season 2015/2016 table_
@@ -120,7 +121,7 @@ Used to filter out positions and the players contained inside that position.
 
 We use a container creation tool to create a Match container. Since there are several values that needs to be set for a match we create a dialog windows where every feature of a match is displayed to the user so he can fill out necesssary information.
 
-![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/match_creation.png)
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/Match_creation.png)
 **Figure 16:** _Screenshot of match creation_
 
 ![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/opponent_creation.png)
