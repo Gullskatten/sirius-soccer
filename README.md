@@ -60,9 +60,25 @@ An e-core model is in essence a representation of the domain, in this context, t
 ![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/representation.aird.png)
 **Figure 8:** _Screenshot of representation.aird_
 
-## ViewPoints
+### ViewPoints
 
-- MatchDay: This diagram presents one matchday in a season. A matchday is consists of a date and one or several matches. This diagram presents every match on a specified matchday and vizualizes if a team won, lost or if the match ended in a draw. The diagram consists of a MatchDay Node that presents the match date square, and inside each match container we have set several conditinal styles to determine which team won and colour their respectitve container green, red or grey depending on the match result. A relation based edge is created to link the match day to each match. For each match there is an bordered node with an "Info-icon" that links to a more detailed view of the match(Match View). This is done with the 'Double Click-Navigation' tool.
-![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/MatchDay.jng)
+- MatchDay: This diagram presents one matchday in a season. A matchday is consists of a date and one or several matches. This diagram presents every match on a specified matchday and vizualizes if a team won, lost or if the match ended in a draw. The diagram consists of a MatchDay Node that presents the match date square, and inside each match container we have set several conditinal styles to determine which team won and colour their respectitve container green, red or grey depending on the match result. A relation based edge is created to link the match day to each match.
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/MatchDay.jpg)
 **Figure 9:** _Screenshot of the match day view_
-- 
+
+- Match: The match diragam presents the teams and players who played the match. The presentation consists of a match node that contains the team's short name, and an opponent container that contains off all the positions and their players. The opponent container is styled with an image of an soccer field and its children(positions) are presneted as a vertical stack. The player node is inside the position container and presented in a list form.
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/match.jpg)
+**Figure 9:** _Screenshot of the match view_
+
+
+- Team: Team View consists of a Team container which presents the information stored in the Team class, and a Placements container which presents the teams placement information in a given season.
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/team.jpg)
+**Figure 9:** _Screenshot of the team view_
+
+### Table
+
+### Navigation
+
+### Creation Tool
+
+

@@ -88,7 +88,7 @@
           </borderedNodeMappings>
           <subContainerMappings name="Position Container" semanticCandidatesExpression="aql:self.lineup" domainClass="soccer::Position" childrenPresentation="List">
             <subNodeMappings name="Player Position Node" semanticCandidatesExpression="aql:self.players" domainClass="soccer::Player">
-              <style xsi:type="style:BundledImageDescription" borderSizeComputationExpression="-1" labelSize="14" labelExpression="aql:self.name" labelPosition="node" resizeKind="NSEW" shape="dot">
+              <style xsi:type="style:BundledImageDescription" borderSizeComputationExpression="-1" labelSize="14" showIcon="false" labelExpression="aql:self.name" labelPosition="node" resizeKind="NSEW" shape="dot">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
