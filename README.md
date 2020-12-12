@@ -1,7 +1,10 @@
 # Sirius Soccer ⚽️
 
 ## Background
-This project is a solution to the semester group project in the course "TDT4250 - Avansert programvaredesign".
+This project is a solution to the semester group project in the course [TDT4250][] Advanced Software Design at [NTNU][].
+
+[NTNU]: https://www.ntnu.edu/
+[TDT4250]: https://www.ntnu.edu/studies/courses/TDT4250/2020/
 
 ## Case
 **Part 1:** Create a parser to transform a publicly available data set into a format which can be used within the [Eclipse Modelling Framework (EMF)](https://www.eclipse.org/modeling/emf/) with Eclipse (XMI). 
