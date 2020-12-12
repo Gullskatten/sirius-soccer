@@ -68,17 +68,17 @@ An e-core model is in essence a representation of the domain, in this context, t
 
 - Match: The match diragam presents the teams and players who played the match. The presentation consists of a match node that contains the team's short name, and an opponent container that contains off all the positions and their players. The opponent container is styled with an image of an soccer field and its children(positions) are presneted as a vertical stack. The player node is inside the position container and presented in a list form.
 ![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/match.jpg)
-**Figure 9:** _Screenshot of the match view_
+**Figure 10:** _Screenshot of the match view_
 
 
 - Team: Team View consists of a Team container which presents the information stored in the Team class, and a Placements container which presents the teams placement information in a given season.
 ![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/team.jpg)
-**Figure 9:** _Screenshot of the team view_
+**Figure 11:** _Screenshot of the team view_
 
 ### Table
 
 ![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/table.png)
-**Figure 9:** _Screenshot of the season 2015/2016 table_
+**Figure 12:** _Screenshot of the season 2015/2016 table_
 
 ### Navigation between views
 
@@ -92,6 +92,9 @@ To be able to navigate between different diagrams we have added a bordered node 
 
 Some semantic validation rules has been added on the Match day representation to ensure that each match has two opponents. An error message will be displayed if the program is validated and there exicts a match that doesn't have two opponents.
 
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/validation.png)
+**Figure 13:** _Screenshot of validation_
+
 ### Filter
 
 Three filter functions have been added. 
@@ -100,15 +103,32 @@ Three filter functions have been added.
 
 Filters out every match in a match day where the result was 'DRAW'.
 
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/draw_filter.png)
+**Figure 14:** _Screenshot of the draw filter_
+
+
 - Keeper and Defence filter on match diagram
 
 Used to filter out positions and the players contained inside that position.
+
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/position_filter.png)
+**Figure 15:** _Screenshot of the position filter_
 
 ### Creation Tool
 
 - Create a Match and Opponents in the matchday diagram
 
 We use a container creation tool to create a Match container. Since there are several values that needs to be set for a match we create a dialog windows where every feature of a match is displayed to the user so he can fill out necesssary information.
+
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/match_creation.png)
+**Figure 16:** _Screenshot of match creation_
+
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/opponent_creation.png)
+**Figure 17:** _Screenshot of opponent creation_
+
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/match_created.png)
+**Figure 18:** _Screenshot of a match created with the creation tool_
+
 
 - Create Positions and Players in the match diagram
 
