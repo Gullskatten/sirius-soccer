@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -453,7 +453,8 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 	 */
 	public EList<Team> getTeam() {
 		if (team == null) {
-			team = new EObjectResolvingEList<Team>(Team.class, this, SoccerPackage.PLACEMENT__TEAM);
+			team = new EObjectWithInverseResolvingEList<Team>(Team.class, this, SoccerPackage.PLACEMENT__TEAM,
+					SoccerPackage.TEAM__PLACEMENTS);
 		}
 		return team;
 	}
@@ -550,9 +551,12 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+		case SoccerPackage.PLACEMENT__TEAM:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getTeam()).basicAdd(otherEnd, msgs);
 		case SoccerPackage.PLACEMENT__STANDING:
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -569,6 +573,8 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+		case SoccerPackage.PLACEMENT__TEAM:
+			return ((InternalEList<?>) getTeam()).basicRemove(otherEnd, msgs);
 		case SoccerPackage.PLACEMENT__STANDING:
 			return basicSetStanding(null, msgs);
 		}

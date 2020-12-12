@@ -8,6 +8,7 @@ import no.ntnu.soccer.model.soccer.Team;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
@@ -216,12 +217,71 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPlacements(Placement newPlacements) {
+	public NotificationChain basicSetPlacements(Placement newPlacements, NotificationChain msgs) {
 		Placement oldPlacements = placements;
 		placements = newPlacements;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.TEAM__PLACEMENTS, oldPlacements,
-					placements));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					SoccerPackage.TEAM__PLACEMENTS, oldPlacements, newPlacements);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPlacements(Placement newPlacements) {
+		if (newPlacements != placements) {
+			NotificationChain msgs = null;
+			if (placements != null)
+				msgs = ((InternalEObject) placements).eInverseRemove(this, SoccerPackage.PLACEMENT__TEAM,
+						Placement.class, msgs);
+			if (newPlacements != null)
+				msgs = ((InternalEObject) newPlacements).eInverseAdd(this, SoccerPackage.PLACEMENT__TEAM,
+						Placement.class, msgs);
+			msgs = basicSetPlacements(newPlacements, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.TEAM__PLACEMENTS, newPlacements,
+					newPlacements));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case SoccerPackage.TEAM__PLACEMENTS:
+			if (placements != null)
+				msgs = ((InternalEObject) placements).eInverseRemove(this, SoccerPackage.PLACEMENT__TEAM,
+						Placement.class, msgs);
+			return basicSetPlacements((Placement) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case SoccerPackage.TEAM__PLACEMENTS:
+			return basicSetPlacements(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

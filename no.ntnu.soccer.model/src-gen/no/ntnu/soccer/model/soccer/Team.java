@@ -92,12 +92,14 @@ public interface Team extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Placements</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link no.ntnu.soccer.model.soccer.Placement#getTeam <em>Team</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Placements</em>' reference.
 	 * @see #setPlacements(Placement)
 	 * @see no.ntnu.soccer.model.soccer.SoccerPackage#getTeam_Placements()
-	 * @model required="true"
+	 * @see no.ntnu.soccer.model.soccer.Placement#getTeam
+	 * @model opposite="team" required="true"
 	 * @generated
 	 */
 	Placement getPlacements();

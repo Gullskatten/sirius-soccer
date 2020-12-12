@@ -212,11 +212,13 @@ public interface Placement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Team</b></em>' reference list.
 	 * The list contents are of type {@link no.ntnu.soccer.model.soccer.Team}.
+	 * It is bidirectional and its opposite is '{@link no.ntnu.soccer.model.soccer.Team#getPlacements <em>Placements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Team</em>' reference list.
 	 * @see no.ntnu.soccer.model.soccer.SoccerPackage#getPlacement_Team()
-	 * @model
+	 * @see no.ntnu.soccer.model.soccer.Team#getPlacements
+	 * @model opposite="placements"
 	 * @generated
 	 */
 	EList<Team> getTeam();
