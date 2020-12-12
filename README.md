@@ -37,7 +37,7 @@ The output file of the transformation can be found and opened directly in your b
 ### Part 2: Ecore Model
 An Ecore model is in essence a representation of the domain, in this context, the soccer matches domain. It describes the various relations between the entities of the domain, and the constraints of both attributes and relations within an entity.
 
-![Ecore model](docs/ecore-model.png)
+![Ecore model](docs/soccer-model.png)
 **Figure 3:** _Screenshot of the Ecore model_
 
 
