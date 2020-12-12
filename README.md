@@ -77,7 +77,16 @@ An e-core model is in essence a representation of the domain, in this context, t
 
 ### Table
 
-### Navigation
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/table.jpg)
+**Figure 9:** _Screenshot of the season 2015/2016 table_
+
+### Navigation between views
+
+To be able to navigate between different diagrams we have added a bordered node on the match day view and match view. With the navigation tool this allows us to navigate to a different diagram by double-clicking. If the diagram don't exist a new one will be created.
+
+- From match day to match: Double-click on the information icon labeled with 'Show Match Information'.
+- From match to team: Double-Click on the information icon labeled with 'Show team information'
+
 
 ### Creation Tool
 
