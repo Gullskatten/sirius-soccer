@@ -77,7 +77,7 @@ An e-core model is in essence a representation of the domain, in this context, t
 
 ### Table
 
-![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/table.jpg)
+![Run Configuration](https://github.com/Gullskatten/sirius-soccer/blob/main/docs/table.pngeqq)
 **Figure 9:** _Screenshot of the season 2015/2016 table_
 
 ### Navigation between views
