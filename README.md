@@ -90,7 +90,19 @@ To be able to navigate between different diagrams we have added a bordered node 
 
 ### Validation
 
+Some semantic validation rules has been added on the Match day representation to ensure that each match has two opponents. An error message will be displayed if the program is validated and there exicts a match that doesn't have two opponents.
+
 ### Filter
+
+Three filter functions have been added. 
+
+- Draw filter in match day diagram
+
+Filters out every match in a match day where the result was 'DRAW'.
+
+- Keeper and Defence filter on match diagram
+
+Used to filter out positions and the players contained inside that position.
 
 ### Creation Tool
 
