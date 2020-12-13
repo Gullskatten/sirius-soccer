@@ -24,7 +24,6 @@ This step expects that you to have an IDEA installed, preferably IntelliJ (for t
 
 **Figure 1:** _Screenhot of csv-files required in order to perform the parsing (from file explorer in IntelliJ)_
 
-
 ![Database View IntelliJ](docs/database-view-soccerdb.png)
 
 **Figure 2:** _Screenshot of the database tables defined in the SQLite-database (from Database view in IntelliJ)_
@@ -33,16 +32,18 @@ This step expects that you to have an IDEA installed, preferably IntelliJ (for t
 The output file of the transformation can be found and opened directly in your browser [here](no.ntnu.soccer.parser/sample.soccer). In order to limit the file size of the data set, the group decided to perform parsing selecting only data from one country (England) and a single season (2015/2016). The [PerformParser.java](no.ntnu.soccer.parser/src/main/java/PerformParsing.java) may however easily be modified to include all countries and seasons.
 
 
-
 ### Part 2: Ecore Model
 An Ecore model is in essence a representation of the domain, in this context, the soccer matches domain. It describes the various relations between the entities of the domain, and the constraints of both attributes and relations within an entity.
 
 ![Ecore model](docs/soccer-model.png)
+
 **Figure 3:** _Screenshot of the Ecore model_
 
 ### Part 3: Sirius
 
-In order to run the Sirius modeling project ([no.ntnu.soccer.design](no.ntnu.soccer.design/)), you need to launch another instance of Eclipse with the Ecore model ([no.ntnu.soccer.model](no.ntnu.soccer.model/)) installed.
+#### Launching Sirius from Eclipse
+
+As a prerequisite, it is expected that you have Eclipse installed, with EMF / Sirius plugins installed. In order to run the Sirius modeling project ([no.ntnu.soccer.design](no.ntnu.soccer.design/)), you need to launch another instance of Eclipse with the Ecore model ([no.ntnu.soccer.model](no.ntnu.soccer.model/)) installed.
 
 ![Sirius Run Configuration](https://folk.ntnu.no/einaru/files/sirius-soccer-800-opt.gif)
 
@@ -52,58 +53,67 @@ In order to run the Sirius modeling project ([no.ntnu.soccer.design](no.ntnu.soc
 4.  Add the location where you cloned this repository in **Select root directory** and click **Browse**.
 5.  In the list of Projects, make sure that only **no.ntnu.soccer.design** and **no.ntnu.soccer.sample** are selected, and then click on **Finish**.
 
-To edit the representations of diagrams and tables open the [soccer.odesign](no.ntnu.soccer.design/description/soccer.odesign) file as shown below.
+To edit the representations of diagrams and tables open the [soccer.odesign](no.ntnu.soccer.design/description/soccer.odesign) file as shown in Figure 7.
 
 ![Open soccer.design](docs/odesign.png)
+
 **Figure 7:** _Screenshot of soccer.odesign_
 
 To view the diagrams and tables we have created, open the [representation.aird](no.ntnu.soccer.sample/representations.aird) file and select the view you want to open in the "Representation" tab.
 
 ![Open representation.aird](docs/representation.aird.png)
+
 **Figure 8:** _Screenshot of representation.aird_
 
 #### Viewpoints
 
-##### Match Day
+Different visualizations (viewpoints) have been created, which brings up relevant information to the user. For instance, viewpoints detailing a single match (Match viewpoint), or details about all matches that occurred on a single day with goal results (Match Day viewpoint).
 
-This diagram presents one match day in a season. A match day consists of a date and one or several matches. This diagram presents every match on a specified match day and visualizes if a team *won*, *lost* or if the match ended in a *draw*. The diagram consists of a match day node that presents the match date square, and inside each match container we have set several conditional styles to determine which team won and colour their respective container green, red or grey depending on the match result. A relation based edge is created to link the match day to each match.
+##### Match Day Viewpoint
+
+The Match Day viewpoint presents one match day in a season. A match day consists of a date and one or several matches. This viewpoint presents every match on a specified match day and visualizes if a team *won*, *lost* or if the match ended in a *draw*. The diagram consists of a match day node that presents the match date square, and inside each match container we have set several conditional styles to determine which team won and colour their respective container green, red or grey depending on the match result. A relation based edge is created to link the match day to each match.
 
 ![Run Configuration](docs/MatchDay.jpg)
+
 **Figure 9:** _Screenshot of the match day view_
 
-##### Match
+##### Match Viewpoint
 
-The match diagram presents the teams and players who played the match. The presentation consists of a match node that contains the team short name, and an opponent container that contains all players and their positions. The opponent container is styled with an image of a soccer field and its children (positions) are presented as a vertical stack. The player nodes are inside the position container and are presented as a list.
+The match viewpoint presents the teams and players who played the match. The presentation consists of a match node that contains the team short name, and an opponent container that contains all players and their positions. The opponent container is styled with an image of a soccer field and its children (positions) are presented as a vertical stack. The player nodes are inside the position container and are presented as a list.
 
 ![Run Configuration](docs/match.jpg)
+
 **Figure 10:** _Screenshot of the match view_
 
-##### Team
+##### Team Viewpoint
 
-The Team View consists of a Team container which presents the information stored in the Team class, and a Placements container which presents the teams placement information in a given season.
+The Team viewpoint consists of a Team container which presents the information stored in the Team class (team details), and a Placements container which presents the teams placement information in a given season (one team may have many placements for each season they have played).
 
 ![Run Configuration](docs/team.jpg)
+
 **Figure 11:** _Screenshot of the team view_
 
-##### Season Standing
+##### Season Standing Viewpoint
 
 A table representation was created to visualize season standings.
 
 ![Run Configuration](docs/table.png)
+
 **Figure 12:** _Screenshot of the season 2015/2016 table_
 
 ### Navigation between views
 
-To be able to navigate between different diagrams we have added a bordered node on the match day view and match view. With the navigation tool this allows us to navigate to a different diagram by double-clicking. If the diagram don't exist a new one will be created.
+To be able to navigate between different diagrams we have added a bordered node on the match day view and match view (a "magnifying glass", indicating further detail levels). By using the navigation tool the user is directed to a different diagram by double-clicking, and if the diagram does not previously exist, a new one will be created.
 
 - From match day to match: Double-click on the information icon labeled with **Show Match Information**.
 - From match to team: Double-Click on the information icon labeled with **Show team information**.
 
 #### Validations
 
-Some semantic validation rules has been added on the Match day representation to ensure that each match has two opponents. An error message will be displayed if the program is validated and there exists a match that doesn't have two opponents.
+Some semantic validation rules has been added on the Match day representation to ensure that each match has two opponents. An error message will be displayed if the match being validated doesn't have two opponents.
 
 ![Run Configuration](docs/validation.png)
+
 **Figure 13:** _Screenshot of validation_
 
 #### Filters
@@ -115,6 +125,7 @@ Three filter functions have been added.
 Filters out every match in a match day where the result is *draw*.
 
 ![Run Configuration](docs/draw_filter.png)
+
 **Figure 14:** _Screenshot of the draw filter_
 
 ##### Keeper- and Defence-filter in the Match diagram
@@ -122,6 +133,7 @@ Filters out every match in a match day where the result is *draw*.
 Used to filter out positions and the players contained inside that position.
 
 ![Run Configuration](docs/position_filter.png)
+
 **Figure 15:** _Screenshot of the position filter_
 
 #### Creation Tools
@@ -131,14 +143,17 @@ Used to filter out positions and the players contained inside that position.
 We use a container creation tool to create a Match container. Since there are several values that needs to be set for a match we create a dialog windows where every feature of a match is displayed to the user so he can fill out necessary information.
 
 ![Run Configuration](docs/Match_creation.png)
+
 **Figure 16:** _Screenshot of match creation_
 
 ![Run Configuration](docs/opponent_creation.png)
+
 **Figure 17:** _Screenshot of opponent creation_
 
 ![Run Configuration](docs/match_created.png)
+
 **Figure 18:** _Screenshot of a match created with the creation tool_
 
 ##### Create Positions and Players in the match diagram
 
-After a new match is created we can use the **createOpponent** tool to create one of the match opponents. A dialog window will appear where the user can choose the team and whether it is the *home* or *away* team. The references between match and opponents will be set automatically. You will have to repeat the last step twice since each match needs two opponents.
+After a new match is created we can use the **createOpponent** tool to create one of the match opponents. A dialog window will appear where the user can choose the team and whether it is the *home* or *away* team. The references between match and opponents will be set automatically. You will have to repeat the last step for the opponent team as well (two opponents is required for a match).
