@@ -11,14 +11,14 @@ This project is a solution to the semester group project in the course [TDT4250]
 
 **Part 2:** Create an Ecore model of the data set using EMF.
 
-**Part 3:** Create a tool using either Sirius (for creating a graphical view/editor) or XText (DSL) to either view or modify the existing data set.
+**Part 3:** Create a tool using either Sirius (for creating a graphical view/editor) or Xtext (DSL) to either view or modify the existing data set.
 
 ## Solution
-The group chose to use a [Soccer data set from kaggle.com](https://www.kaggle.com/hugomathien/soccer), which consist of soccer matches, teams and players from eight leagues for the seasons 2009-2016. The data was stored in an SQLite-database, which would first be parsed into a CSV-format using capabilities within IntelliJ and then be processed by a custom parser created by the group. In addition to the original structure of the data set, the parser creates multiple new tables and relations between the data - like season standings for teams, and player positions within a match (e.g., "keeper", "defence"). The format of the output from the parser corresponds to the Ecore model definition, so the tasks of modeling and parsing were done in parallel. Finally, a graphical tool using Sirius was made, which supports navigation of the data set with details about the teams and matches.
+The group chose to use a [Soccer data set from kaggle.com](https://www.kaggle.com/hugomathien/soccer), which consist of soccer matches, teams and players from eight leagues for the seasons 2009-2016. The data was stored in an SQLite-database, which would first be parsed into a CSV-format using capabilities within IntelliJ and then be processed by a custom parser created by the group. In addition to the original structure of the data set, the parser creates multiple new tables and relations between the data - like season standings for teams, and player positions within a match (keeper, defence, midfield of forward). The format of the output from the parser corresponds to the Ecore model, so the tasks of modeling and parsing were done in parallel. Finally, a graphical tool using Sirius was made, which supports navigation of the data set with details about the teams and matches.
 
 
 ### Part 1: Running the Soccer DB parser code
-This step expects that you to have an IDEA installed, preferrably IntelliJ (for the database view). The parser code for part 1 of the assignment can be found [here](no.ntnu.soccer.parser/). Running the parser requires you to download the [data set](https://www.kaggle.com/hugomathien/soccer) from kaggle.com, then extract every table into separate CSV files using the filenames as shown in Figure 1, corresponding to the table from Figure 2 (see screenshots below).
+This step expects that you to have an IDEA installed, preferably IntelliJ (for the database view). The parser code for part 1 of the assignment can be found [here](no.ntnu.soccer.parser/). Running the parser requires you to download the [data set](https://www.kaggle.com/hugomathien/soccer) from kaggle.com, then extract every table into separate CSV files using the filenames as shown in Figure 1, corresponding to the table from Figure 2 (see screenshots below).
 
 ![CSV files in Resources folder](docs/csv-files-in-resources.png)
 
@@ -30,7 +30,7 @@ This step expects that you to have an IDEA installed, preferrably IntelliJ (for 
 **Figure 2:** _Screenshot of the database tables defined in the SQLite-database (from Database view in IntelliJ)_
 
 ### Parser output (XMI)
-The output file of the transformation can be found and opened directly in your browser [here](no.ntnu.soccer.parser/sample.soccer). In order to limit the file size of the data set, the group decided to perform parsing selecting only data from the country "England" and a single season "2015/2016". The [PerformParser.java](no.ntnu.soccer.parser/src/main/java/PerformParsing.java) may however easily be modified to include all countries and seasons.
+The output file of the transformation can be found and opened directly in your browser [here](no.ntnu.soccer.parser/sample.soccer). In order to limit the file size of the data set, the group decided to perform parsing selecting only data from one country (England) and a single season (2015/2016). The [PerformParser.java](no.ntnu.soccer.parser/src/main/java/PerformParsing.java) may however easily be modified to include all countries and seasons.
 
 
 
@@ -64,30 +64,30 @@ To view the diagrams and tables we have created, open the [representation.aird](
 
 #### Viewpoints
 
-##### MatchDay
+##### Match Day
 
-This diagram presents one matchday in a season. A matchday is consists of a date and one or several matches. This diagram presents every match on a specified matchday and vizualizes if a team won, lost or if the match ended in a draw. The diagram consists of a MatchDay Node that presents the match date square, and inside each match container we have set several conditinal styles to determine which team won and colour their respectitve container green, red or grey depending on the match result. A relation based edge is created to link the match day to each match.
+This diagram presents one match day in a season. A match day consists of a date and one or several matches. This diagram presents every match on a specified match day and visualizes if a team *won*, *lost* or if the match ended in a *draw*. The diagram consists of a match day node that presents the match date square, and inside each match container we have set several conditional styles to determine which team won and colour their respective container green, red or grey depending on the match result. A relation based edge is created to link the match day to each match.
 
 ![Run Configuration](docs/MatchDay.jpg)
 **Figure 9:** _Screenshot of the match day view_
 
 ##### Match
 
-The match diragam presents the teams and players who played the match. The presentation consists of a match node that contains the team's short name, and an opponent container that contains off all the positions and their players. The opponent container is styled with an image of an soccer field and its children(positions) are presneted as a vertical stack. The player node is inside the position container and presented in a list form.
+The match diagram presents the teams and players who played the match. The presentation consists of a match node that contains the team short name, and an opponent container that contains all players and their positions. The opponent container is styled with an image of a soccer field and its children (positions) are presented as a vertical stack. The player nodes are inside the position container and are presented as a list.
 
 ![Run Configuration](docs/match.jpg)
 **Figure 10:** _Screenshot of the match view_
 
 ##### Team
 
-Team View consists of a Team container which presents the information stored in the Team class, and a Placements container which presents the teams placement information in a given season.
+The Team View consists of a Team container which presents the information stored in the Team class, and a Placements container which presents the teams placement information in a given season.
 
 ![Run Configuration](docs/team.jpg)
 **Figure 11:** _Screenshot of the team view_
 
 ##### Season Standing
 
-A table representation was created to vizualize the standing for a season.
+A table representation was created to visualize season standings.
 
 ![Run Configuration](docs/table.png)
 **Figure 12:** _Screenshot of the season 2015/2016 table_
@@ -96,12 +96,12 @@ A table representation was created to vizualize the standing for a season.
 
 To be able to navigate between different diagrams we have added a bordered node on the match day view and match view. With the navigation tool this allows us to navigate to a different diagram by double-clicking. If the diagram don't exist a new one will be created.
 
-- From match day to match: Double-click on the information icon labeled with 'Show Match Information'.
-- From match to team: Double-Click on the information icon labeled with 'Show team information'
+- From match day to match: Double-click on the information icon labeled with **Show Match Information**.
+- From match to team: Double-Click on the information icon labeled with **Show team information**.
 
 #### Validations
 
-Some semantic validation rules has been added on the Match day representation to ensure that each match has two opponents. An error message will be displayed if the program is validated and there exicts a match that doesn't have two opponents.
+Some semantic validation rules has been added on the Match day representation to ensure that each match has two opponents. An error message will be displayed if the program is validated and there exists a match that doesn't have two opponents.
 
 ![Run Configuration](docs/validation.png)
 **Figure 13:** _Screenshot of validation_
@@ -112,7 +112,7 @@ Three filter functions have been added.
 
 ##### Draw-filter in the Match Day diagram
 
-Filters out every match in a match day where the result was 'DRAW'.
+Filters out every match in a match day where the result is *draw*.
 
 ![Run Configuration](docs/draw_filter.png)
 **Figure 14:** _Screenshot of the draw filter_
@@ -128,7 +128,7 @@ Used to filter out positions and the players contained inside that position.
 
 ##### Create a Match and Opponents in the match day diagram
 
-We use a container creation tool to create a Match container. Since there are several values that needs to be set for a match we create a dialog windows where every feature of a match is displayed to the user so he can fill out necesssary information.
+We use a container creation tool to create a Match container. Since there are several values that needs to be set for a match we create a dialog windows where every feature of a match is displayed to the user so he can fill out necessary information.
 
 ![Run Configuration](docs/Match_creation.png)
 **Figure 16:** _Screenshot of match creation_
@@ -141,4 +141,4 @@ We use a container creation tool to create a Match container. Since there are se
 
 ##### Create Positions and Players in the match diagram
 
-After a new match is created we can use the createOpponent tool to create one of the match opponents. A dialog window will appear where the user can chooce team and if the team is HOME or AWAY team. The references between match and opponents wil be automaticly set. You will have to repeat the last step twice since each match needs two opponents.
+After a new match is created we can use the **createOpponent** tool to create one of the match opponents. A dialog window will appear where the user can choose the team and whether it is the *home* or *away* team. The references between match and opponents will be set automatically. You will have to repeat the last step twice since each match needs two opponents.
