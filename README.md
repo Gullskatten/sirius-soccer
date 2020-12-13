@@ -40,27 +40,26 @@ An Ecore model is in essence a representation of the domain, in this context, th
 ![Ecore model](docs/soccer-model.png)
 **Figure 3:** _Screenshot of the Ecore model_
 
-
 ### Part 3: Sirius
 
-- Right click on the 'no.ntnu.soccer.model.editor' project and create a new run configuration with default settings.
-![Run Configuration](docs/run.png)
-**Figure 4:** _Screenshot of run configuration setup_
+In order to run the Sirius modeling project ([no.ntnu.soccer.design](no.ntnu.soccer.design/)), you need to launch another instance of Eclipse with the Ecore model ([no.ntnu.soccer.model](no.ntnu.soccer.model/)) installed.
 
-- Import exicting projects into workspace
-![Run Configuration](docs/import_projects.png)
-**Figure 5:** _Import projects_
+![Sirius Run Configuration](https://folk.ntnu.no/einaru/files/sirius-soccer-800-opt.gif)
 
-- Import these projects into the new workspace: "no.ntnu.soccer.design", "no.ntnu.soccer.sample".
-![Run Configuration](docs/select_projects.png)
-**Figure 6:** _Screenshot of the projects that needs to be imported_
+1.  Right-click on the **no.ntnu.soccer.model.editor** project and select **Run As** and then **Eclipse Application**
+2.  Inside the new Eclipse Application click on **Import project…**.
+3.  In the Import dialog, select **Existing Projects Into Workspace** and click **Next**.
+4.  Add the location where you cloned this repository in **Select root directory** and click **Browse**.
+5.  In the list of Projects, make sure that only **no.ntnu.soccer.design** and **no.ntnu.soccer.sample** are selected, and then click on **Finish**.
 
-- To edit the representations of diagrams and tables, open the soccer.odesign as shown below.
-![Run Configuration](docs/odesign.png)
+To edit the representations of diagrams and tables open the [soccer.odesign](no.ntnu.soccer.design/description/soccer.odesign) file as shown below.
+
+![Open soccer.design](docs/odesign.png)
 **Figure 7:** _Screenshot of soccer.odesign_
 
-- To view the diagrams and tables we have created, open the representation.aird file and select the view you want to open in the "Representation" tab.
-![Run Configuration](docs/representation.aird.png)
+To view the diagrams and tables we have created, open the [representation.aird](no.ntnu.soccer.sample/representations.aird) file and select the view you want to open in the "Representation" tab.
+
+![Open representation.aird](docs/representation.aird.png)
 **Figure 8:** _Screenshot of representation.aird_
 
 #### Viewpoints
