@@ -63,23 +63,32 @@ An Ecore model is in essence a representation of the domain, in this context, th
 ![Run Configuration](docs/representation.aird.png)
 **Figure 8:** _Screenshot of representation.aird_
 
-### ViewPoints
+#### Viewpoints
 
-- MatchDay: This diagram presents one matchday in a season. A matchday is consists of a date and one or several matches. This diagram presents every match on a specified matchday and vizualizes if a team won, lost or if the match ended in a draw. The diagram consists of a MatchDay Node that presents the match date square, and inside each match container we have set several conditinal styles to determine which team won and colour their respectitve container green, red or grey depending on the match result. A relation based edge is created to link the match day to each match.
+##### MatchDay
+
+This diagram presents one matchday in a season. A matchday is consists of a date and one or several matches. This diagram presents every match on a specified matchday and vizualizes if a team won, lost or if the match ended in a draw. The diagram consists of a MatchDay Node that presents the match date square, and inside each match container we have set several conditinal styles to determine which team won and colour their respectitve container green, red or grey depending on the match result. A relation based edge is created to link the match day to each match.
+
 ![Run Configuration](docs/MatchDay.jpg)
 **Figure 9:** _Screenshot of the match day view_
 
-- Match: The match diragam presents the teams and players who played the match. The presentation consists of a match node that contains the team's short name, and an opponent container that contains off all the positions and their players. The opponent container is styled with an image of an soccer field and its children(positions) are presneted as a vertical stack. The player node is inside the position container and presented in a list form.
+##### Match
+
+The match diragam presents the teams and players who played the match. The presentation consists of a match node that contains the team's short name, and an opponent container that contains off all the positions and their players. The opponent container is styled with an image of an soccer field and its children(positions) are presneted as a vertical stack. The player node is inside the position container and presented in a list form.
+
 ![Run Configuration](docs/match.jpg)
 **Figure 10:** _Screenshot of the match view_
 
+##### Team
 
-- Team: Team View consists of a Team container which presents the information stored in the Team class, and a Placements container which presents the teams placement information in a given season.
+Team View consists of a Team container which presents the information stored in the Team class, and a Placements container which presents the teams placement information in a given season.
+
 ![Run Configuration](docs/team.jpg)
 **Figure 11:** _Screenshot of the team view_
 
-### Table
-A table representation was created to vizualize the standings of each season.
+##### Season Standing
+
+A table representation was created to vizualize the standing for a season.
 
 ![Run Configuration](docs/table.png)
 **Figure 12:** _Screenshot of the season 2015/2016 table_
@@ -91,36 +100,34 @@ To be able to navigate between different diagrams we have added a bordered node 
 - From match day to match: Double-click on the information icon labeled with 'Show Match Information'.
 - From match to team: Double-Click on the information icon labeled with 'Show team information'
 
-
-### Validation
+#### Validations
 
 Some semantic validation rules has been added on the Match day representation to ensure that each match has two opponents. An error message will be displayed if the program is validated and there exicts a match that doesn't have two opponents.
 
 ![Run Configuration](docs/validation.png)
 **Figure 13:** _Screenshot of validation_
 
-### Filter
+#### Filters
 
 Three filter functions have been added.
 
-- Draw filter in match day diagram
+##### Draw-filter in the Match Day diagram
 
 Filters out every match in a match day where the result was 'DRAW'.
 
 ![Run Configuration](docs/draw_filter.png)
 **Figure 14:** _Screenshot of the draw filter_
 
-
-- Keeper and Defence filter on match diagram
+##### Keeper- and Defence-filter in the Match diagram
 
 Used to filter out positions and the players contained inside that position.
 
 ![Run Configuration](docs/position_filter.png)
 **Figure 15:** _Screenshot of the position filter_
 
-### Creation Tool
+#### Creation Tools
 
-- Create a Match and Opponents in the matchday diagram
+##### Create a Match and Opponents in the match day diagram
 
 We use a container creation tool to create a Match container. Since there are several values that needs to be set for a match we create a dialog windows where every feature of a match is displayed to the user so he can fill out necesssary information.
 
@@ -133,7 +140,6 @@ We use a container creation tool to create a Match container. Since there are se
 ![Run Configuration](docs/match_created.png)
 **Figure 18:** _Screenshot of a match created with the creation tool_
 
-
-- Create Positions and Players in the match diagram
+##### Create Positions and Players in the match diagram
 
 After a new match is created we can use the createOpponent tool to create one of the match opponents. A dialog window will appear where the user can chooce team and if the team is HOME or AWAY team. The references between match and opponents wil be automaticly set. You will have to repeat the last step twice since each match needs two opponents.
