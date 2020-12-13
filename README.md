@@ -1,5 +1,21 @@
 # Sirius Soccer ⚽️
 
+## Table of Contents
+
+* [Background](#background)
+* [Case](#case)
+* [Solution](#solution)
+  + [Part 1: Running the Soccer DB parser code](#part-1-running-the-soccer-db-parser-code)
+    - [Parser output (XMI)](#parser-output-xmi)
+  + [Part 2: Ecore Model](#part-2-ecore-model)
+  + [Part 3: Sirius](#part-3-sirius)
+    - [Launching Sirius from Eclipse](#launching-sirius-from-eclipse)
+    - [Viewpoints](#viewpoints)
+    - [Navigation between views](#navigation-between-views)
+    - [Validations](#validations)
+    - [Filters](#filters)
+    - [Creation Tools](#creation-tools)
+
 ## Background
 This project is a solution to the semester group project in the course [TDT4250][] Advanced Software Design at [NTNU][].
 
@@ -28,7 +44,7 @@ This step expects that you to have an IDEA installed, preferably IntelliJ (for t
 
 **Figure 2:** _Screenshot of the database tables defined in the SQLite-database (from Database view in IntelliJ)_
 
-### Parser output (XMI)
+#### Parser output (XMI)
 The output file of the transformation can be found and opened directly in your browser [here](no.ntnu.soccer.parser/sample.soccer). In order to limit the file size of the data set, the group decided to perform parsing selecting only data from one country (England) and a single season (2015/2016). The [PerformParser.java](no.ntnu.soccer.parser/src/main/java/PerformParsing.java) may however easily be modified to include all countries and seasons.
 
 
@@ -101,7 +117,7 @@ A table representation was created to visualize season standings.
 
 **Figure 12:** _Screenshot of the season 2015/2016 table_
 
-### Navigation between views
+#### Navigation between views
 
 To be able to navigate between different diagrams we have added a bordered node on the match day view and match view (a "magnifying glass", indicating further detail levels). By using the navigation tool the user is directed to a different diagram by double-clicking, and if the diagram does not previously exist, a new one will be created.
 
